@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_doodlejump: phony || CMakeFiles/doodleju
 
 build CMakeFiles/doodlejump.dir/main.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/main.cpp || cmake_object_order_depends_target_doodlejump
   DEP_FILE = CMakeFiles\doodlejump.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\doodlejump.dir
   OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir
   TARGET_COMPILE_PDB = CMakeFiles\doodlejump.dir\
