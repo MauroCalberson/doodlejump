@@ -1,0 +1,8 @@
+
+
+#ifndef DOODLEJUMP_STOPWATCH_H
+#define DOODLEJUMP_STOPWATCH_H
+
+class StopWatch {};
+
+#endif // DOODLEJUMP_STOPWATCH_H

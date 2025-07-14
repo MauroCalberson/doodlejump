@@ -1,7 +1,54 @@
 cmake_minimum_required(VERSION 3.22.1)
 project(doodlejump)
 set(CMAKE_CXX_STANDARD 17)
-#set(SFML_STATIC_LIBRARIES TRUE)
+add_executable(doodlejump src/main.cpp
+        src/Model/Entities/Player.cpp
+        src/Model/Entities/Player.h
+        src/Model/Entities/Platform.cpp
+        src/Model/Entities/Platform.h
+        src/Model/Entities/Entitymodel.cpp
+        src/Model/Entities/Entitymodel.h
+        src/View/ConcreteFactory.cpp
+        src/View/ConcreteFactory.h
+        src/Model/AbstractFactory.cpp
+        src/Model/AbstractFactory.h
+        src/Helper/StopWatch.cpp
+        src/Helper/StopWatch.h
+        src/Helper/Random.cpp
+        src/Helper/Random.h
+        src/Model/World.cpp
+        src/Model/World.h
+        src/Model/Entities/Subject.cpp
+        src/Model/Entities/Subject.h
+        src/Model/Entities/BGTile.cpp
+        src/Model/Entities/BGTile.h
+        src/Model/Entities/Bonus.cpp
+        src/Model/Entities/Bonus.h
+        src/Model/Enums.h
+        src/Controller/PlayerController.cpp
+        src/Controller/PlayerController.h
+        src/Controller/PlatformController.cpp
+        src/Controller/PlatformController.h
+        src/Controller/CameraController.cpp
+        src/Controller/CameraController.h
+        src/View/PlayerView.cpp
+        src/View/PlayerView.h
+        src/View/PlatformView.cpp
+        src/View/PlatformView.h
+        src/Model/Observer.cpp
+        src/Model/Observer.h
+        src/View/EntitytView.cpp
+        src/View/EntitytView.h
+        src/Game.cpp
+        src/Game.h
+        src/Controller/EntityController.cpp
+        src/Controller/EntityController.h
+        src/Model/Camera.cpp
+        src/Model/Camera.h
+        src/View/BGTile.cpp
+        src/View/BGTile.h
+)
+set(SFML_STATIC_LIBRARIES TRUE)
 if (WIN32)
     set(SFML_DIR "C:/SFML-2.5.1/lib/cmake/SFML")
 elseif (UNIX)
@@ -9,5 +56,5 @@ elseif (UNIX)
 endif ()
 
 find_package(SFML 2.5.1 COMPONENTS graphics window network audio REQUIRED)
-add_executable(doodlejump src/main.cpp)
+include_directories("C:/SFML-2.5.1/include/SFML")
 target_link_libraries(doodlejump sfml-window sfml-graphics sfml-network sfml-audio)
