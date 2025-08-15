@@ -8,12 +8,21 @@ enum VertDirection {
 };
 enum HorDirection {
     LEFT,
-    RIGHT
+    RIGHT,
+    NONE
 };
-enum PlatformType {
+enum EntityType {
     Green,
     Yellow,
     Blue,
-    White
+    White,
+    PLAYER,
+    BGTILE,
+    SPRING,
+    JETPACK
+};
+enum class BonusType {
+    SPRING,
+    JETPACK
 };
 #endif // DOODLEJUMP_ENUMS_H

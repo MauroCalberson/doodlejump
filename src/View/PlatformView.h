@@ -8,27 +8,35 @@
 
 class PlatformView : public EntityView {
 public:
-    PlatformView() = default;
-    ~PlatformView() override = default;
-    void setTexture(PlatformType type) {
-        switch (type) {
-            case Green:
-                texture.loadFromFile("textures/platform1.png");
-                break;
-            case Blue:
-                texture.loadFromFile("textures/platform2.png");
-                break;
-            case Yellow:
-                texture.loadFromFile("textures/platform3.png");
-                break;
-            case White:
-                texture.loadFromFile("textures/platform4.png");
-                break;
-        }
-        sprite.setTexture(texture);
+    PlatformView() {
+        texture = std::make_unique<sf::Texture>();
+        sprite = std::make_unique<sf::Sprite>();
     }
 
-    sf::Sprite& getSprite() { return sprite; }
+    void setTexture(EntityType type) {
+        switch (type) {
+        case Green:
+            if (!texture->loadFromFile("textures/platform1.png")) {
+                throw std::runtime_error("Failed to load texture: textures/platform1.png");
+            }
+            break;
+        case Blue:
+            if (!texture->loadFromFile("textures/platform2.png")) {
+                throw std::runtime_error("Failed to load texture: textures/platform2.png");
+            }
+            break;
+        case Yellow:
+            if (!texture->loadFromFile("textures/platform3.png")) {
+                throw std::runtime_error("Failed to load texture: textures/platform3.png");
+            }
+            break;
+        case White:
+            if (!texture->loadFromFile("textures/platform4.png")) {
+                throw std::runtime_error("Failed to load texture: textures/platform4.png");
+            }
+            break;
+        }
+        sprite->setTexture(*texture);
+    }
 };
-
 #endif // DOODLEJUMP_PLATFORMVIEW_H

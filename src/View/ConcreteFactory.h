@@ -6,9 +6,9 @@
 
 class ConcreteFactory : public AbstractFactory {
 public:
-    std::shared_ptr<Platform> createPlatform(PlatformType platform) override;
+    std::shared_ptr<Platform> createPlatform(EntityType platform) override;
     std::shared_ptr<Player> createPlayer() override;
-    std::shared_ptr<Bonus> createBonus() override;
+    std::shared_ptr<Bonus> createBonus(EntityType type) override;
     std::shared_ptr<BGTile> createBGTile() override;
 };
 
