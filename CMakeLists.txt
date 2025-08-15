@@ -45,8 +45,10 @@ add_executable(doodlejump src/main.cpp
         src/Controller/EntityController.h
         src/Model/Camera.cpp
         src/Model/Camera.h
-        src/View/BGTile.cpp
-        src/View/BGTile.h
+        src/View/BGTileView.cpp
+        src/View/BGTileView.h
+        src/View/BonusView.cpp
+        src/View/BonusView.h
 )
 set(SFML_STATIC_LIBRARIES TRUE)
 if (WIN32)

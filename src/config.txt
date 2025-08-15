@@ -1,0 +1,5 @@
+camera_x 0.0
+camera_y 0.0
+player_x 50.0
+player_y 300.0
+platform_count 10

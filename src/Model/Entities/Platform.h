@@ -1,27 +1,79 @@
 // Platform.h
 #ifndef DOODLEJUMP_PLATFORM_H
 #define DOODLEJUMP_PLATFORM_H
-
+#include <iostream>
 #include "Entitymodel.h"
 #include "../Enums.h"
 
 class Platform : public Entitymodel {
 
 private:
-    PlatformType type;
+    EntityType type;
+    float max;
+    float min;
+    float moveSpeed = 3;
+    bool movingRight = true;  // Direction flag for blue platforms
+    bool movingUp = true;     // Direction flag for yellow platforms
 
+    void updateHorizontalMovement() {
+        if (movingRight) {
+            x += moveSpeed;
+            if (x > 540) {  // Screen width boundary
+                x = 540;
+                movingRight = false;
+            }
+        } else {
+            x -= moveSpeed;
+            if (x < 60) {  // Left boundary with platform width
+                x = 60;
+                movingRight = true;
+            }
+        }
+    }
+
+    void updateVerticalMovement() {
+        if (movingUp) {
+            y += moveSpeed;
+            if (y > max) {
+                y = max;
+                movingUp = false;
+            }
+        } else {
+            y -= moveSpeed;
+            if (y < min) {
+                y = min;
+                movingUp = true;
+            }
+        }
+    }
 public:
 
     Platform() = default;
     ~Platform() override = default;
-    void setType(PlatformType t) {
+    void setType(EntityType t) {
         type = t;
     }
-
-    [[nodiscard]] PlatformType getType() const {
+    [[nodiscard]] EntityType getType() const {
         return type;
     }
+    void setcoords(float& x, float& y) override {
+        Entitymodel::setcoords(x, y);
+    }
+    Hitbox getHitbox() const override {
+        return {x - 44, y +12, 164, 16}; // Centered at (x, y) with width 120 and height 8
+    }
+    void setMovementBounds(float minBound, float maxBound) {
+        min = minBound;
+        max = maxBound;
+    }
 
+    void updatePosition() {
+        if (type == EntityType::Blue) {
+            updateHorizontalMovement();
+        } else if (type == EntityType::Yellow) {
+            updateVerticalMovement();
+        }
+    }
 };
 
 #endif // DOODLEJUMP_PLATFORM_H

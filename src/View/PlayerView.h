@@ -3,13 +3,25 @@
 #define DOODLEJUMP_PLAYERVIEW_H
 #include <SFML/Graphics.hpp>
 #include "EntitytView.h"
+
 class PlayerView : public EntityView {
 public:
-    PlayerView();
-    void setTexture() {texture.loadFromFile("textures/doodleplayer.png"); sprite.setTexture(texture);};
+    PlayerView() {
+        texture = std::make_unique<sf::Texture>();
+        sprite = std::make_unique<sf::Sprite>();
+        setTexture();
+    }
+
+    void setTexture() {
+        if (texture->loadFromFile("textures/doodleplayer.png")) {
+            sprite->setTexture(*texture);
+        } else {
+            throw std::runtime_error("Failed to load texture: textures/doodleplayer.png");
+        }
+    }
+
     void update(float x, float y) override {
-        // Update the sprite's position based on the platform's position
-        sprite.setPosition(x, y);
+        sprite->setPosition(x, y);
     }
 };
 

@@ -1,15 +1,15 @@
-//
-// Created by mauro on 31/12/2024.
-//
-
+// src/Model/Entities/BGTile.h
 #ifndef DOODLEJUMP_BGTILE_H
 #define DOODLEJUMP_BGTILE_H
+
 #include "Entitymodel.h"
 
-class BGTile : public Entitymodel{
-    double lefttop;
+class BGTile : public Entitymodel {
 public:
     BGTile() = default;
+    EntityType getType() const override {
+        return EntityType::BGTILE;
+    }
 };
 
 #endif // DOODLEJUMP_BGTILE_H
