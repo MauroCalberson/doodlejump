@@ -33,6 +33,12 @@ public:
         return normalizedX >= 0 && normalizedX <= CameraWidth &&
                normalizedY >= y - 300 && normalizedY <= CameraHeight;
     }
+    void updatePosition(float playerY) {
+        // Update camera position based on player's Y position
+        if (playerY < y + 300) {
+            y = playerY - 300; // Keep the player centered in the view
+        }
+    }
 };
 
 #endif // DOODLEJUMP_CAMERA_H

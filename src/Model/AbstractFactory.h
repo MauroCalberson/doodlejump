@@ -3,10 +3,11 @@
 #ifndef DOODLEJUMP_ABSTRACTFACTORY_H
 #define DOODLEJUMP_ABSTRACTFACTORY_H
 #include <memory>
-#include "Entities/Platform.h"
-#include "Entities/Bonus.h"
-#include "Entities/Player.h"
-#include "Entities/BGTile.h"
+#include "Enums.h"
+class Platform;
+class Player;
+class Bonus;
+class BGTile;
 
 class PlayerController;
 class PlatformController;

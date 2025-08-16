@@ -241,6 +241,38 @@ build CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj: CXX_COMPILER__doodle
   OBJECT_DIR = CMakeFiles\doodlejump.dir
   OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
 
+build CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/PlatformManager.cpp || cmake_object_order_depends_target_doodlejump
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\PlatformManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.5.1/include/SFML -isystem C:/SFML-2.5.1/include
+  OBJECT_DIR = CMakeFiles\doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+
+build CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/BonusManager.cpp || cmake_object_order_depends_target_doodlejump
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\BonusManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.5.1/include/SFML -isystem C:/SFML-2.5.1/include
+  OBJECT_DIR = CMakeFiles\doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+
+build CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/CollisionSystem.cpp || cmake_object_order_depends_target_doodlejump
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\CollisionSystem.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.5.1/include/SFML -isystem C:/SFML-2.5.1/include
+  OBJECT_DIR = CMakeFiles\doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+
+build CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/BGTileManager.cpp || cmake_object_order_depends_target_doodlejump
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\BGTileManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/SFML-2.5.1/include/SFML -isystem C:/SFML-2.5.1/include
+  OBJECT_DIR = CMakeFiles\doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target doodlejump
@@ -249,7 +281,7 @@ build CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj: CXX_COMPILER__doodle
 #############################################
 # Link the executable doodlejump.exe
 
-build doodlejump.exe: CXX_EXECUTABLE_LINKER__doodlejump_Debug CMakeFiles/doodlejump.dir/src/main.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.obj CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Model/AbstractFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.obj CMakeFiles/doodlejump.dir/src/Model/World.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/BGTile.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/PlayerController.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/PlatformController.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/CameraController.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Observer.cpp.obj CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.obj CMakeFiles/doodlejump.dir/src/Game.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/EntityController.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.obj CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.obj CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj | C$:/SFML-2.5.1/lib/libsfml-window-s-d.a C$:/SFML-2.5.1/lib/libsfml-graphics-s-d.a C$:/SFML-2.5.1/lib/libsfml-network-s-d.a C$:/SFML-2.5.1/lib/libsfml-audio-s-d.a C$:/SFML-2.5.1/lib/libsfml-window-s-d.a C$:/SFML-2.5.1/lib/libfreetype.a C$:/SFML-2.5.1/lib/libsfml-system-s-d.a C$:/SFML-2.5.1/lib/libopenal32.a C$:/SFML-2.5.1/lib/libvorbisfile.a C$:/SFML-2.5.1/lib/libvorbisenc.a C$:/SFML-2.5.1/lib/libvorbis.a C$:/SFML-2.5.1/lib/libogg.a C$:/SFML-2.5.1/lib/libFLAC.a
+build doodlejump.exe: CXX_EXECUTABLE_LINKER__doodlejump_Debug CMakeFiles/doodlejump.dir/src/main.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.obj CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Model/AbstractFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.obj CMakeFiles/doodlejump.dir/src/Model/World.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/BGTile.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/PlayerController.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/PlatformController.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/CameraController.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Observer.cpp.obj CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.obj CMakeFiles/doodlejump.dir/src/Game.cpp.obj CMakeFiles/doodlejump.dir/src/Controller/EntityController.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.obj CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.obj CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.obj CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.obj CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.obj CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.obj | C$:/SFML-2.5.1/lib/libsfml-window-s-d.a C$:/SFML-2.5.1/lib/libsfml-graphics-s-d.a C$:/SFML-2.5.1/lib/libsfml-network-s-d.a C$:/SFML-2.5.1/lib/libsfml-audio-s-d.a C$:/SFML-2.5.1/lib/libsfml-window-s-d.a C$:/SFML-2.5.1/lib/libfreetype.a C$:/SFML-2.5.1/lib/libsfml-system-s-d.a C$:/SFML-2.5.1/lib/libopenal32.a C$:/SFML-2.5.1/lib/libvorbisfile.a C$:/SFML-2.5.1/lib/libvorbisenc.a C$:/SFML-2.5.1/lib/libvorbis.a C$:/SFML-2.5.1/lib/libogg.a C$:/SFML-2.5.1/lib/libFLAC.a
   FLAGS = -g
   LINK_LIBRARIES = C:/SFML-2.5.1/lib/libsfml-window-s-d.a  C:/SFML-2.5.1/lib/libsfml-graphics-s-d.a  C:/SFML-2.5.1/lib/libsfml-network-s-d.a  C:/SFML-2.5.1/lib/libsfml-audio-s-d.a  C:/SFML-2.5.1/lib/libsfml-window-s-d.a  -lgdi32  -lOpenGL32  C:/SFML-2.5.1/lib/libfreetype.a  -lws2_32  C:/SFML-2.5.1/lib/libsfml-system-s-d.a  -lwinmm  C:/SFML-2.5.1/lib/libopenal32.a  C:/SFML-2.5.1/lib/libvorbisfile.a  C:/SFML-2.5.1/lib/libvorbisenc.a  C:/SFML-2.5.1/lib/libvorbis.a  C:/SFML-2.5.1/lib/libogg.a  C:/SFML-2.5.1/lib/libFLAC.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\doodlejump.dir

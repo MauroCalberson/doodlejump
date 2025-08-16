@@ -60,7 +60,7 @@ public:
         Entitymodel::setcoords(x, y);
     }
     Hitbox getHitbox() const override {
-        return {x - 44, y +12, 164, 16}; // Centered at (x, y) with width 120 and height 8
+        return {x - 100, y, 120, 16}; // Centered at (x, y) with width 120 and height 8
     }
     void setMovementBounds(float minBound, float maxBound) {
         min = minBound;
