@@ -30,7 +30,7 @@ public:
     }
     Hitbox getHitbox() const override {
         if (Type == EntityType::SPRING) {
-            return {x-90, y - 60, 17, 16}; // Adjusted for spring
+            return {x-100, y - 60, 17, 16}; // Adjusted for spring
         } else { // JETPACK
             return {x-40, y -20, 28, 60}; // Adjusted for jetpack
         }
