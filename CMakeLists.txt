@@ -1,15 +1,15 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.28.3)
 
 project(AP-DoodleJump)
 
 if (WIN32)
     set(SFML_STATIC_LIBRARIES TRUE)
-    set(SFML_DIR "C:/SFML-2.5.1/lib/cmake/SFML")
+    set(SFML_DIR "C:/SFML-2.6.1/lib/cmake/SFML")
 elseif (UNIX)
     set(SFML_DIR "/usr/lib/cmake/SFML")
 endif()
 
-find_package(SFML 2.5.1 COMPONENTS graphics window network audio REQUIRED)
+find_package(SFML 2.6.1 COMPONENTS graphics window network audio REQUIRED)
 
 add_executable(doodlejump
         src/main.cpp
