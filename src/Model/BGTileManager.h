@@ -5,11 +5,11 @@
 #ifndef DOODLEJUMP_BGTILEMANAGER_H
 #define DOODLEJUMP_BGTILEMANAGER_H
 
-#include "BGTileManager.h"
 #include "Entities/BGTile.h"
 #include <memory>
 #include <vector>
 #include "Camera.h"
+namespace model {
 class BGTileManager {
 private:
     std::vector<std::shared_ptr<BGTile>> backgroundTiles;
@@ -17,9 +17,7 @@ private:
     const float tileHeight = 1024.0f;
 
 public:
-    void addTile(const std::shared_ptr<BGTile>& tile) {
-        backgroundTiles.push_back(tile);
-    }
+    void addTile(const std::shared_ptr<BGTile>& tile) { backgroundTiles.push_back(tile); }
 
     void updateTiles(const std::shared_ptr<Camera>& camera) {
         for (auto& tile : backgroundTiles) {
@@ -33,15 +31,12 @@ public:
             }
 
             // Notify observers of the updated position
-            normalizedCoords = camera->normalizeCoordinates(tile->getcoords().first, tile->getcoords().second);
+            auto tilecoords = tile->getcoords();
+            normalizedCoords = camera->normalizeCoordinates(tilecoords.first, tilecoords.second);
             tile->notifyObservers(normalizedCoords.first, normalizedCoords.second);
         }
     }
-
-    void setHighestTileY(float y) { highestTileY = y; }
-    float getHighestTileY() const { return highestTileY; }
-    const std::vector<std::shared_ptr<BGTile>>& getBackgroundTiles() const {
-        return backgroundTiles;
-    }
+    [[nodiscard]] const std::vector<std::shared_ptr<BGTile>>& getBackgroundTiles() const { return backgroundTiles; }
 };
+}
 #endif // DOODLEJUMP_BGTILEMANAGER_H

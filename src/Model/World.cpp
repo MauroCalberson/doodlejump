@@ -1,43 +1,27 @@
 #include "World.h"
 #include <fstream>
 #include <sstream>
+#include "PlatformManager.h"
+#include "BonusManager.h"
+#include "BGTileManager.h"
 
-World::World(const std::string& configFilePath) {
-    std::ifstream configFile(configFilePath);
-    if (!configFile.is_open()) {
-        throw std::runtime_error("Failed to open config file: " + configFilePath);
-    }
-
-    std::string line;
-    while (std::getline(configFile, line)) {
-        std::istringstream iss(line);
-        std::string key;
-        float value;
-        if (iss >> key >> value) {
-            if (key == "camera_x") {
-                camera = std::make_shared<Camera>();
-                camera->setcoords(value, 0.0f);
-            } else if (key == "camera_y" && camera) {
-                auto coords = camera->getPosition();
-                camera->setcoords(coords.first, value);
-            }
-        }
-    }
-    configFile.close();
+model::World::World(std::unique_ptr<AbstractFactory> factory)
+    : factory(std::move(factory)) {
     setup();
 }
 
-void World::setup() {
-    factory = std::make_unique<ConcreteFactory>();
+model::World::~World() = default;
+
+void model::World::setup() {
     platformManager = std::make_unique<PlatformManager>();
     bonusManager = std::make_unique<BonusManager>();
     bgTileManager = std::make_unique<BGTileManager>();
-
+    camera = std::make_shared<Camera>();
     player = factory->createPlayer();
-    std::pair<float,float> coords = {300.0f, 400.0f};
-    player->setcoords(coords.first, coords.second);
+    std::pair<float,float> pcoords = {300.0f, 400.0f};
+    player->setcoords(pcoords.first, pcoords.second);
     if (camera) {
-        auto coords = camera->normalizeCoordinates(300.0f, 400.0f);
+        auto coords = camera->normalizeCoordinates(pcoords.first, pcoords.second);
         player->notifyObservers(coords.first, coords.second);
     }
 
@@ -50,14 +34,14 @@ void World::setup() {
     }
 }
 
-void World::update() {
+void model::World::update() {
     if (!player->move(camera)) {
-        Game::getInstance()->stop();
+        stop = true; // Player has fallen off the screen
         return;
     }
     // Handle collisions
     float playerY = player->getcoords().second;
-    handleCollisions(playerY);
+    handleCollisions();
     // Update camera if needed
     camera->updatePosition(playerY);
 
@@ -76,7 +60,7 @@ void World::update() {
 }
 
 
-void World::handleCollisions(float& newY) {
+void model::World::handleCollisions() {
     auto collision = CollisionSystem::detectCollision(player, platformManager->getPlatforms(), bonusManager->getBonuses());
 
     if (collision.hasCollision) {
@@ -96,7 +80,7 @@ void World::handleCollisions(float& newY) {
     }
 }
 
-std::pair<float, float> World::calcPlatformCoords() {
+std::pair<float, float> model::World::calcPlatformCoords() {
     auto& random = Random::getInstance();
     float baseSpacing = 50.0f;
     float randVariation = random.getFloat(0.0f, 100.0f);
@@ -106,7 +90,7 @@ std::pair<float, float> World::calcPlatformCoords() {
     return {x, y};
 }
 
-std::shared_ptr<Platform> World::generatePlatform() {
+std::shared_ptr<model::Platform> model::World::generatePlatform() {
     auto& random = Random::getInstance();
     float specialPlatformChance = difficulty * 0.9f;
     float randomValue = random.getFloat(0.0f, 1.0f);
@@ -142,13 +126,13 @@ std::shared_ptr<Platform> World::generatePlatform() {
     return platform;
 }
 
-void World::updateDifficulty() {
+void model::World::updateDifficulty() {
     auto cameraPos = camera->getPosition();
     float absHeight = std::max(0.0f, -cameraPos.second);
     difficulty = std::min(absHeight / 100000.0f, 1.0f);
 }
 
-void World::createBackgroundTiles() {
+void model::World::createBackgroundTiles() {
     for (int y = 0; y < 2; ++y) {
         for (int x = 0; x < 1; ++x) {
             auto tile = factory->createBGTile();
@@ -163,19 +147,25 @@ void World::createBackgroundTiles() {
         }
     }
 }
-void World::notifyEntityObservers() {
-    for(const auto& platform : platformManager->getPlatforms()) {
-        auto coords = camera->normalizeCoordinates(platform->getcoords().first, platform->getcoords().second);
-        platform->notifyObservers(coords.first, coords.second);
+void model::World::notifyEntityObservers() {
+    std::vector<std::shared_ptr<Entitymodel>> entities;
+
+    // collect all entities
+    entities.insert(entities.end(),platformManager->getPlatforms().begin(),platformManager->getPlatforms().end());
+
+    entities.insert(entities.end(),bonusManager->getBonuses().begin(),bonusManager->getBonuses().end());
+
+    entities.insert(entities.end(),bgTileManager->getBackgroundTiles().begin(),bgTileManager->getBackgroundTiles().end());
+
+    entities.push_back(player);
+
+    // Notify all observers
+    for (const auto& entity : entities) {
+        auto entitycoords = entity->getcoords();
+        auto coords = camera->normalizeCoordinates(
+            entitycoords.first,
+            entitycoords.second
+        );
+        entity->notifyObservers(coords.first, coords.second);
     }
-    for(const auto& bonus : bonusManager->getBonuses()) {
-        auto coords = camera->normalizeCoordinates(bonus->getcoords().first, bonus->getcoords().second);
-        bonus->notifyObservers(coords.first, coords.second);
-    }
-    for(const auto& tile : bgTileManager->getBackgroundTiles()) {
-        auto coords = camera->normalizeCoordinates(tile->getcoords().first, tile->getcoords().second);
-        tile->notifyObservers(coords.first, coords.second);
-    }
-    auto playerCoords = camera->normalizeCoordinates(player->getcoords().first, player->getcoords().second);
-    player->notifyObservers(playerCoords.first, playerCoords.second);
 };

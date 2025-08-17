@@ -1,7 +1,13 @@
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.28.3)
 project(doodlejump)
+
+# Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
-add_executable(doodlejump src/main.cpp
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Add the executable
+add_executable(doodlejump
+        src/main.cpp
         src/Model/Entities/Player.cpp
         src/Model/Entities/Player.h
         src/Model/Entities/Platform.cpp
@@ -25,12 +31,6 @@ add_executable(doodlejump src/main.cpp
         src/Model/Entities/Bonus.cpp
         src/Model/Entities/Bonus.h
         src/Model/Enums.h
-        src/Controller/PlayerController.cpp
-        src/Controller/PlayerController.h
-        src/Controller/PlatformController.cpp
-        src/Controller/PlatformController.h
-        src/Controller/CameraController.cpp
-        src/Controller/CameraController.h
         src/View/PlayerView.cpp
         src/View/PlayerView.h
         src/View/PlatformView.cpp
@@ -41,8 +41,6 @@ add_executable(doodlejump src/main.cpp
         src/View/EntitytView.h
         src/Game.cpp
         src/Game.h
-        src/Controller/EntityController.cpp
-        src/Controller/EntityController.h
         src/Model/Camera.cpp
         src/Model/Camera.h
         src/View/BGTileView.cpp
@@ -60,11 +58,12 @@ add_executable(doodlejump src/main.cpp
 )
 set(SFML_STATIC_LIBRARIES TRUE)
 if (WIN32)
-    set(SFML_DIR "C:/SFML-2.5.1/lib/cmake/SFML")
+    set(SFML_DIR "C:/SFML-2.6.1/lib/cmake/SFML")
 elseif (UNIX)
     set(SFML_DIR "/usr/lib/cmake/SFML")
 endif ()
+# Find SFML
+find_package(SFML 2.6.1 COMPONENTS graphics window system audio REQUIRED)
 
-find_package(SFML 2.5.1 COMPONENTS graphics window network audio REQUIRED)
-include_directories("C:/SFML-2.5.1/include/SFML")
-target_link_libraries(doodlejump sfml-window sfml-graphics sfml-network sfml-audio)
+# Link SFML libraries
+target_link_libraries(doodlejump sfml-graphics sfml-window sfml-network sfml-audio)

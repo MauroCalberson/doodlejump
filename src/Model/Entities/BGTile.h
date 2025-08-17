@@ -3,13 +3,11 @@
 #define DOODLEJUMP_BGTILE_H
 
 #include "Entitymodel.h"
-
+namespace model {
 class BGTile : public Entitymodel {
 public:
     BGTile() = default;
-    EntityType getType() const override {
-        return EntityType::BGTILE;
-    }
+    [[nodiscard]] EntityType getType() const override { return EntityType::BGTILE; }
 };
-
+}
 #endif // DOODLEJUMP_BGTILE_H

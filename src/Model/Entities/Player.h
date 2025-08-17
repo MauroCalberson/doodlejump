@@ -3,12 +3,10 @@
 #include "../Enums.h"
 #include "Entitymodel.h"
 #include "../Camera.h"
-class Game;
-
+namespace model {
 class Player : public Entitymodel {
 private:
     float verticalSpeed = 25.0f;
-    VertDirection vertdirection;
     HorDirection horDirection;
 
     bool isOffScreen(const std::shared_ptr<Camera>& camera) const;
@@ -21,23 +19,15 @@ private:
     void updateVerticalPosition();
 
 public:
-    Hitbox getHitbox() const override {
-        return {x, y + 100, 44, 8};
-    }
-    
-    void setVerticalSpeed(float speed) {
-        verticalSpeed = speed;
-    }
-    
-    float getVerticalSpeed() const {
-        return verticalSpeed;
-    }
-    
-    EntityType getType() const override {
-        return EntityType::PLAYER;
-    }
+    [[nodiscard]] Hitbox getHitbox() const override { return {x, y + 100, 44, 8}; }
+
+    void setVerticalSpeed(float speed) { verticalSpeed = speed; }
+
+    [[nodiscard]] float getVerticalSpeed() const { return verticalSpeed; }
+
+    [[nodiscard]] EntityType getType() const override { return EntityType::PLAYER; }
 
     bool move(const std::shared_ptr<Camera>& camera);
 };
-
+}
 #endif //DOODLEJUMP_PLAYER_H

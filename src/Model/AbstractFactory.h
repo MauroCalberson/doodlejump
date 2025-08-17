@@ -4,15 +4,12 @@
 #define DOODLEJUMP_ABSTRACTFACTORY_H
 #include <memory>
 #include "Enums.h"
+namespace model {
 class Platform;
 class Player;
 class Bonus;
 class BGTile;
 
-class PlayerController;
-class PlatformController;
-class BonusController;
-class BGTileController;
 class AbstractFactory {
 public:
     virtual std::shared_ptr<Platform> createPlatform(EntityType platform) = 0;
@@ -22,5 +19,5 @@ public:
     AbstractFactory() = default;
     ~AbstractFactory() = default;
 };
-
+}
 #endif // DOODLEJUMP_ABSTRACTFACTORY_H

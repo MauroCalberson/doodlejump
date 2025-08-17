@@ -1,7 +1,7 @@
 #include "../../Game.h"
 #include "Player.h"
 
-bool Player::move(const std::shared_ptr<Camera>& camera) {
+bool model::Player::move(const std::shared_ptr<Camera>& camera) {
     if (isOffScreen(camera)) {
         return false;
     }
@@ -12,11 +12,11 @@ bool Player::move(const std::shared_ptr<Camera>& camera) {
     return true;
 }
 
-bool Player::isOffScreen(const std::shared_ptr<Camera>& camera) const {
+bool model::Player::isOffScreen(const std::shared_ptr<Camera>& camera) const {
     return camera->normalizeCoordinates(x, y).second > 800;
 }
 
-void Player::handleHorizontalMovement() {
+void model::Player::handleHorizontalMovement() {
     const auto& input = Game::getInstance()->getInput();
     switch (input) {
     case HorDirection::LEFT:
@@ -30,30 +30,30 @@ void Player::handleHorizontalMovement() {
     }
 }
 
-void Player::moveLeft() {
+void model::Player::moveLeft() {
     x -= 7.5f;
     wrapAroundScreen();
 }
 
-void Player::moveRight() {
+void model::Player::moveRight() {
     x += 7.5f;
     wrapAroundScreen();
 }
 
-void Player::wrapAroundScreen() {
+void model::Player::wrapAroundScreen() {
     if (x < -80) x = 540;
     if (x > 560) x = -80;
 }
 
-void Player::handleVerticalMovement() {
+void model::Player::handleVerticalMovement() {
     applyGravity();
     updateVerticalPosition();
 }
 
-void Player::applyGravity() {
+void model::Player::applyGravity() {
     verticalSpeed -= 1.0f;
 }
 
-void Player::updateVerticalPosition() {
+void model::Player::updateVerticalPosition() {
     y -= verticalSpeed;
 }

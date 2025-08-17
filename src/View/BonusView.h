@@ -3,14 +3,14 @@
 
 #include "EntitytView.h"
 #include "../Model/Enums.h"
-
+namespace view {
 class BonusView : public EntityView {
 public:
     BonusView() {
         texture = std::make_unique<sf::Texture>();
         sprite = std::make_unique<sf::Sprite>();
     }
-    
+
     void setTexture(EntityType type) {
         if (type == EntityType::SPRING) {
             if (!texture->loadFromFile("textures/spring.png")) {
@@ -23,6 +23,7 @@ public:
         }
         sprite->setTexture(*texture);
     }
+    EntityViewType getType() override { return EntityViewType::Bonus; }
 };
-
+}
 #endif // DOODLEJUMP_BONUSVIEW_H
