@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28.3)
 
-project(AP-DoodleJump)
+project(doodlejump)
 
 if (WIN32)
     set(SFML_STATIC_LIBRARIES TRUE)
@@ -61,4 +61,4 @@ add_executable(doodlejump
         src/Model/BGTileManager.cpp
         src/Model/BGTileManager.h
 )
-target_link_libraries(AP-DoodleJump sfml-window sfml-graphics sfml-network sfml-audio)
+target_link_libraries(doodlejump sfml-window sfml-graphics sfml-network sfml-audio)
