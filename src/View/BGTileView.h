@@ -1,23 +1,31 @@
-//
-// Created by mauro on 06/07/2025.
-//
-#include "EntitytView.h"
 #ifndef DOODLEJUMP_BGTILEVIEW_H
 #define DOODLEJUMP_BGTILEVIEW_H
+
+#include "EntitytView.h"
+#include <memory>
+#include <stdexcept>
+
 namespace view {
+
+/**
+ * @brief View class for background tiles.
+ * Handles texture loading and sprite setup for background tiles.
+ */
 class BGTileView : public EntityView {
 public:
-    BGTileView() {
-        texture = std::make_unique<sf::Texture>();
-        sprite = std::make_unique<sf::Sprite>();
-        if (!texture->loadFromFile("textures/background.png")) {
-            throw std::runtime_error("Failed to load texture: textures/background.png");
-        }
-        sprite->setTexture(*texture);
-    }
-    EntityViewType getType() override {
-        return EntityViewType::BGTile;
-    }
+    /**
+     * @brief Construct a BGTileView and load its texture.
+     * Throws std::runtime_error if texture loading fails.
+     */
+    BGTileView();
+
+    /**
+     * @brief Get the type of this entity view.
+     * @return EntityViewType::BGTile
+     */
+    EntityViewType getType() override;
 };
+
 }
+
 #endif // DOODLEJUMP_BGTILEVIEW_H

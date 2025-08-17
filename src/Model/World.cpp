@@ -5,14 +5,20 @@
 #include "BonusManager.h"
 #include "BGTileManager.h"
 #include <iostream>
-model::World::World(std::unique_ptr<AbstractFactory> factory)
+
+namespace model {
+
+// Construct the world and initialize entities
+World::World(std::unique_ptr<AbstractFactory> factory)
     : factory(std::move(factory)) {
     setup();
 }
 
-model::World::~World() = default;
+// Destroy the world and clean up resources
+World::~World() = default;
 
-void model::World::setup() {
+// Set up initial entities and game state
+void World::setup() {
     platformManager = std::make_unique<PlatformManager>();
     bonusManager = std::make_unique<BonusManager>();
     bgTileManager = std::make_unique<BGTileManager>();
@@ -34,7 +40,8 @@ void model::World::setup() {
     }
 }
 
-void model::World::update() {
+// Update the world state (entities, collisions, camera, score)
+void World::update() {
     if (!player->move(camera)) {
         stop = true; // Player has fallen off the screen
         return;
@@ -59,31 +66,39 @@ void model::World::update() {
     updateScore();
 }
 
-
-void model::World::handleCollisions() {
+// Handle collisions between player and platforms/bonuses
+void World::handleCollisions() {
     auto collision = CollisionSystem::detectCollision(player, platformManager->getPlatforms(), bonusManager->getBonuses());
     if (collision.hasCollision) {
         auto entity = collision.collidedEntity;
         float verticalSpeed = entity->collidedwithPlayer();
         player->setVerticalSpeed(verticalSpeed);
         switch (entity->getType()) {
-            case EntityType::White: {
-                platformManager->removePlatform(collision.index);
-                break;
-            }
-            case EntityType::JETPACK: {
-                bonusManager->removeBonus(collision.index);
-                break;
-            }
-            case EntityType::SPRING: {
-                bonusManager->removeBonus(collision.index);
-                break;
-            }
+        case EntityType::White: {
+            platformManager->removePlatform(collision.index);
+            break;
+        }
+        case EntityType::JETPACK: {
+            bonusManager->removeBonus(collision.index);
+            break;
+        }
+        case EntityType::SPRING: {
+            bonusManager->removeBonus(collision.index);
+            break;
+        }
         }
     }
 }
 
-std::pair<float, float> model::World::calcPlatformCoords() {
+// Update game difficulty based on camera position
+void World::updateDifficulty() {
+    auto cameraPos = camera->getPosition();
+    float absHeight = std::max(0.0f, -cameraPos.second);
+    difficulty = std::min(absHeight / 100000.0f, 1.0f);
+}
+
+// Calculate coordinates for a new platform
+std::pair<float, float> World::calcPlatformCoords() {
     auto& random = Random::getInstance();
     float baseSpacing = 50.0f;
     float randVariation = random.getFloat(0.0f, 100.0f);
@@ -93,7 +108,8 @@ std::pair<float, float> model::World::calcPlatformCoords() {
     return {x, y};
 }
 
-std::shared_ptr<model::Platform> model::World::generatePlatform() {
+// Generate a new platform and possibly a bonus
+std::shared_ptr<Platform> World::generatePlatform() {
     auto& random = Random::getInstance();
     float specialPlatformChance = difficulty * 0.9f;
     float randomValue = random.getFloat(0.0f, 1.0f);
@@ -129,13 +145,8 @@ std::shared_ptr<model::Platform> model::World::generatePlatform() {
     return platform;
 }
 
-void model::World::updateDifficulty() {
-    auto cameraPos = camera->getPosition();
-    float absHeight = std::max(0.0f, -cameraPos.second);
-    difficulty = std::min(absHeight / 100000.0f, 1.0f);
-}
-
-void model::World::createBackgroundTiles() {
+// Create initial background tiles
+void World::createBackgroundTiles() {
     for (int y = 0; y < 2; ++y) {
         for (int x = 0; x < 1; ++x) {
             auto tile = factory->createBGTile();
@@ -150,16 +161,15 @@ void model::World::createBackgroundTiles() {
         }
     }
 }
-void model::World::notifyEntityObservers() {
+
+// Notify all entity observers of their updated positions
+void World::notifyEntityObservers() {
     std::vector<std::shared_ptr<Entitymodel>> entities;
 
     // collect all entities
     entities.insert(entities.end(),platformManager->getPlatforms().begin(),platformManager->getPlatforms().end());
-
     entities.insert(entities.end(),bonusManager->getBonuses().begin(),bonusManager->getBonuses().end());
-
     entities.insert(entities.end(),bgTileManager->getBackgroundTiles().begin(),bgTileManager->getBackgroundTiles().end());
-
     entities.push_back(player);
 
     // Notify all observers
@@ -171,4 +181,13 @@ void model::World::notifyEntityObservers() {
         );
         entity->notifyObservers(coords.first, coords.second);
     }
-};
+}
+
+// Update the score based on camera position
+void World::updateScore(){
+    auto cameraPos = camera->getPosition();
+    score = static_cast<int>(-cameraPos.second);
+    if (score < 0) score = 0;
+}
+
+}

@@ -1,45 +1,39 @@
-// PlatformView.h
 #ifndef DOODLEJUMP_PLATFORMVIEW_H
 #define DOODLEJUMP_PLATFORMVIEW_H
 
 #include "EntitytView.h"
 #include "SFML/Graphics.hpp"
 #include "../Model/Enums.h"
+#include <memory>
+#include <stdexcept>
+
 namespace view {
+
+/**
+ * @brief View class for platform entities.
+ * Handles texture loading and sprite setup for platforms.
+ */
 class PlatformView : public EntityView {
 public:
-    PlatformView() {
-        texture = std::make_unique<sf::Texture>();
-        sprite = std::make_unique<sf::Sprite>();
-    }
-    void setTexture(EntityType type) {
-        switch (type) {
-        case Green:
-            if (!texture->loadFromFile("textures/platform1.png")) {
-                throw std::runtime_error("Failed to load texture: textures/platform1.png");
-            }
-            break;
-        case Blue:
-            if (!texture->loadFromFile("textures/platform2.png")) {
-                throw std::runtime_error("Failed to load texture: textures/platform2.png");
-            }
-            break;
-        case Yellow:
-            if (!texture->loadFromFile("textures/platform3.png")) {
-                throw std::runtime_error("Failed to load texture: textures/platform3.png");
-            }
-            break;
-        case White:
-            if (!texture->loadFromFile("textures/platform4.png")) {
-                throw std::runtime_error("Failed to load texture: textures/platform4.png");
-            }
-            break;
-        }
-        sprite->setTexture(*texture);
-    }
-    [[nodiscard]] EntityViewType getType() override {
-        return EntityViewType::Platform;
-    }
+    /**
+     * @brief Construct a PlatformView and initialize its texture and sprite.
+     */
+    PlatformView();
+
+    /**
+     * @brief Set the texture based on the platform type.
+     * Throws std::runtime_error if texture loading fails.
+     * @param type The type of platform entity.
+     */
+    void setTexture(EntityType type);
+
+    /**
+     * @brief Get the type of this entity view.
+     * @return EntityViewType::Platform
+     */
+    [[nodiscard]] EntityViewType getType() override { return EntityViewType::Platform; }
 };
+
 }
+
 #endif // DOODLEJUMP_PLATFORMVIEW_H

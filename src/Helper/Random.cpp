@@ -1,18 +1,22 @@
-
-
 #include "Random.h"
-// code from chatGPT
-int generatenumber(int bound1, int bound2) {
-    // Create a random device for seeding
-    std::random_device rd;
 
-    // Initialize a random number generator with the random device
-    std::mt19937 gen(rd());
+// Private constructor initializes the generator with a random seed
+Random::Random() : generator(std::random_device{}()) {}
 
-    // Define the range for the random number
-    std::uniform_int_distribution<> dist(bound1, bound2); // Random number between 1 and 100
+// Get the singleton instance of Random
+Random& Random::getInstance() {
+    static Random instance;
+    return instance;
+}
 
-    // Generate a random number
-    int randomNumber = dist(gen);
-    return randomNumber;
+// Generate a random float in the range [min, max]
+float Random::getFloat(float min, float max) {
+    std::uniform_real_distribution<float> distribution(min, max);
+    return distribution(generator);
+}
+
+// Generate a random integer in the range [min, max]
+int Random::getInt(int min, int max) {
+    std::uniform_int_distribution<int> distribution(min, max);
+    return distribution(generator);
 }

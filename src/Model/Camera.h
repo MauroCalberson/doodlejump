@@ -1,41 +1,61 @@
-// src/Model/Camera.h
 #ifndef DOODLEJUMP_CAMERA_H
 #define DOODLEJUMP_CAMERA_H
+
 #include <vector>
+#include <utility>
+
 namespace model {
+
+/**
+ * @brief Manages the camera's position and view in the game world.
+ * Handles coordinate normalization and view checks.
+ */
 class Camera {
 private:
-    float x = 0;                  // Camera's X position
-    float y = 0;                  // Camera's Y position
-    float CameraWidth = 600;  // Width of the Camera View (e.g., 600)
-    float CameraHeight = 800; // Height of the Camera View (e.g., 800)
+    float x = 0;                  ///< Camera's X position
+    float y = 0;                  ///< Camera's Y position
+    float CameraWidth = 600;      ///< Width of the camera view
+    float CameraHeight = 800;     ///< Height of the camera view
 
 public:
     Camera() = default;
 
-    void setcoords(float newX, float newY) {
-        x = newX;
-        y = newY;
-    }
+    /**
+     * @brief Set the camera's coordinates.
+     * @param newX New X position.
+     * @param newY New Y position.
+     */
+    void setcoords(float newX, float newY);
 
+    /**
+     * @brief Get the camera's current position.
+     * @return Pair of X and Y coordinates.
+     */
     [[nodiscard]] std::pair<float, float> getPosition() const { return {x, y}; }
 
-    [[nodiscard]] std::pair<float, float> normalizeCoordinates(float worldX, float worldY) const {
-        float normalizedX = worldX - x; // Relative to camera's X position
-        float normalizedY = worldY - y; // Relative to camera's Y position
-        return {normalizedX, normalizedY};
-    }
+    /**
+     * @brief Normalize world coordinates to camera-relative coordinates.
+     * @param worldX World X position.
+     * @param worldY World Y position.
+     * @return Pair of normalized X and Y coordinates.
+     */
+    [[nodiscard]] std::pair<float, float> normalizeCoordinates(float worldX, float worldY) const;
 
-    bool isInView(float& worldX, float& worldY) const {
-        auto [normalizedX, normalizedY] = normalizeCoordinates(worldX, worldY);
-        return normalizedX >= 0 && normalizedX <= CameraWidth && normalizedY >= y - 300 && normalizedY <= CameraHeight;
-    }
-    void updatePosition(float& playerY) {
-        // Update camera position based on player's Y position
-        if (playerY < y + 300) {
-            y = playerY - 300; // Keep the player centered in the view
-        }
-    }
+    /**
+     * @brief Check if a world position is within the camera's view.
+     * @param worldX World X position (by reference).
+     * @param worldY World Y position (by reference).
+     * @return True if in view, false otherwise.
+     */
+    bool isInView(float& worldX, float& worldY) const;
+
+    /**
+     * @brief Update the camera's position based on the player's Y position.
+     * @param playerY Player's Y position (by reference).
+     */
+    void updatePosition(float& playerY);
 };
+
 }
+
 #endif // DOODLEJUMP_CAMERA_H

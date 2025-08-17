@@ -1,49 +1,52 @@
-// StopWatch.h
 #ifndef DOODLEJUMP_STOPWATCH_H
 #define DOODLEJUMP_STOPWATCH_H
 
 #include <chrono>
 
+/**
+ * @brief Singleton class for measuring elapsed time.
+ */
 class StopWatch {
 private:
-    std::chrono::steady_clock::time_point startTime;
-    bool isRunning;
+    std::chrono::steady_clock::time_point startTime; ///< Start time of the stopwatch
+    bool isRunning; ///< Indicates if the stopwatch is running
 
-    // Private constructor
-    StopWatch() : isRunning(false) {}
-    
+    /**
+     * @brief Private constructor to enforce singleton pattern.
+     */
+    StopWatch();
+
     // Delete copy constructor and assignment operator
     StopWatch(const StopWatch&) = delete;
     StopWatch& operator=(const StopWatch&) = delete;
 
 public:
-    static StopWatch& getInstance() {
-        static StopWatch instance;
-        return instance;
-    }
+    /**
+     * @brief Get the singleton instance of StopWatch.
+     * @return Reference to the StopWatch instance.
+     */
+    static StopWatch& getInstance();
 
-    void start() {
-        if (!isRunning) {
-            startTime = std::chrono::steady_clock::now();
-            isRunning = true;
-        }
-    }
+    /**
+     * @brief Start the stopwatch.
+     */
+    void start();
 
-    void stop() {
-        isRunning = false;
-    }
+    /**
+     * @brief Stop the stopwatch.
+     */
+    void stop();
 
-    double getElapsedTime() {
-        if (!isRunning) return 0.0;
-        
-        auto currentTime = std::chrono::steady_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(currentTime - startTime);
-        return duration.count() / 1000.0; // Convert to seconds
-    }
+    /**
+     * @brief Get the elapsed time in seconds.
+     * @return Elapsed time as double (seconds).
+     */
+    double getElapsedTime();
 
-    void reset() {
-        startTime = std::chrono::steady_clock::now();
-    }
+    /**
+     * @brief Reset the stopwatch to the current time.
+     */
+    void reset();
 };
 
 #endif // DOODLEJUMP_STOPWATCH_H

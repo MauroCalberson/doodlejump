@@ -4,42 +4,62 @@
 #include "Entities/Platform.h"
 #include <vector>
 #include <memory>
+
 namespace model {
+
+/**
+ * @brief Manages platform entities in the game.
+ * Handles adding, updating, and removing platforms.
+ */
 class PlatformManager {
 private:
-    std::vector<std::shared_ptr<Platform>> platforms;
-    float maxPlatformHeight;
+    std::vector<std::shared_ptr<Platform>> platforms; ///< List of active platforms
+    float maxPlatformHeight; ///< Maximum height for platform placement
 
 public:
-    explicit PlatformManager(float startHeight = 800.0f) : maxPlatformHeight(startHeight) {}
+    /**
+     * @brief Construct a PlatformManager with an initial max platform height.
+     * @param startHeight Initial maximum platform height.
+     */
+    explicit PlatformManager(float startHeight = 800.0f);
 
-    void addPlatform(const std::shared_ptr<Platform>& platform) { platforms.push_back(platform); }
+    /**
+     * @brief Add a platform to the manager.
+     * @param platform Shared pointer to Platform.
+     */
+    void addPlatform(const std::shared_ptr<Platform>& platform);
 
-    void updatePlatforms(float cameraY) {
-        for (auto it = platforms.begin(); it != platforms.end();) {
-            auto platformCoords = (*it)->getcoords();
-            if (platformCoords.second < cameraY - 300 || platformCoords.second > cameraY + 850) {
-                (*it)->notifyDeletion();
-                it = platforms.erase(it);
-            } else {
-                (*it)->updatePosition();
-                ++it;
-            }
-        }
-    }
+    /**
+     * @brief Update the positions of platforms and remove out-of-view platforms.
+     * @param cameraY Y position of the camera.
+     */
+    void updatePlatforms(float cameraY);
 
+    /**
+     * @brief Get the list of platforms.
+     * @return Const reference to vector of Platform shared pointers.
+     */
     [[nodiscard]] const std::vector<std::shared_ptr<Platform>>& getPlatforms() const { return platforms; }
 
+    /**
+     * @brief Get the maximum platform height.
+     * @return Maximum platform height.
+     */
     [[nodiscard]] float getMaxPlatformHeight() const { return maxPlatformHeight; }
-    void setMaxPlatformHeight(float height) { maxPlatformHeight = height; }
 
-    void removePlatform(size_t index) {
-        if (index < platforms.size()) {
-            platforms[index]->notifyDeletion();
-            platforms.erase(platforms.begin() + index);
-        }
-    }
+    /**
+     * @brief Set the maximum platform height.
+     * @param height New maximum platform height.
+     */
+    void setMaxPlatformHeight(float height);
+
+    /**
+     * @brief Remove a platform by index.
+     * @param index Index of the platform to remove.
+     */
+    void removePlatform(size_t index);
 };
+
 }
 
 #endif // DOODLEJUMP_PLATFORMMANAGER_H

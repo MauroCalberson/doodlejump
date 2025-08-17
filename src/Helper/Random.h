@@ -4,32 +4,44 @@
 
 #include <random>
 
+/**
+ * @brief Singleton class for generating random numbers.
+ */
 class Random {
 private:
-    std::mt19937 generator;
+    std::mt19937 generator; ///< Mersenne Twister random number generator
 
-    // Private constructor
-    Random() : generator(std::random_device{}()) {}
+    /**
+     * @brief Private constructor initializes the generator with a random seed.
+     */
+    Random();
 
-    // Delete copy constructor and assignment operator
+    // Delete copy constructor and assignment operator to enforce singleton
     Random(const Random&) = delete;
     Random& operator=(const Random&) = delete;
 
 public:
-    static Random& getInstance() {
-        static Random instance;
-        return instance;
-    }
+    /**
+     * @brief Get the singleton instance of Random.
+     * @return Reference to the Random instance.
+     */
+    static Random& getInstance();
 
-    float getFloat(float min, float max) {
-        std::uniform_real_distribution<float> distribution(min, max);
-        return distribution(generator);
-    }
+    /**
+     * @brief Generate a random float in the range [min, max].
+     * @param min Minimum value.
+     * @param max Maximum value.
+     * @return Random float between min and max.
+     */
+    float getFloat(float min, float max);
 
-    int getInt(int min, int max) {
-        std::uniform_int_distribution<int> distribution(min, max);
-        return distribution(generator);
-    }
+    /**
+     * @brief Generate a random integer in the range [min, max].
+     * @param min Minimum value.
+     * @param max Maximum value.
+     * @return Random integer between min and max.
+     */
+    int getInt(int min, int max);
 };
 
 #endif // DOODLEJUMP_RANDOM_H
