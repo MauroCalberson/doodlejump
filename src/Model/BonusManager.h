@@ -4,21 +4,19 @@
 #include "Entities/Bonus.h"
 #include <vector>
 #include <memory>
-
+namespace model {
 class BonusManager {
 private:
     std::vector<std::shared_ptr<Bonus>> bonuses;
 
 public:
-    void addBonus(const std::shared_ptr<Bonus>& bonus) {
-        bonuses.push_back(bonus);
-    }
+    void addBonus(const std::shared_ptr<Bonus>& bonus) { bonuses.push_back(bonus); }
 
     void updateBonuses(float cameraY) {
         for (auto it = bonuses.begin(); it != bonuses.end();) {
             (*it)->updatePosition();
             auto bonusCoords = (*it)->getcoords();
-            if (bonusCoords.second < cameraY - 400 || bonusCoords.second > cameraY + 950) {
+            if (bonusCoords.second < cameraY - 400 || bonusCoords.second > cameraY + 850) {
                 (*it)->notifyDeletion();
                 it = bonuses.erase(it);
             } else {
@@ -27,9 +25,7 @@ public:
         }
     }
 
-    const std::vector<std::shared_ptr<Bonus>>& getBonuses() const {
-        return bonuses;
-    }
+    [[nodiscard]] const std::vector<std::shared_ptr<Bonus>>& getBonuses() const { return bonuses; }
 
     void removeBonus(size_t index) {
         if (index < bonuses.size()) {
@@ -38,5 +34,5 @@ public:
         }
     }
 };
-
+}
 #endif // DOODLEJUMP_BONUSMANAGER_H

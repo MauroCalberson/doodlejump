@@ -5,14 +5,13 @@
 #include "EntitytView.h"
 #include "SFML/Graphics.hpp"
 #include "../Model/Enums.h"
-
+namespace view {
 class PlatformView : public EntityView {
 public:
     PlatformView() {
         texture = std::make_unique<sf::Texture>();
         sprite = std::make_unique<sf::Sprite>();
     }
-
     void setTexture(EntityType type) {
         switch (type) {
         case Green:
@@ -38,5 +37,9 @@ public:
         }
         sprite->setTexture(*texture);
     }
+    [[nodiscard]] EntityViewType getType() override {
+        return EntityViewType::Platform;
+    }
 };
+}
 #endif // DOODLEJUMP_PLATFORMVIEW_H

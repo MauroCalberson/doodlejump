@@ -3,25 +3,23 @@
 
 #include <SFML/Graphics.hpp>
 #include "View/EntitytView.h"
-#include "View/PlatformView.h"
-#include "View/PlayerView.h"
-#include "View/BonusView.h"
-//#include "Model/World.h"
-#include "View/BGTileView.h"
+#include "Model/Enums.h"
 #include <memory>
 #include <vector>
-class World;
+namespace model {
+    class World;
+}
 class Game {
 private:
     sf::RenderWindow window;
-    std::unique_ptr<World> world;
+    std::unique_ptr<model::World> world;
     sf::Font font;
     sf::Text scoreText;
 
-    std::vector<std::shared_ptr<BGTileView>> bgTileViews;
-    std::vector<std::shared_ptr<PlatformView>> platformViews;
-    std::vector<std::shared_ptr<PlayerView>> playerViews;
-    std::vector<std::shared_ptr<BonusView>> bonusViews;
+    std::vector<std::shared_ptr<view::BGTileView>> bgTileViews;
+    std::vector<std::shared_ptr<view::PlatformView>> platformViews;
+    std::vector<std::shared_ptr<view::PlayerView>> playerViews;
+    std::vector<std::shared_ptr<view::BonusView>> bonusViews;
 
     HorDirection horDirection = HorDirection::NONE;
     bool isGameOver = false;
@@ -47,8 +45,8 @@ public:
     void stop();
     void restart();
 
-    void addEntityView(std::shared_ptr<EntityView> view);
-    void removeEntityView(const std::shared_ptr<EntityView>& view);
+    void addEntityView(const std::shared_ptr<view::EntityView>& view);
+    void removeEntityView(const std::shared_ptr<view::EntityView>& view);
 };
 
 #endif // DOODLEJUMP_GAME_H

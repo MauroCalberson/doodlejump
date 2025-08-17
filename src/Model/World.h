@@ -1,24 +1,26 @@
 #ifndef DOODLEJUMP_WORLD_H
 #define DOODLEJUMP_WORLD_H
 
-#include "../View/ConcreteFactory.h"
+#include "AbstractFactory.h"
 #include "Entities/Player.h"
 #include "Camera.h"
-#include "PlatformManager.h"
-#include "BonusManager.h"
-#include "BGTileManager.h"
 #include "CollisionSystem.h"
+#include "../Helper/Random.h"
 #include <memory>
-
+namespace model {
+class PlatformManager;
+class BonusManager;
+class BGTileManager;
 class World {
 public:
-    World(const std::string& configFilePath = "src/config.txt");
+    explicit World(std::unique_ptr<AbstractFactory> factory);
+    ~World();
     void update();
     void setup();
     [[nodiscard]] int getScore() const { return score; }
-
+    bool stop = false;
 private:
-    void handleCollisions(float& newY);
+    void handleCollisions();
     void updateDifficulty();
     std::pair<float, float> calcPlatformCoords();
     std::shared_ptr<Platform> generatePlatform();
@@ -38,5 +40,6 @@ private:
     float difficulty = 0.0f;
     int score = 0;
 };
+}
 
 #endif // DOODLEJUMP_WORLD_H

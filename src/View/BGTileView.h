@@ -4,7 +4,7 @@
 #include "EntitytView.h"
 #ifndef DOODLEJUMP_BGTILEVIEW_H
 #define DOODLEJUMP_BGTILEVIEW_H
-
+namespace view {
 class BGTileView : public EntityView {
 public:
     BGTileView() {
@@ -15,6 +15,9 @@ public:
         }
         sprite->setTexture(*texture);
     }
+    EntityViewType getType() override {
+        return EntityViewType::BGTile;
+    }
 };
-
+}
 #endif // DOODLEJUMP_BGTILEVIEW_H

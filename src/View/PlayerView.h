@@ -3,7 +3,7 @@
 #define DOODLEJUMP_PLAYERVIEW_H
 #include <SFML/Graphics.hpp>
 #include "EntitytView.h"
-
+namespace view {
 class PlayerView : public EntityView {
 public:
     PlayerView() {
@@ -20,9 +20,10 @@ public:
         }
     }
 
-    void update(float x, float y) override {
-        sprite->setPosition(x, y);
+    void update(float x, float y) override { sprite->setPosition(x, y); }
+    EntityViewType getType() override {
+        return EntityViewType::Player;
     }
 };
-
+}
 #endif // DOODLEJUMP_PLAYERVIEW_H

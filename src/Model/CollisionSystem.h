@@ -11,6 +11,7 @@
 #include "Entities/Bonus.h"
 #include <vector>
 #include <memory>
+namespace model {
 struct CollisionInfo {
     bool hasCollision;
     std::shared_ptr<Entitymodel> collidedEntity;
@@ -19,16 +20,11 @@ struct CollisionInfo {
 class CollisionSystem {
 public:
     static bool doHitboxesIntersect(const Hitbox& a, const Hitbox& b) {
-        return (a.x < b.x + b.width &&
-                a.x + a.width > b.x &&
-                a.y < b.y + b.height &&
-                a.y + a.height > b.y);
+        return (a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y);
     }
-    static CollisionInfo detectCollision(
-        const std::shared_ptr<Player>& player,
-        const std::vector<std::shared_ptr<Platform>>& platforms,
-        const std::vector<std::shared_ptr<Bonus>>& bonuses
-    ) {
+    static CollisionInfo detectCollision(const std::shared_ptr<Player>& player,
+                                         const std::vector<std::shared_ptr<Platform>>& platforms,
+                                         const std::vector<std::shared_ptr<Bonus>>& bonuses) {
         auto playerHitbox = player->getHitbox();
         float verticalSpeed = player->getVerticalSpeed();
 
@@ -38,8 +34,7 @@ public:
             index++;
             if (bonus->getType() == EntityType::SPRING && verticalSpeed > 0) {
                 continue;
-            }
-            else if (doHitboxesIntersect(playerHitbox, bonus->getHitbox())) {
+            } else if (doHitboxesIntersect(playerHitbox, bonus->getHitbox())) {
                 return {true, bonus, index};
             }
         }
@@ -58,5 +53,5 @@ public:
         return {false, nullptr, -1};
     }
 };
-
+}
 #endif // DOODLEJUMP_COLLISIONSYSTEM_H

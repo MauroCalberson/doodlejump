@@ -5,7 +5,7 @@
 #include "../Observer.h"
 #include <vector>
 #include <memory>
-
+namespace model {
 class Subject {
 private:
     std::vector<std::shared_ptr<Observer>> observers; // Allow multiple observers
@@ -32,5 +32,5 @@ public:
     virtual void setcoords(float& x, float& y) = 0;
     virtual std::pair<float, float> getcoords() const = 0;
 };
-
+}
 #endif // DOODLEJUMP_SUBJECT_H
