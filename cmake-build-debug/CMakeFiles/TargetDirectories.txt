@@ -1,3 +1,0 @@
-C:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug/CMakeFiles/doodlejump.dir
-C:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug/CMakeFiles/rebuild_cache.dir
