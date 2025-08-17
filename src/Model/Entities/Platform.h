@@ -1,76 +1,82 @@
-// Platform.h
 #ifndef DOODLEJUMP_PLATFORM_H
 #define DOODLEJUMP_PLATFORM_H
+
 #include "Entitymodel.h"
 #include "../Enums.h"
+
 namespace model {
+
+/**
+ * @brief Represents a platform entity in the game.
+ * Supports static, horizontally moving (Blue), and vertically moving (Yellow) platforms.
+ */
 class Platform : public Entitymodel {
-
 private:
-    EntityType type;
-    float max = 0;
-    float min = 800;
-    float moveSpeed = 3;
-    bool movingRight = true; // Direction flag for blue platforms
-    bool movingUp = true;    // Direction flag for yellow platforms
+    EntityType type; ///< Type of the platform
+    float max = 0; ///< Maximum movement bound (for vertical movement)
+    float min = 800; ///< Minimum movement bound (for vertical movement)
+    float moveSpeed = 3; ///< Speed of movement
+    bool movingRight = true; ///< Direction flag for horizontal movement
+    bool movingUp = true; ///< Direction flag for vertical movement
 
-    void updateHorizontalMovement() {
-        if (movingRight) {
-            x += moveSpeed;
-            if (x > 540) { // Screen width boundary
-                x = 540;
-                movingRight = false;
-            }
-        } else {
-            x -= moveSpeed;
-            if (x < 60) { // Left boundary with platform width
-                x = 60;
-                movingRight = true;
-            }
-        }
-    }
+    /**
+     * @brief Update horizontal movement for Blue platforms.
+     */
+    void updateHorizontalMovement();
 
-    void updateVerticalMovement() {
-        if (movingUp) {
-            y += moveSpeed;
-            if (y > max) {
-                y = max;
-                movingUp = false;
-            }
-        } else {
-            y -= moveSpeed;
-            if (y < min) {
-                y = min;
-                movingUp = true;
-            }
-        }
-    }
+    /**
+     * @brief Update vertical movement for Yellow platforms.
+     */
+    void updateVerticalMovement();
 
 public:
-    Platform() = default;
-    ~Platform() override = default;
-    void setType(EntityType t) { type = t; }
-    [[nodiscard]] EntityType getType() const override { return type; }
-    void setcoords(float& x, float& y) override { Entitymodel::setcoords(x, y); }
-    [[nodiscard]] Hitbox getHitbox() const override {
-        return {x - 100, y, 120, 16}; // Centered at (x, y) with width 120 and height 8
-    }
-    void setMovementBounds(float minBound, float maxBound) {
-        min = minBound;
-        max = maxBound;
-    }
+    Platform();
+    ~Platform() override;
 
-    void updatePosition() {
-        if (type == EntityType::Blue) {
-            updateHorizontalMovement();
-        } else if (type == EntityType::Yellow) {
-            updateVerticalMovement();
-        }
-    }
-    float collidedwithPlayer() override {
-        // Collision logic with player can be implemented here
-        return 25.0f; // Placeholder return value
-    }
+    /**
+     * @brief Set the type of the platform.
+     * @param t EntityType value.
+     */
+    void setType(EntityType t);
+
+    /**
+     * @brief Get the type of the platform.
+     * @return EntityType value.
+     */
+    [[nodiscard]] EntityType getType() const override;
+
+    /**
+     * @brief Set the coordinates of the platform.
+     * @param x X position.
+     * @param y Y position.
+     */
+    void setcoords(float& x, float& y) override;
+
+    /**
+     * @brief Get the hitbox of the platform.
+     * @return Hitbox struct.
+     */
+    [[nodiscard]] Hitbox getHitbox() const override;
+
+    /**
+     * @brief Set movement bounds for vertical movement.
+     * @param minBound Minimum Y value.
+     * @param maxBound Maximum Y value.
+     */
+    void setMovementBounds(float minBound, float maxBound);
+
+    /**
+     * @brief Update the position of the platform based on its type.
+     */
+    void updatePosition();
+
+    /**
+     * @brief Handle collision with the player.
+     * @return Bounce height (default: 25.0f).
+     */
+    float collidedwithPlayer() override;
 };
+
 }
+
 #endif // DOODLEJUMP_PLATFORM_H

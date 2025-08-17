@@ -8,6 +8,9 @@
 #include "View/BonusView.h"
 #include "View/BGTileView.h"
 #include "Model/World.h"
+#include "Helper/StopWatch.h"
+
+// Construct the game and initialize window and UI
 Game::Game() noexcept : window(sf::VideoMode(600, 800), "Doodle Jump") {
     if (!font.loadFromFile("textures/Playful Boxes.otf")) {
         std::cerr <<  " Error: Could not load font" << std::endl;
@@ -18,10 +21,16 @@ Game::Game() noexcept : window(sf::VideoMode(600, 800), "Doodle Jump") {
     scoreText.setPosition(10, 10);
 }
 
+// Destroy the game
 Game::~Game() = default;
 
-#include "Helper/StopWatch.h"
+// Get the singleton instance of the game
+Game* Game::getInstance() {
+    static Game instance;
+    return &instance;
+}
 
+// Main game loop
 void Game::run() {
     const int TICKS_PER_SECOND = 60;
     const double TICK_DURATION = 1.0 / TICKS_PER_SECOND; // seconds
@@ -58,6 +67,7 @@ void Game::run() {
     }
 }
 
+// Process window and keyboard events
 void Game::processEvents() {
     sf::Event event;
     while (window.pollEvent(event)) {
@@ -92,10 +102,12 @@ void Game::processEvents() {
     }
 }
 
+// Update game logic
 void Game::update() {
     world->update();
 }
 
+// Render all entities and UI
 void Game::render() {
     window.clear();
     if (isGameOver) {
@@ -108,10 +120,12 @@ void Game::render() {
     window.display();
 }
 
+// Set the game to game over state
 void Game::stop() {
     isGameOver = true;
 }
 
+// Restart the game
 void Game::restart() {
     bgTileViews.clear();
     platformViews.clear();
@@ -123,6 +137,7 @@ void Game::restart() {
     horDirection = HorDirection::NONE;
 }
 
+// Display the game over screen
 void Game::displayGameOver() {
     sf::Text gameOverText;
     gameOverText.setFont(font);
@@ -133,6 +148,7 @@ void Game::displayGameOver() {
     window.draw(gameOverText);
 }
 
+// Draw all entity views
 void Game::displayEntities() {
     for (auto it = bgTileViews.begin(); it != bgTileViews.end();) {
         if (!(*it)->isActive) {
@@ -168,11 +184,12 @@ void Game::displayEntities() {
     }
 }
 
+// Update the score display
 void Game::updateScore(int score) {
     scoreText.setString("Score: " + std::to_string(score));
 }
 
-// Game.cpp
+// Add an entity view to the appropriate container
 void Game::addEntityView(const std::shared_ptr<view::EntityView>& view) {
     switch (view->getType()) {
     case EntityViewType::BGTile:
@@ -189,7 +206,8 @@ void Game::addEntityView(const std::shared_ptr<view::EntityView>& view) {
         break;
     }
 }
-/*
+
+// Remove an entity view from the appropriate container
 void Game::removeEntityView(const std::shared_ptr<view::EntityView>& view) {
     if (auto bgTile = std::dynamic_pointer_cast<view::BGTileView>(view)) {
         auto it = std::find(bgTileViews.begin(), bgTileViews.end(), bgTile);
@@ -204,4 +222,4 @@ void Game::removeEntityView(const std::shared_ptr<view::EntityView>& view) {
         auto it = std::find(bonusViews.begin(), bonusViews.end(), bonus);
         if (it != bonusViews.end()) bonusViews.erase(it);
     }
-}*/
+}

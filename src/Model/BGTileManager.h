@@ -1,7 +1,3 @@
-//
-// Created by mauro on 15/08/2025.
-//
-
 #ifndef DOODLEJUMP_BGTILEMANAGER_H
 #define DOODLEJUMP_BGTILEMANAGER_H
 
@@ -9,34 +5,40 @@
 #include <memory>
 #include <vector>
 #include "Camera.h"
+
 namespace model {
+
+/**
+ * @brief Manages background tiles for the game.
+ * Handles adding, updating, and repositioning tiles as needed.
+ */
 class BGTileManager {
 private:
-    std::vector<std::shared_ptr<BGTile>> backgroundTiles;
-    float highestTileY = 0.0f;
-    const float tileHeight = 1024.0f;
+    std::vector<std::shared_ptr<BGTile>> backgroundTiles; ///< List of background tiles
+    float highestTileY = 0.0f; ///< Y position of the highest tile
+    const float tileHeight = 1024.0f; ///< Height of each tile
 
 public:
-    void addTile(const std::shared_ptr<BGTile>& tile) { backgroundTiles.push_back(tile); }
+    /**
+     * @brief Add a background tile to the manager.
+     * @param tile Shared pointer to BGTile.
+     */
+    void addTile(const std::shared_ptr<BGTile>& tile);
 
-    void updateTiles(const std::shared_ptr<Camera>& camera) {
-        for (auto& tile : backgroundTiles) {
-            auto tileCoords = tile->getcoords();
-            auto normalizedCoords = camera->normalizeCoordinates(tileCoords.first, tileCoords.second);
+    /**
+     * @brief Update the positions of background tiles based on camera.
+     * Repositions tiles that move out of view and notifies observers.
+     * @param camera Shared pointer to Camera.
+     */
+    void updateTiles(const std::shared_ptr<Camera>& camera);
 
-            // Reposition tiles that move out of view
-            if (normalizedCoords.second > 900) {
-                highestTileY -= tileHeight;
-                tile->setcoords(tileCoords.first, highestTileY);
-            }
-
-            // Notify observers of the updated position
-            auto tilecoords = tile->getcoords();
-            normalizedCoords = camera->normalizeCoordinates(tilecoords.first, tilecoords.second);
-            tile->notifyObservers(normalizedCoords.first, normalizedCoords.second);
-        }
-    }
+    /**
+     * @brief Get the list of background tiles.
+     * @return Const reference to vector of BGTile shared pointers.
+     */
     [[nodiscard]] const std::vector<std::shared_ptr<BGTile>>& getBackgroundTiles() const { return backgroundTiles; }
 };
+
 }
+
 #endif // DOODLEJUMP_BGTILEMANAGER_H

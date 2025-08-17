@@ -4,35 +4,43 @@
 #include "Entities/Bonus.h"
 #include <vector>
 #include <memory>
+
 namespace model {
+
+/**
+ * @brief Manages bonus entities in the game.
+ * Handles adding, updating, and removing bonuses.
+ */
 class BonusManager {
 private:
-    std::vector<std::shared_ptr<Bonus>> bonuses;
+    std::vector<std::shared_ptr<Bonus>> bonuses; ///< List of active bonuses
 
 public:
-    void addBonus(const std::shared_ptr<Bonus>& bonus) { bonuses.push_back(bonus); }
+    /**
+     * @brief Add a bonus to the manager.
+     * @param bonus Shared pointer to Bonus.
+     */
+    void addBonus(const std::shared_ptr<Bonus>& bonus);
 
-    void updateBonuses(float cameraY) {
-        for (auto it = bonuses.begin(); it != bonuses.end();) {
-            (*it)->updateBonusPosition();
-            auto bonusCoords = (*it)->getcoords();
-            if (bonusCoords.second < cameraY - 400 || bonusCoords.second > cameraY + 850) {
-                (*it)->notifyDeletion();
-                it = bonuses.erase(it);
-            } else {
-                ++it;
-            }
-        }
-    }
+    /**
+     * @brief Update the positions of bonuses and remove out-of-view bonuses.
+     * @param cameraY Y position of the camera.
+     */
+    void updateBonuses(float cameraY);
 
+    /**
+     * @brief Get the list of bonuses.
+     * @return Const reference to vector of Bonus shared pointers.
+     */
     [[nodiscard]] const std::vector<std::shared_ptr<Bonus>>& getBonuses() const { return bonuses; }
 
-    void removeBonus(size_t index) {
-        if (index < bonuses.size()) {
-            bonuses[index]->notifyDeletion();
-            bonuses.erase(bonuses.begin() + index);
-        }
-    }
+    /**
+     * @brief Remove a bonus by index.
+     * @param index Index of the bonus to remove.
+     */
+    void removeBonus(size_t index);
 };
+
 }
+
 #endif // DOODLEJUMP_BONUSMANAGER_H

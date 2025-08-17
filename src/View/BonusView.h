@@ -3,27 +3,36 @@
 
 #include "EntitytView.h"
 #include "../Model/Enums.h"
+#include <memory>
+#include <stdexcept>
+
 namespace view {
+
+/**
+ * @brief View class for bonus entities.
+ * Handles texture loading and sprite setup for bonuses.
+ */
 class BonusView : public EntityView {
 public:
-    BonusView() {
-        texture = std::make_unique<sf::Texture>();
-        sprite = std::make_unique<sf::Sprite>();
-    }
+    /**
+     * @brief Construct a BonusView and initialize its texture and sprite.
+     */
+    BonusView();
 
-    void setTexture(EntityType type) {
-        if (type == EntityType::SPRING) {
-            if (!texture->loadFromFile("textures/spring.png")) {
-                throw std::runtime_error("Failed to load texture: textures/spring.png");
-            }
-        } else { // JETPACK
-            if (!texture->loadFromFile("textures/jetpack.png")) {
-                throw std::runtime_error("Failed to load texture: textures/jetpack.png");
-            }
-        }
-        sprite->setTexture(*texture);
-    }
+    /**
+     * @brief Set the texture based on the bonus type.
+     * Throws std::runtime_error if texture loading fails.
+     * @param type The type of bonus entity.
+     */
+    void setTexture(EntityType type);
+
+    /**
+     * @brief Get the type of this entity view.
+     * @return EntityViewType::Bonus
+     */
     EntityViewType getType() override { return EntityViewType::Bonus; }
 };
+
 }
+
 #endif // DOODLEJUMP_BONUSVIEW_H
