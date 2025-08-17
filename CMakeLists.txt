@@ -1,69 +1,57 @@
 cmake_minimum_required(VERSION 3.28.3)
-project(doodlejump)
 
-# Set the C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+project(AP-DoodleJump)
 
-# Add the executable
-add_executable(doodlejump
-        src/main.cpp
-        src/Model/Entities/Player.cpp
-        src/Model/Entities/Player.h
-        src/Model/Entities/Platform.cpp
-        src/Model/Entities/Platform.h
-        src/Model/Entities/Entitymodel.cpp
-        src/Model/Entities/Entitymodel.h
-        src/View/ConcreteFactory.cpp
-        src/View/ConcreteFactory.h
-        src/Model/AbstractFactory.cpp
-        src/Model/AbstractFactory.h
-        src/Helper/StopWatch.cpp
-        src/Helper/StopWatch.h
-        src/Helper/Random.cpp
-        src/Helper/Random.h
-        src/Model/World.cpp
-        src/Model/World.h
-        src/Model/Entities/Subject.cpp
-        src/Model/Entities/Subject.h
-        src/Model/Entities/BGTile.cpp
-        src/Model/Entities/BGTile.h
-        src/Model/Entities/Bonus.cpp
-        src/Model/Entities/Bonus.h
-        src/Model/Enums.h
-        src/View/PlayerView.cpp
-        src/View/PlayerView.h
-        src/View/PlatformView.cpp
-        src/View/PlatformView.h
-        src/Model/Observer.cpp
-        src/Model/Observer.h
-        src/View/EntitytView.cpp
-        src/View/EntitytView.h
-        src/Game.cpp
-        src/Game.h
-        src/Model/Camera.cpp
-        src/Model/Camera.h
-        src/View/BGTileView.cpp
-        src/View/BGTileView.h
-        src/View/BonusView.cpp
-        src/View/BonusView.h
-        src/Model/PlatformManager.cpp
-        src/Model/PlatformManager.h
-        src/Model/BonusManager.cpp
-        src/Model/BonusManager.h
-        src/Model/CollisionSystem.cpp
-        src/Model/CollisionSystem.h
-        src/Model/BGTileManager.cpp
-        src/Model/BGTileManager.h
-)
-set(SFML_STATIC_LIBRARIES TRUE)
 if (WIN32)
+    set(SFML_STATIC_LIBRARIES TRUE)
     set(SFML_DIR "C:/SFML-2.6.1/lib/cmake/SFML")
 elseif (UNIX)
     set(SFML_DIR "/usr/lib/cmake/SFML")
-endif ()
-# Find SFML
-find_package(SFML 2.6.1 COMPONENTS graphics window system audio REQUIRED)
+endif()
 
-# Link SFML libraries
-target_link_libraries(doodlejump sfml-graphics sfml-window sfml-network sfml-audio)
+find_package(SFML 2.6.1 COMPONENTS graphics window network audio REQUIRED)
+
+add_executable(AP-DoodleJump
+        src/main.cpp
+        src/base/Controller.cpp
+        src/base/Model.cpp
+        src/base/Observer.cpp
+        src/base/View.cpp
+        src/bgtile/BGTileModel.cpp
+        src/bgtile/BGTileView.cpp
+        src/bgtile/BGTileObserver.cpp
+        src/bonus/jetpack/JetpackController.cpp
+        src/bonus/jetpack/JetpackModel.cpp
+        src/bonus/jetpack/JetpackObserver.cpp
+        src/bonus/jetpack/JetpackView.cpp
+        src/bonus/spring/SpringController.cpp
+        src/bonus/spring/SpringModel.cpp
+        src/bonus/spring/SpringObserver.cpp
+        src/bonus/spring/SpringView.cpp
+        src/bonus/BonusController.cpp
+        src/bonus/BonusModel.cpp
+        src/bonus/BonusObserver.cpp
+        src/bonus/BonusView.cpp
+        src/camera/Camera.cpp
+        src/factory/EntityFactoryAbstract.h
+        src/factory/EntityFactory.cpp
+        src/game/Game.cpp
+        src/player/PlayerController.cpp
+        src/player/PlayerModel.cpp
+        src/player/PlayerObserver.cpp
+        src/player/PlayerView.cpp
+        src/platform/PlatformController.cpp
+        src/platform/PlatformModel.cpp
+        src/platform/PlatformObserver.cpp
+        src/platform/PlatformType.h
+        src/platform/PlatformView.cpp
+        src/score/Score.cpp
+        src/score/ScoreView.cpp
+        src/base/Collidable.h
+        src/util/Config.h
+        src/util/Coordinate.h
+        src/util/Random.cpp
+        src/util/Stopwatch.cpp
+        src/world/World.cpp)
+
+target_link_libraries(AP-DoodleJump sfml-window sfml-graphics sfml-network sfml-audio)
