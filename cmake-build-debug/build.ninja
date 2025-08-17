@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug/
+cmake_ninja_workdir = /home/mauro/CLionProjects/doodlejump/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target doodlejump
 
@@ -49,221 +49,194 @@ cmake_ninja_workdir = C$:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug
 
 build cmake_object_order_depends_target_doodlejump: phony || .
 
-build CMakeFiles/doodlejump.dir/src/main.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/main.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/main.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/main.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\main.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/Player.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Entities/Player.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\Player.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model/Entities
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/Platform.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Entities/Platform.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\Platform.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model/Entities
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/Entitymodel.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Entities/Entitymodel.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\Entitymodel.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model/Entities
 
-build CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/ConcreteFactory.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/ConcreteFactory.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\ConcreteFactory.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/Model/AbstractFactory.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/AbstractFactory.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Helper/StopWatch.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\AbstractFactory.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Helper
 
-build CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Helper/StopWatch.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Helper/Random.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Helper\StopWatch.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Helper
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Helper
 
-build CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Helper/Random.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/World.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/World.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Helper\Random.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/World.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Helper
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
-build CMakeFiles/doodlejump.dir/src/Model/World.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/World.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Entities/Subject.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\World.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model/Entities
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/Subject.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Entities/Bonus.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\Subject.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model/Entities
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/BGTile.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/BGTile.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/PlayerView.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\BGTile.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Entities/Bonus.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/PlatformView.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Entities\Bonus.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model\Entities
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/PlayerView.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/EntitytView.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\PlayerView.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/PlatformView.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Game.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Game.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\PlatformView.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Game.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src
 
-build CMakeFiles/doodlejump.dir/src/Model/Observer.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Observer.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/Camera.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Observer.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
-build CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/EntitytView.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/BGTileView.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\EntitytView.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/Game.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Game.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/View/BonusView.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Game.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/View
 
-build CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/Camera.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/PlatformManager.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\Camera.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
-build CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/BGTileView.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/BonusManager.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\BGTileView.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
-build CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/View/BonusView.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/CollisionSystem.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\View\BonusView.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\View
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
-build CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/PlatformManager.cpp || cmake_object_order_depends_target_doodlejump
+build CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.o: CXX_COMPILER__doodlejump_unscanned_Debug /home/mauro/CLionProjects/doodlejump/src/Model/BGTileManager.cpp || cmake_object_order_depends_target_doodlejump
   CONFIG = Debug
   DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\PlatformManager.cpp.obj.d
+  DEP_FILE = CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.o.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
-
-build CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/BonusManager.cpp || cmake_object_order_depends_target_doodlejump
-  CONFIG = Debug
-  DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\BonusManager.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
-
-build CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/CollisionSystem.cpp || cmake_object_order_depends_target_doodlejump
-  CONFIG = Debug
-  DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\CollisionSystem.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
-
-build CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.obj: CXX_COMPILER__doodlejump_unscanned_Debug C$:/Users/mauro/CLionProjects/doodlejump/src/Model/BGTileManager.cpp || cmake_object_order_depends_target_doodlejump
-  CONFIG = Debug
-  DEFINES = -DSFML_STATIC
-  DEP_FILE = CMakeFiles\doodlejump.dir\src\Model\BGTileManager.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/SFML-2.6.1/include
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  OBJECT_FILE_DIR = CMakeFiles\doodlejump.dir\src\Model
+  INCLUDES = -isystem /home/mauro/Documents/SFML-2.6.1/include
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  OBJECT_FILE_DIR = CMakeFiles/doodlejump.dir/src/Model
 
 
 # =============================================================================
@@ -271,25 +244,26 @@ build CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.obj: CXX_COMPILER__d
 
 
 #############################################
-# Link the executable doodlejump.exe
+# Link the executable doodlejump
 
-build doodlejump.exe: CXX_EXECUTABLE_LINKER__doodlejump_Debug CMakeFiles/doodlejump.dir/src/main.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.obj CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Model/AbstractFactory.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.obj CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.obj CMakeFiles/doodlejump.dir/src/Model/World.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/BGTile.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.obj CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Observer.cpp.obj CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.obj CMakeFiles/doodlejump.dir/src/Game.cpp.obj CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.obj CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.obj CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.obj CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.obj CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.obj CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.obj CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.obj | C$:/SFML-2.6.1/lib/libsfml-graphics-s-d.a C$:/SFML-2.6.1/lib/libsfml-window-s-d.a C$:/SFML-2.6.1/lib/libsfml-system-s-d.a C$:/SFML-2.6.1/lib/libsfml-audio-s-d.a C$:/SFML-2.6.1/lib/libsfml-network-s-d.a C$:/SFML-2.6.1/lib/libfreetype.a C$:/SFML-2.6.1/lib/libopenal32.a C$:/SFML-2.6.1/lib/libvorbisfile.a C$:/SFML-2.6.1/lib/libvorbisenc.a C$:/SFML-2.6.1/lib/libvorbis.a C$:/SFML-2.6.1/lib/libogg.a C$:/SFML-2.6.1/lib/libFLAC.a C$:/SFML-2.6.1/lib/libsfml-system-s-d.a
+build doodlejump: CXX_EXECUTABLE_LINKER__doodlejump_Debug CMakeFiles/doodlejump.dir/src/main.cpp.o CMakeFiles/doodlejump.dir/src/Model/Entities/Player.cpp.o CMakeFiles/doodlejump.dir/src/Model/Entities/Platform.cpp.o CMakeFiles/doodlejump.dir/src/Model/Entities/Entitymodel.cpp.o CMakeFiles/doodlejump.dir/src/View/ConcreteFactory.cpp.o CMakeFiles/doodlejump.dir/src/Helper/StopWatch.cpp.o CMakeFiles/doodlejump.dir/src/Helper/Random.cpp.o CMakeFiles/doodlejump.dir/src/Model/World.cpp.o CMakeFiles/doodlejump.dir/src/Model/Entities/Subject.cpp.o CMakeFiles/doodlejump.dir/src/Model/Entities/Bonus.cpp.o CMakeFiles/doodlejump.dir/src/View/PlayerView.cpp.o CMakeFiles/doodlejump.dir/src/View/PlatformView.cpp.o CMakeFiles/doodlejump.dir/src/View/EntitytView.cpp.o CMakeFiles/doodlejump.dir/src/Game.cpp.o CMakeFiles/doodlejump.dir/src/Model/Camera.cpp.o CMakeFiles/doodlejump.dir/src/View/BGTileView.cpp.o CMakeFiles/doodlejump.dir/src/View/BonusView.cpp.o CMakeFiles/doodlejump.dir/src/Model/PlatformManager.cpp.o CMakeFiles/doodlejump.dir/src/Model/BonusManager.cpp.o CMakeFiles/doodlejump.dir/src/Model/CollisionSystem.cpp.o CMakeFiles/doodlejump.dir/src/Model/BGTileManager.cpp.o | /home/mauro/Documents/SFML-2.6.1/lib/libsfml-graphics-s-d.a /home/mauro/Documents/SFML-2.6.1/lib/libsfml-window-s-d.a /home/mauro/Documents/SFML-2.6.1/lib/libsfml-network-s-d.a /home/mauro/Documents/SFML-2.6.1/lib/libsfml-audio-s-d.a /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXrandr.so /usr/lib/x86_64-linux-gnu/libXcursor.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libudev.so /usr/lib/x86_64-linux-gnu/libfreetype.so /home/mauro/Documents/SFML-2.6.1/lib/libsfml-system-s-d.a /usr/lib/x86_64-linux-gnu/libopenal.so /usr/lib/x86_64-linux-gnu/libvorbisfile.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libFLAC.so
   CONFIG = Debug
+  DEP_FILE = CMakeFiles/doodlejump.dir/link.d
   FLAGS = -g
-  LINK_LIBRARIES = C:/SFML-2.6.1/lib/libsfml-graphics-s-d.a  C:/SFML-2.6.1/lib/libsfml-window-s-d.a  C:/SFML-2.6.1/lib/libsfml-system-s-d.a  C:/SFML-2.6.1/lib/libsfml-audio-s-d.a  C:/SFML-2.6.1/lib/libsfml-network-s-d.a  -lOpenGL32  -lgdi32  C:/SFML-2.6.1/lib/libfreetype.a  C:/SFML-2.6.1/lib/libopenal32.a  C:/SFML-2.6.1/lib/libvorbisfile.a  C:/SFML-2.6.1/lib/libvorbisenc.a  C:/SFML-2.6.1/lib/libvorbis.a  C:/SFML-2.6.1/lib/libogg.a  C:/SFML-2.6.1/lib/libFLAC.a  C:/SFML-2.6.1/lib/libsfml-system-s-d.a  -lwinmm  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\doodlejump.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = doodlejump.exe
-  TARGET_IMPLIB = libdoodlejump.dll.a
-  TARGET_PDB = doodlejump.exe.dbg
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/doodlejump.dir/link.d
+  LINK_LIBRARIES = /home/mauro/Documents/SFML-2.6.1/lib/libsfml-graphics-s-d.a  /home/mauro/Documents/SFML-2.6.1/lib/libsfml-window-s-d.a  /home/mauro/Documents/SFML-2.6.1/lib/libsfml-network-s-d.a  /home/mauro/Documents/SFML-2.6.1/lib/libsfml-audio-s-d.a  /usr/lib/x86_64-linux-gnu/libX11.so  /usr/lib/x86_64-linux-gnu/libXrandr.so  /usr/lib/x86_64-linux-gnu/libXcursor.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libudev.so  -ldl  /usr/lib/x86_64-linux-gnu/libfreetype.so  /home/mauro/Documents/SFML-2.6.1/lib/libsfml-system-s-d.a  -lpthread  -lrt  /usr/lib/x86_64-linux-gnu/libopenal.so  /usr/lib/x86_64-linux-gnu/libvorbisfile.so  /usr/lib/x86_64-linux-gnu/libvorbisenc.so  /usr/lib/x86_64-linux-gnu/libvorbis.so  /usr/lib/x86_64-linux-gnu/libogg.so  /usr/lib/x86_64-linux-gnu/libFLAC.so
+  OBJECT_DIR = CMakeFiles/doodlejump.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = doodlejump
+  TARGET_PDB = doodlejump.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\mauro\CLionProjects\doodlejump\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2025.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cd /home/mauro/CLionProjects/doodlejump/cmake-build-debug && /snap/clion/367/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -300,7 +274,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\mauro\CLionProjects\doodlejump\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2025.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\mauro\CLionProjects\doodlejump -BC:\Users\mauro\CLionProjects\doodlejump\cmake-build-debug"
+  COMMAND = cd /home/mauro/CLionProjects/doodlejump/cmake-build-debug && /snap/clion/367/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/mauro/CLionProjects/doodlejump -B/home/mauro/CLionProjects/doodlejump/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -310,17 +284,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build doodlejump: phony doodlejump.exe
-
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug
+# Folder: /home/mauro/CLionProjects/doodlejump/cmake-build-debug
 
-build all: phony doodlejump.exe
+build all: phony doodlejump
 
 # =============================================================================
 # Built-in targets
@@ -329,14 +301,14 @@ build all: phony doodlejump.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/mauro/CLionProjects/doodlejump/cmake-build-debug/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfigDependencies.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfigVersion.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-debug.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-release.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets.cmake C$:/Users/mauro/CLionProjects/doodlejump/CMakeLists.txt CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeRCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
+build build.ninja /home/mauro/CLionProjects/doodlejump/cmake-build-debug/cmake_install.cmake: RERUN_CMAKE | /home/mauro/CLionProjects/doodlejump/CMakeLists.txt /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfigDependencies.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfigVersion.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-debug.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-release.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Linker/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2025.2/bin/cmake/win/x64/share/cmake-4.0/Modules/Platform/WindowsPaths.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfigDependencies.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLConfigVersion.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-debug.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-release.cmake C$:/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets.cmake C$:/Users/mauro/CLionProjects/doodlejump/CMakeLists.txt CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeRCCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
+build /home/mauro/CLionProjects/doodlejump/CMakeLists.txt /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfigDependencies.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLConfigVersion.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-debug.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets-release.cmake /home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML/SFMLStaticTargets.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux.cmake /snap/clion/367/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/4.0.2/CMakeCCompiler.cmake CMakeFiles/4.0.2/CMakeCXXCompiler.cmake CMakeFiles/4.0.2/CMakeSystem.cmake: phony
 
 
 #############################################

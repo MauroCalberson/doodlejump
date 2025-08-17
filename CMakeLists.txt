@@ -16,7 +16,6 @@ add_executable(doodlejump
         src/Model/Entities/Entitymodel.h
         src/View/ConcreteFactory.cpp
         src/View/ConcreteFactory.h
-        src/Model/AbstractFactory.cpp
         src/Model/AbstractFactory.h
         src/Helper/StopWatch.cpp
         src/Helper/StopWatch.h
@@ -26,7 +25,6 @@ add_executable(doodlejump
         src/Model/World.h
         src/Model/Entities/Subject.cpp
         src/Model/Entities/Subject.h
-        src/Model/Entities/BGTile.cpp
         src/Model/Entities/BGTile.h
         src/Model/Entities/Bonus.cpp
         src/Model/Entities/Bonus.h
@@ -35,7 +33,6 @@ add_executable(doodlejump
         src/View/PlayerView.h
         src/View/PlatformView.cpp
         src/View/PlatformView.h
-        src/Model/Observer.cpp
         src/Model/Observer.h
         src/View/EntitytView.cpp
         src/View/EntitytView.h
@@ -60,7 +57,7 @@ set(SFML_STATIC_LIBRARIES TRUE)
 if (WIN32)
     set(SFML_DIR "C:/SFML-2.6.1/lib/cmake/SFML")
 elseif (UNIX)
-    set(SFML_DIR "/usr/lib/cmake/SFML")
+    set(SFML_DIR "/home/mauro/Documents/SFML-2.6.1/lib/cmake/SFML")
 endif ()
 # Find SFML
 find_package(SFML 2.6.1 COMPONENTS graphics window system audio REQUIRED)

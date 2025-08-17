@@ -12,6 +12,7 @@
 
 // Construct the game and initialize window and UI
 Game::Game() noexcept : window(sf::VideoMode(600, 800), "Doodle Jump") {
+    window.setFramerateLimit(60);
     if (!font.loadFromFile("textures/Playful Boxes.otf")) {
         std::cerr <<  " Error: Could not load font" << std::endl;
     }
