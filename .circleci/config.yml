@@ -1,0 +1,25 @@
+version: 2.1
+
+jobs:
+  buildtest:
+    docker:
+      - image: ubuntu:22.04
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            apt update
+            apt install -y cmake g++ libsfml-dev
+      - run:
+          name: build project
+          command: |
+            mkdir -p build
+            cd build
+            cmake ..
+            make
+
+workflows:
+  buildtest_workflow:
+    jobs:
+      - buildtest
