@@ -34,8 +34,15 @@ std::shared_ptr<model::Player> view::ConcreteFactory::createPlayer() {
 }
 
 std::shared_ptr<model::Bonus> view::ConcreteFactory::createBonus(EntityType type) {
-    std::shared_ptr<model::Bonus> model = std::make_shared<model::Bonus>(type);
-    std::shared_ptr<BonusView> view = std::make_shared<BonusView>();
+    std::shared_ptr<model::Bonus> model;
+    if (type == EntityType::SPRING) {
+        model = std::make_shared<model::Spring>();
+    } else if (type == EntityType::JETPACK) {
+        model = std::make_shared<model::Jetpack>();
+    } else {
+        throw std::invalid_argument("Unknown bonus type");
+    }
+    auto view = std::make_shared<BonusView>();
     view->setTexture(type);
     model->addObserver(view);
     Game::getInstance()->addEntityView(view);

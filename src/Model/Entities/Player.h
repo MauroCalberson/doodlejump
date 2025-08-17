@@ -28,6 +28,10 @@ public:
     [[nodiscard]] EntityType getType() const override { return EntityType::PLAYER; }
 
     bool move(const std::shared_ptr<Camera>& camera);
+
+    float collidedwithPlayer() override {
+        return verticalSpeed; // Return the vertical speed when collided with player
+    }
 };
 }
 #endif //DOODLEJUMP_PLAYER_H

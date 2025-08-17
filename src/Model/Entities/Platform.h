@@ -67,6 +67,10 @@ public:
             updateVerticalMovement();
         }
     }
+    float collidedwithPlayer() override {
+        // Collision logic with player can be implemented here
+        return 25.0f; // Placeholder return value
+    }
 };
 }
 #endif // DOODLEJUMP_PLATFORM_H

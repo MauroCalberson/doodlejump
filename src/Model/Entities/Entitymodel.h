@@ -34,6 +34,7 @@ public:
         return {x, y, 0, 0}; // Default hitbox, should be overridden in derived classes
     }
     [[nodiscard]] virtual EntityType getType() const = 0; // Pure virtual function to get the type of the entity
+    virtual float collidedwithPlayer() = 0;
 };
 }
 
