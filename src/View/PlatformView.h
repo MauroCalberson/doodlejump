@@ -13,26 +13,26 @@ namespace view {
  * @brief View class for platform entities.
  * Handles texture loading and sprite setup for platforms.
  */
-class PlatformView : public EntityView {
-public:
-    /**
-     * @brief Construct a PlatformView and initialize its texture and sprite.
-     */
-    PlatformView();
+    class PlatformView : public EntityView {
+    public:
+        /**
+         * @brief Construct a PlatformView and initialize its texture and sprite.
+         */
+        PlatformView();
 
-    /**
-     * @brief Set the texture based on the platform type.
-     * Throws std::runtime_error if texture loading fails.
-     * @param type The type of platform entity.
-     */
-    void setTexture(EntityType type);
+        /**
+         * @brief Set the texture based on the platform type.
+         * Throws std::runtime_error if texture loading fails.
+         * @param type The type of platform entity.
+         */
+        void setTexture(EntityType type);
 
-    /**
-     * @brief Get the type of this entity view.
-     * @return EntityViewType::Platform
-     */
-    [[nodiscard]] EntityViewType getType() override { return EntityViewType::Platform; }
-};
+        /**
+         * @brief Get the type of this entity view.
+         * @return EntityViewType::Platform
+         */
+        [[nodiscard]] EntityViewType getType() override { return EntityViewType::Platform; }
+    };
 
 }
 

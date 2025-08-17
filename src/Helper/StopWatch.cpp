@@ -4,7 +4,7 @@
 StopWatch::StopWatch() : isRunning(false) {}
 
 // Get the singleton instance of StopWatch
-StopWatch& StopWatch::getInstance() {
+StopWatch &StopWatch::getInstance() {
     static StopWatch instance;
     return instance;
 }

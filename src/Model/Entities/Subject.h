@@ -11,44 +11,45 @@ namespace model {
  * @brief Base class for observable entities.
  * Supports multiple observers and notifies them of changes.
  */
-class Subject {
-private:
-    std::vector<std::shared_ptr<Observer>> observers; ///< List of observers
+    class Subject {
+    private:
+        std::vector <std::shared_ptr<Observer>> observers; ///< List of observers
 
-public:
-    Subject() = default;
-    virtual ~Subject() = default;
+    public:
+        Subject() = default;
 
-    /**
-     * @brief Add an observer to the subject.
-     * @param o Shared pointer to observer.
-     */
-    void addObserver(const std::shared_ptr<Observer>& o);
+        virtual ~Subject() = default;
 
-    /**
-     * @brief Notify all observers of a coordinate change.
-     * @param x X coordinate.
-     * @param y Y coordinate.
-     */
-    void notifyObservers(const float& x, const float& y);
+        /**
+         * @brief Add an observer to the subject.
+         * @param o Shared pointer to observer.
+         */
+        void addObserver(const std::shared_ptr <Observer> &o);
 
-    /**
-     * @brief Notify all observers that the subject is being destroyed.
-     */
-    void notifyDeletion();
+        /**
+         * @brief Notify all observers of a coordinate change.
+         * @param x X coordinate.
+         * @param y Y coordinate.
+         */
+        void notifyObservers(const float &x, const float &y);
 
-    /**
-     * @brief Set the coordinates of the subject.
-     * Pure virtual, must be implemented by derived classes.
-     */
-    virtual void setcoords(float& x, float& y) = 0;
+        /**
+         * @brief Notify all observers that the subject is being destroyed.
+         */
+        void notifyDeletion();
 
-    /**
-     * @brief Get the coordinates of the subject.
-     * Pure virtual, must be implemented by derived classes.
-     */
-    virtual std::pair<float, float> getcoords() const = 0;
-};
+        /**
+         * @brief Set the coordinates of the subject.
+         * Pure virtual, must be implemented by derived classes.
+         */
+        virtual void setcoords(float &x, float &y) = 0;
+
+        /**
+         * @brief Get the coordinates of the subject.
+         * Pure virtual, must be implemented by derived classes.
+         */
+        virtual std::pair<float, float> getcoords() const = 0;
+    };
 
 }
 

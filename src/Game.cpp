@@ -11,21 +11,28 @@
 #include "Helper/StopWatch.h"
 
 // Construct the game and initialize window and UI
-Game::Game() noexcept : window(sf::VideoMode(600, 800), "Doodle Jump") {
-    if (!font.loadFromFile("textures/Playful Boxes.otf")) {
-        std::cerr <<  " Error: Could not load font" << std::endl;
-    }
-    scoreText.setFont(font);
-    scoreText.setCharacterSize(30);
-    scoreText.setFillColor(sf::Color::Black);
-    scoreText.setPosition(10, 10);
+Game::Game()
+
+noexcept :
+window(sf::VideoMode(600, 800),
+"Doodle Jump") {
+if (!font.loadFromFile("textures/Playful Boxes.otf")) {
+std::cerr <<  " Error: Could not load font" <<
+std::endl;
+}
+scoreText.
+setFont(font);
+scoreText.setCharacterSize(30);
+scoreText.
+setFillColor(sf::Color::Black);
+scoreText.setPosition(10, 10);
 }
 
 // Destroy the game
 Game::~Game() = default;
 
 // Get the singleton instance of the game
-Game* Game::getInstance() {
+Game *Game::getInstance() {
     static Game instance;
     return &instance;
 }
@@ -38,7 +45,7 @@ void Game::run() {
     auto f = std::make_unique<view::ConcreteFactory>();
     world = std::make_unique<model::World>(std::move(f));
 
-    StopWatch& stopwatch = StopWatch::getInstance();
+    StopWatch &stopwatch = StopWatch::getInstance();
 
     while (window.isOpen()) {
         if (world->stop) {
@@ -56,7 +63,7 @@ void Game::run() {
 
         if (elapsed < TICK_DURATION) {
             std::this_thread::sleep_for(
-                std::chrono::duration<double>(TICK_DURATION - elapsed)
+                    std::chrono::duration<double>(TICK_DURATION - elapsed)
             );
         } else {
             std::cout << "Warning: tick overran by "
@@ -80,8 +87,10 @@ void Game::processEvents() {
     }
 
     if (!isGameOver) {
-        bool leftPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A);
-        bool rightPressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D);
+        bool leftPressed =
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A);
+        bool rightPressed =
+                sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D);
 
         if (leftPressed && rightPressed) {
             horDirection = HorDirection::NONE;
@@ -190,25 +199,25 @@ void Game::updateScore(int score) {
 }
 
 // Add an entity view to the appropriate container
-void Game::addEntityView(const std::shared_ptr<view::EntityView>& view) {
+void Game::addEntityView(const std::shared_ptr <view::EntityView> &view) {
     switch (view->getType()) {
-    case EntityViewType::BGTile:
-        bgTileViews.push_back(std::static_pointer_cast<view::BGTileView>(view));
-        break;
-    case EntityViewType::Platform:
-        platformViews.push_back(std::static_pointer_cast<view::PlatformView>(view));
-        break;
-    case EntityViewType::Player:
-        playerViews.push_back(std::static_pointer_cast<view::PlayerView>(view));
-        break;
-    case EntityViewType::Bonus:
-        bonusViews.push_back(std::static_pointer_cast<view::BonusView>(view));
-        break;
+        case EntityViewType::BGTile:
+            bgTileViews.push_back(std::static_pointer_cast<view::BGTileView>(view));
+            break;
+        case EntityViewType::Platform:
+            platformViews.push_back(std::static_pointer_cast<view::PlatformView>(view));
+            break;
+        case EntityViewType::Player:
+            playerViews.push_back(std::static_pointer_cast<view::PlayerView>(view));
+            break;
+        case EntityViewType::Bonus:
+            bonusViews.push_back(std::static_pointer_cast<view::BonusView>(view));
+            break;
     }
 }
 
 // Remove an entity view from the appropriate container
-void Game::removeEntityView(const std::shared_ptr<view::EntityView>& view) {
+void Game::removeEntityView(const std::shared_ptr <view::EntityView> &view) {
     if (auto bgTile = std::dynamic_pointer_cast<view::BGTileView>(view)) {
         auto it = std::find(bgTileViews.begin(), bgTileViews.end(), bgTile);
         if (it != bgTileViews.end()) bgTileViews.erase(it);

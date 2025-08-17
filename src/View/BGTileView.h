@@ -11,20 +11,20 @@ namespace view {
  * @brief View class for background tiles.
  * Handles texture loading and sprite setup for background tiles.
  */
-class BGTileView : public EntityView {
-public:
-    /**
-     * @brief Construct a BGTileView and load its texture.
-     * Throws std::runtime_error if texture loading fails.
-     */
-    BGTileView();
+    class BGTileView : public EntityView {
+    public:
+        /**
+         * @brief Construct a BGTileView and load its texture.
+         * Throws std::runtime_error if texture loading fails.
+         */
+        BGTileView();
 
-    /**
-     * @brief Get the type of this entity view.
-     * @return EntityViewType::BGTile
-     */
-    EntityViewType getType() override;
-};
+        /**
+         * @brief Get the type of this entity view.
+         * @return EntityViewType::BGTile
+         */
+        EntityViewType getType() override;
+    };
 
 }
 

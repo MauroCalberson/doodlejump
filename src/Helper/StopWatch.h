@@ -17,15 +17,16 @@ private:
     StopWatch();
 
     // Delete copy constructor and assignment operator
-    StopWatch(const StopWatch&) = delete;
-    StopWatch& operator=(const StopWatch&) = delete;
+    StopWatch(const StopWatch &) = delete;
+
+    StopWatch &operator=(const StopWatch &) = delete;
 
 public:
     /**
      * @brief Get the singleton instance of StopWatch.
      * @return Reference to the StopWatch instance.
      */
-    static StopWatch& getInstance();
+    static StopWatch &getInstance();
 
     /**
      * @brief Start the stopwatch.

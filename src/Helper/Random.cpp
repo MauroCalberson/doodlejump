@@ -4,7 +4,7 @@
 Random::Random() : generator(std::random_device{}()) {}
 
 // Get the singleton instance of Random
-Random& Random::getInstance() {
+Random &Random::getInstance() {
     static Random instance;
     return instance;
 }

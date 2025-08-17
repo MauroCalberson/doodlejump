@@ -17,15 +17,16 @@ private:
     Random();
 
     // Delete copy constructor and assignment operator to enforce singleton
-    Random(const Random&) = delete;
-    Random& operator=(const Random&) = delete;
+    Random(const Random &) = delete;
+
+    Random &operator=(const Random &) = delete;
 
 public:
     /**
      * @brief Get the singleton instance of Random.
      * @return Reference to the Random instance.
      */
-    static Random& getInstance();
+    static Random &getInstance();
 
     /**
      * @brief Generate a random float in the range [min, max].

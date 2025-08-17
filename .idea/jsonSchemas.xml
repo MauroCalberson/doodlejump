@@ -14,6 +14,9 @@
                   <Item>
                     <option name="path" value=".clang-format" />
                   </Item>
+                  <Item>
+                    <option name="path" value=".clang-format" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>

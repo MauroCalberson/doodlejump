@@ -8,7 +8,7 @@
 #include <vector>
 
 namespace model {
-class World;
+    class World;
 }
 
 /**
@@ -17,14 +17,14 @@ class World;
 class Game {
 private:
     sf::RenderWindow window; ///< Main game window
-    std::unique_ptr<model::World> world; ///< Game world
+    std::unique_ptr <model::World> world; ///< Game world
     sf::Font font; ///< Font for score and game over text
     sf::Text scoreText; ///< Text for displaying score
 
-    std::vector<std::shared_ptr<view::BGTileView>> bgTileViews; ///< Background tile views
-    std::vector<std::shared_ptr<view::PlatformView>> platformViews; ///< Platform views
-    std::vector<std::shared_ptr<view::PlayerView>> playerViews; ///< Player views
-    std::vector<std::shared_ptr<view::BonusView>> bonusViews; ///< Bonus views
+    std::vector <std::shared_ptr<view::BGTileView>> bgTileViews; ///< Background tile views
+    std::vector <std::shared_ptr<view::PlatformView>> platformViews; ///< Platform views
+    std::vector <std::shared_ptr<view::PlayerView>> playerViews; ///< Player views
+    std::vector <std::shared_ptr<view::BonusView>> bonusViews; ///< Bonus views
 
     HorDirection horDirection = HorDirection::NONE; ///< Current horizontal input direction
     bool isGameOver = false; ///< Game over state
@@ -34,7 +34,9 @@ public:
     /**
      * @brief Construct the game and initialize window and UI.
      */
-    Game() noexcept;
+    Game()
+
+    noexcept;
 
     /**
      * @brief Destroy the game.
@@ -45,7 +47,7 @@ public:
      * @brief Get the singleton instance of the game.
      * @return Pointer to the game instance.
      */
-    static Game* getInstance();
+    static Game *getInstance();
 
     /**
      * @brief Update the score display.
@@ -87,7 +89,7 @@ public:
      * @brief Get the current horizontal input direction.
      * @return Reference to HorDirection.
      */
-    const HorDirection& getInput() const { return horDirection; }
+    const HorDirection &getInput() const { return horDirection; }
 
     /**
      * @brief Set the game to game over state.
@@ -103,13 +105,13 @@ public:
      * @brief Add an entity view to the appropriate container.
      * @param view Shared pointer to the entity view.
      */
-    void addEntityView(const std::shared_ptr<view::EntityView>& view);
+    void addEntityView(const std::shared_ptr <view::EntityView> &view);
 
     /**
      * @brief Remove an entity view from the appropriate container.
      * @param view Shared pointer to the entity view.
      */
-    void removeEntityView(const std::shared_ptr<view::EntityView>& view);
+    void removeEntityView(const std::shared_ptr <view::EntityView> &view);
 };
 
 #endif // DOODLEJUMP_GAME_H
