@@ -20,30 +20,41 @@ Game::Game() noexcept : window(sf::VideoMode(600, 800), "Doodle Jump") {
 
 Game::~Game() = default;
 
+#include "Helper/StopWatch.h"
+
 void Game::run() {
     const int TICKS_PER_SECOND = 60;
-    const std::chrono::milliseconds TICK_DURATION(1000 / TICKS_PER_SECOND);
+    const double TICK_DURATION = 1.0 / TICKS_PER_SECOND; // seconds
+
     auto f = std::make_unique<view::ConcreteFactory>();
     world = std::make_unique<model::World>(std::move(f));
+
+    StopWatch& stopwatch = StopWatch::getInstance();
+
     while (window.isOpen()) {
-        if(world->stop) {
+        if (world->stop) {
             stop();
         }
-        auto tick_start = std::chrono::steady_clock::now();
+
+        stopwatch.start();
 
         processEvents();
         update();
         render();
 
-        auto tick_end = std::chrono::steady_clock::now();
-        auto tick_elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(tick_end - tick_start);
+        stopwatch.stop();
+        double elapsed = stopwatch.getElapsedTime();
 
-        if (tick_elapsed < TICK_DURATION) {
-            std::this_thread::sleep_for(TICK_DURATION - tick_elapsed);
+        if (elapsed < TICK_DURATION) {
+            std::this_thread::sleep_for(
+                std::chrono::duration<double>(TICK_DURATION - elapsed)
+            );
         } else {
             std::cout << "Warning: tick overran by "
-                      << (tick_elapsed - TICK_DURATION).count() << " ms\n";
+                      << (elapsed - TICK_DURATION) * 1000 << " ms\n";
         }
+
+        stopwatch.reset();
     }
 }
 

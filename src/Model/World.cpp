@@ -4,7 +4,7 @@
 #include "PlatformManager.h"
 #include "BonusManager.h"
 #include "BGTileManager.h"
-
+#include <iostream>
 model::World::World(std::unique_ptr<AbstractFactory> factory)
     : factory(std::move(factory)) {
     setup();
@@ -62,19 +62,22 @@ void model::World::update() {
 
 void model::World::handleCollisions() {
     auto collision = CollisionSystem::detectCollision(player, platformManager->getPlatforms(), bonusManager->getBonuses());
-
     if (collision.hasCollision) {
         auto entity = collision.collidedEntity;
-        if (entity->getType() == EntityType::JETPACK) {
-            player->setVerticalSpeed(100.0f);
-            bonusManager->removeBonus(collision.index);
-        } else if (entity->getType() == EntityType::SPRING) {
-            player->setVerticalSpeed(56.509f);
-            bonusManager->removeBonus(collision.index);
-        } else {
-            player->setVerticalSpeed(25.0f);
-            if (entity->getType() == EntityType::White) {
+        float verticalSpeed = entity->collidedwithPlayer();
+        player->setVerticalSpeed(verticalSpeed);
+        switch (entity->getType()) {
+            case EntityType::White: {
                 platformManager->removePlatform(collision.index);
+                break;
+            }
+            case EntityType::JETPACK: {
+                bonusManager->removeBonus(collision.index);
+                break;
+            }
+            case EntityType::SPRING: {
+                bonusManager->removeBonus(collision.index);
+                break;
             }
         }
     }

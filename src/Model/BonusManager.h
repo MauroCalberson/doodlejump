@@ -14,7 +14,7 @@ public:
 
     void updateBonuses(float cameraY) {
         for (auto it = bonuses.begin(); it != bonuses.end();) {
-            (*it)->updatePosition();
+            (*it)->updateBonusPosition();
             auto bonusCoords = (*it)->getcoords();
             if (bonusCoords.second < cameraY - 400 || bonusCoords.second > cameraY + 850) {
                 (*it)->notifyDeletion();
