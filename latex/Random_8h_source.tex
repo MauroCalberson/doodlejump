@@ -1,0 +1,31 @@
+\doxysection{Random.\+h}
+\hypertarget{Random_8h_source}{}\label{Random_8h_source}\index{src/Helper/Random.h@{src/Helper/Random.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Random.h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_RANDOM\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_RANDOM\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRandom}{Random}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::mt19937\ generator;\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classRandom}{Random}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Delete\ copy\ constructor\ and\ assignment\ operator\ to\ enforce\ singleton}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classRandom}{Random}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRandom}{Random}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classRandom}{Random}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRandom}{Random}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classRandom}{Random}}\&\ \mbox{\hyperlink{classRandom_a2aa30d2f678fc76f75efc60356c6ea4d}{getInstance}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRandom_a7c208cfc4a9859dbf23bd45e73e26ffa}{getFloat}}(\textcolor{keywordtype}{float}\ min,\ \textcolor{keywordtype}{float}\ max);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRandom_a7aac570ca0e486704a9c7f27ea884fe6}{getInt}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max);}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_RANDOM\_H}}
+
+\end{DoxyCode}

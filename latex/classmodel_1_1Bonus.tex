@@ -1,0 +1,159 @@
+\doxysection{model\+::Bonus Class Reference}
+\hypertarget{classmodel_1_1Bonus}{}\label{classmodel_1_1Bonus}\index{model::Bonus@{model::Bonus}}
+
+
+Abstract base class for bonus entities attached to platforms.  
+
+
+
+
+{\ttfamily \#include $<$Bonus.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Bonus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classmodel_1_1Bonus__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Bonus\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Bonus__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Bonus_aaad33a5556278ae43bf3a017560d6e0e}{attach\+To\+Platform}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ \&platform)
+\begin{DoxyCompactList}\small\item\em Attach this bonus to a platform. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Bonus_ae83a69154226509578a44877a15a75a7}{update\+Bonus\+Position}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the position of the bonus based on its platform. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05}{collidedwith\+Player}} ()=0
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Bonus_a1355778956879277529766cec3865044}{get\+Hitbox}} () const override=0
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the bonus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the entity. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\item 
+virtual Entity\+Type \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the type of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1Bonus_a636b59ed666c9cdea389992ea2ac1ca5}\label{classmodel_1_1Bonus_a636b59ed666c9cdea389992ea2ac1ca5} 
+Entity\+Type {\bfseries Type}
+\begin{DoxyCompactList}\small\item\em Type of the bonus. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1Bonus_a6baaf2b7a5c4a911b0e2547d714d38b7}\label{classmodel_1_1Bonus_a6baaf2b7a5c4a911b0e2547d714d38b7} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ {\bfseries attached\+Platform}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Platform}{Platform} this bonus is attached to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for bonus entities attached to platforms. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Bonus_aaad33a5556278ae43bf3a017560d6e0e}\label{classmodel_1_1Bonus_aaad33a5556278ae43bf3a017560d6e0e} 
+\index{model::Bonus@{model::Bonus}!attachToPlatform@{attachToPlatform}}
+\index{attachToPlatform@{attachToPlatform}!model::Bonus@{model::Bonus}}
+\doxysubsubsection{\texorpdfstring{attachToPlatform()}{attachToPlatform()}}
+{\footnotesize\ttfamily void model\+::\+Bonus\+::attach\+To\+Platform (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ \&}]{platform }\end{DoxyParamCaption})}
+
+
+
+Attach this bonus to a platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em platform} & Shared pointer to the platform. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05}\label{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05} 
+\index{model::Bonus@{model::Bonus}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::Bonus@{model::Bonus}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily virtual float model\+::\+Bonus\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handle collision with the player. 
+
+\begin{DoxyReturn}{Returns}
+Effect value (e.\+g., bounce height or boost speed). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}{model\+::\+Entitymodel}}.
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Spring_a1f06a17090236a29483116db74fa437a}{model\+::\+Spring}}, and \mbox{\hyperlink{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9}{model\+::\+Jetpack}}.
+
+\Hypertarget{classmodel_1_1Bonus_a1355778956879277529766cec3865044}\label{classmodel_1_1Bonus_a1355778956879277529766cec3865044} 
+\index{model::Bonus@{model::Bonus}!getHitbox@{getHitbox}}
+\index{getHitbox@{getHitbox}!model::Bonus@{model::Bonus}}
+\doxysubsubsection{\texorpdfstring{getHitbox()}{getHitbox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} model\+::\+Bonus\+::get\+Hitbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Get the hitbox of the bonus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1Hitbox}{Hitbox} struct. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}{model\+::\+Entitymodel}}.
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Spring_aa594349567f635e19a74948801d32023}{model\+::\+Spring}}, and \mbox{\hyperlink{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c}{model\+::\+Jetpack}}.
+
+\Hypertarget{classmodel_1_1Bonus_ae83a69154226509578a44877a15a75a7}\label{classmodel_1_1Bonus_ae83a69154226509578a44877a15a75a7} 
+\index{model::Bonus@{model::Bonus}!updateBonusPosition@{updateBonusPosition}}
+\index{updateBonusPosition@{updateBonusPosition}!model::Bonus@{model::Bonus}}
+\doxysubsubsection{\texorpdfstring{updateBonusPosition()}{updateBonusPosition()}}
+{\footnotesize\ttfamily virtual void model\+::\+Bonus\+::update\+Bonus\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the position of the bonus based on its platform. 
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Spring_a9df495a46bb484ce1ce72708904fa8d5}{model\+::\+Spring}}, and \mbox{\hyperlink{classmodel_1_1Jetpack_a4e4aadb783b3e2bee1d361e14dc52982}{model\+::\+Jetpack}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Bonus.\+h\item 
+src/\+Model/\+Entities/Bonus.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\doxysection{Platform\+View.\+h}
+\hypertarget{PlatformView_8h_source}{}\label{PlatformView_8h_source}\index{src/View/PlatformView.h@{src/View/PlatformView.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_PLATFORMVIEW\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_PLATFORMVIEW\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EntitytView.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SFML/Graphics.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Model/Enums.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }view\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1PlatformView}{PlatformView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1EntityView}{EntityView}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classview_1_1PlatformView_a5b94bfcbf6e924281ad657a2ef38763a}{PlatformView}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1PlatformView_ae636e2e55adf9a6a46ada53c9731bcc2}{setTexture}}(EntityType\ \mbox{\hyperlink{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739}{type}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ [[nodiscard]]\ EntityViewType\ \mbox{\hyperlink{classview_1_1PlatformView_a4a988d249a3ff40b9eab4a2a0a2375f0}{getType}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ EntityViewType::Platform;\ \}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_PLATFORMVIEW\_H}}
+
+\end{DoxyCode}

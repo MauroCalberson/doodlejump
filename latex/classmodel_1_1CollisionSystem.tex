@@ -1,0 +1,72 @@
+\doxysection{model\+::Collision\+System Class Reference}
+\hypertarget{classmodel_1_1CollisionSystem}{}\label{classmodel_1_1CollisionSystem}\index{model::CollisionSystem@{model::CollisionSystem}}
+
+
+Handles collision detection between player, platforms, and bonuses.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+System.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classmodel_1_1CollisionSystem_a25219baab30865c162cf63439908e4d0}{do\+Hitboxes\+Intersect}} (const \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \&a, const \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \&b)
+\begin{DoxyCompactList}\small\item\em Check if two hitboxes intersect. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structmodel_1_1CollisionInfo}{Collision\+Info}} \mbox{\hyperlink{classmodel_1_1CollisionSystem_aebab8d697913f51eb285f438ae55a963}{detect\+Collision}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Player}{Player}} $>$ \&player, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ $>$ \&platforms, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ $>$ \&bonuses)
+\begin{DoxyCompactList}\small\item\em Detect collision between player and platforms/bonuses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles collision detection between player, platforms, and bonuses. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1CollisionSystem_aebab8d697913f51eb285f438ae55a963}\label{classmodel_1_1CollisionSystem_aebab8d697913f51eb285f438ae55a963} 
+\index{model::CollisionSystem@{model::CollisionSystem}!detectCollision@{detectCollision}}
+\index{detectCollision@{detectCollision}!model::CollisionSystem@{model::CollisionSystem}}
+\doxysubsubsection{\texorpdfstring{detectCollision()}{detectCollision()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1CollisionInfo}{Collision\+Info}} model\+::\+Collision\+System\+::detect\+Collision (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Player}{Player}} $>$ \&}]{player,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ $>$ \&}]{platforms,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ $>$ \&}]{bonuses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Detect collision between player and platforms/bonuses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Shared pointer to player. \\
+\hline
+{\em platforms} & Vector of shared pointers to platforms. \\
+\hline
+{\em bonuses} & Vector of shared pointers to bonuses. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1CollisionInfo}{Collision\+Info} struct with collision details. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1CollisionSystem_a25219baab30865c162cf63439908e4d0}\label{classmodel_1_1CollisionSystem_a25219baab30865c162cf63439908e4d0} 
+\index{model::CollisionSystem@{model::CollisionSystem}!doHitboxesIntersect@{doHitboxesIntersect}}
+\index{doHitboxesIntersect@{doHitboxesIntersect}!model::CollisionSystem@{model::CollisionSystem}}
+\doxysubsubsection{\texorpdfstring{doHitboxesIntersect()}{doHitboxesIntersect()}}
+{\footnotesize\ttfamily bool model\+::\+Collision\+System\+::do\+Hitboxes\+Intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \&}]{a,  }\item[{const \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if two hitboxes intersect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First hitbox. \\
+\hline
+{\em b} & Second hitbox. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if hitboxes intersect, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/Collision\+System.\+h\item 
+src/\+Model/Collision\+System.\+cpp\end{DoxyCompactItemize}

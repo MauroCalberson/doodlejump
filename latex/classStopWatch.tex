@@ -1,0 +1,68 @@
+\doxysection{Stop\+Watch Class Reference}
+\hypertarget{classStopWatch}{}\label{classStopWatch}\index{StopWatch@{StopWatch}}
+
+
+Singleton class for measuring elapsed time.  
+
+
+
+
+{\ttfamily \#include $<$Stop\+Watch.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}\label{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e} 
+void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em Start the stopwatch. \end{DoxyCompactList}\item 
+\Hypertarget{classStopWatch_a6e80b598d9304e37d8768b716e713e0e}\label{classStopWatch_a6e80b598d9304e37d8768b716e713e0e} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the stopwatch. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classStopWatch_ac8be1626396d1a5ca414f74349d59eb2}{get\+Elapsed\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the elapsed time in seconds. \end{DoxyCompactList}\item 
+\Hypertarget{classStopWatch_a1c0dcc57c615559f24bc9f8759271a9d}\label{classStopWatch_a1c0dcc57c615559f24bc9f8759271a9d} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the stopwatch to the current time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classStopWatch}{Stop\+Watch}} \& \mbox{\hyperlink{classStopWatch_af8ded20dbd1a7916443edde3be3f67e3}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of \doxylink{classStopWatch}{Stop\+Watch}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class for measuring elapsed time. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStopWatch_ac8be1626396d1a5ca414f74349d59eb2}\label{classStopWatch_ac8be1626396d1a5ca414f74349d59eb2} 
+\index{StopWatch@{StopWatch}!getElapsedTime@{getElapsedTime}}
+\index{getElapsedTime@{getElapsedTime}!StopWatch@{StopWatch}}
+\doxysubsubsection{\texorpdfstring{getElapsedTime()}{getElapsedTime()}}
+{\footnotesize\ttfamily double Stop\+Watch\+::get\+Elapsed\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the elapsed time in seconds. 
+
+\begin{DoxyReturn}{Returns}
+Elapsed time as double (seconds). 
+\end{DoxyReturn}
+\Hypertarget{classStopWatch_af8ded20dbd1a7916443edde3be3f67e3}\label{classStopWatch_af8ded20dbd1a7916443edde3be3f67e3} 
+\index{StopWatch@{StopWatch}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!StopWatch@{StopWatch}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStopWatch}{Stop\+Watch}} \& Stop\+Watch\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of \doxylink{classStopWatch}{Stop\+Watch}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classStopWatch}{Stop\+Watch} instance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Helper/Stop\+Watch.\+h\item 
+src/\+Helper/Stop\+Watch.\+cpp\end{DoxyCompactItemize}

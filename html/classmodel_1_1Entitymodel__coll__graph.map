@@ -1,0 +1,5 @@
+<map id="model::Entitymodel" name="model::Entitymodel">
+<area shape="rect" id="Node000001" title="Abstract base class for all game entities. Inherits from Subject for observer pattern support." alt="" coords="5,79,156,104"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Subject.html" title="Base class for observable entities. Supports multiple observers and notifies them of changes." alt="" coords="21,5,140,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,44,83,79,78,79,78,44"/>
+</map>

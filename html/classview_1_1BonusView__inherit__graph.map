@@ -1,0 +1,7 @@
+<map id="view::BonusView" name="view::BonusView">
+<area shape="rect" id="Node000001" title="View class for bonus entities. Handles texture loading and sprite setup for bonuses." alt="" coords="5,152,137,177"/>
+<area shape="rect" id="Node000002" href="$classview_1_1EntityView.html" title="Base class for all entity views. Handles sprite management and observer updates." alt="" coords="6,79,137,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,118,74,152,69,152,69,118"/>
+<area shape="rect" id="Node000003" href="$classObserver.html" title=" " alt="" coords="31,5,112,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,44,74,79,69,79,69,44"/>
+</map>

@@ -1,0 +1,179 @@
+\doxysection{model\+::Player Class Reference}
+\hypertarget{classmodel_1_1Player}{}\label{classmodel_1_1Player}\index{model::Player@{model::Player}}
+
+
+Represents the player entity in the game. Handles movement, collision, and position updates for the player.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Player__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Player_a5a20547da362d8a0052832ec0dcba417}{get\+Hitbox}} () const override
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Player_ad45e332a4d82cd3c519be08ea45c50dc}{set\+Vertical\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Set the vertical speed of the player. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmodel_1_1Player_af4ed376def40b366c5aaf626f6c917aa}{get\+Vertical\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Get the current vertical speed of the player. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classmodel_1_1Player_a0972b4cdbbfc7128c735fcf82c4f0ac8}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodel_1_1Player_a039707ac92922ef18226d9ab2e8f633e}{move}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Camera}{Camera}} $>$ \&camera)
+\begin{DoxyCompactList}\small\item\em Move the player based on input and camera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmodel_1_1Player_ab2d2b71d06d09ad14bc78b58c95fca8e}{collidedwith\+Player}} () override
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the entity. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the player entity in the game. Handles movement, collision, and position updates for the player. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Player_ab2d2b71d06d09ad14bc78b58c95fca8e}\label{classmodel_1_1Player_ab2d2b71d06d09ad14bc78b58c95fca8e} 
+\index{model::Player@{model::Player}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily float model\+::\+Player\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle collision with the player. 
+
+\begin{DoxyReturn}{Returns}
+Current vertical speed. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Player_a5a20547da362d8a0052832ec0dcba417}\label{classmodel_1_1Player_a5a20547da362d8a0052832ec0dcba417} 
+\index{model::Player@{model::Player}!getHitbox@{getHitbox}}
+\index{getHitbox@{getHitbox}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{getHitbox()}{getHitbox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} model\+::\+Player\+::get\+Hitbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the hitbox of the player. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1Hitbox}{Hitbox} struct. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Player_a0972b4cdbbfc7128c735fcf82c4f0ac8}\label{classmodel_1_1Player_a0972b4cdbbfc7128c735fcf82c4f0ac8} 
+\index{model::Player@{model::Player}!getType@{getType}}
+\index{getType@{getType}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Entity\+Type model\+::\+Player\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the entity. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+Type\+::\+PLAYER 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Player_af4ed376def40b366c5aaf626f6c917aa}\label{classmodel_1_1Player_af4ed376def40b366c5aaf626f6c917aa} 
+\index{model::Player@{model::Player}!getVerticalSpeed@{getVerticalSpeed}}
+\index{getVerticalSpeed@{getVerticalSpeed}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{getVerticalSpeed()}{getVerticalSpeed()}}
+{\footnotesize\ttfamily float model\+::\+Player\+::get\+Vertical\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current vertical speed of the player. 
+
+\begin{DoxyReturn}{Returns}
+Vertical speed value. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1Player_a039707ac92922ef18226d9ab2e8f633e}\label{classmodel_1_1Player_a039707ac92922ef18226d9ab2e8f633e} 
+\index{model::Player@{model::Player}!move@{move}}
+\index{move@{move}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily bool model\+::\+Player\+::move (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Camera}{Camera}} $>$ \&}]{camera }\end{DoxyParamCaption})}
+
+
+
+Move the player based on input and camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Shared pointer to the camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player is on screen, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1Player_ad45e332a4d82cd3c519be08ea45c50dc}\label{classmodel_1_1Player_ad45e332a4d82cd3c519be08ea45c50dc} 
+\index{model::Player@{model::Player}!setVerticalSpeed@{setVerticalSpeed}}
+\index{setVerticalSpeed@{setVerticalSpeed}!model::Player@{model::Player}}
+\doxysubsubsection{\texorpdfstring{setVerticalSpeed()}{setVerticalSpeed()}}
+{\footnotesize\ttfamily void model\+::\+Player\+::set\+Vertical\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Set the vertical speed of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & New vertical speed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Player.\+h\item 
+src/\+Model/\+Entities/Player.\+cpp\end{DoxyCompactItemize}

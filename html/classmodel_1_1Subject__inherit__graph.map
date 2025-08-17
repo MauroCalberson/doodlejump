@@ -1,0 +1,17 @@
+<map id="model::Subject" name="model::Subject">
+<area shape="rect" id="Node000001" title="Base class for observable entities. Supports multiple observers and notifies them of changes." alt="" coords="211,5,330,31"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Entitymodel.html" title="Abstract base class for all game entities. Inherits from Subject for observer pattern support." alt="" coords="195,79,346,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,44,273,79,268,79,268,44"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1BGTile.html" title="Represents a background tile entity in the game. Inherits from Entitymodel. BGTile does not interact ..." alt="" coords="5,152,120,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,111,97,154,95,149,223,106"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Bonus.html" title="Abstract base class for bonus entities attached to platforms." alt="" coords="145,152,255,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="251,116,213,154,210,150,247,112"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1Platform.html" title="Represents a platform entity in the game. Supports static, horizontally moving (Blue),..." alt="" coords="279,152,406,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="294,112,333,150,329,154,291,116"/>
+<area shape="rect" id="Node000008" href="$classmodel_1_1Player.html" title="Represents the player entity in the game. Handles movement, collision, and position updates for the p..." alt="" coords="431,152,543,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="319,106,453,149,451,154,318,111"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Jetpack.html" title="Jetpack bonus entity, gives player a speed boost." alt="" coords="71,225,190,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="181,189,144,227,140,223,177,185"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1Spring.html" title="Spring bonus entity, gives player a bounce." alt="" coords="213,225,325,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="223,185,260,223,256,227,219,189"/>
+</map>

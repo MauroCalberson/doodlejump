@@ -1,0 +1,155 @@
+\doxysection{model\+::Jetpack Class Reference}
+\hypertarget{classmodel_1_1Jetpack}{}\label{classmodel_1_1Jetpack}\index{model::Jetpack@{model::Jetpack}}
+
+
+\doxylink{classmodel_1_1Jetpack}{Jetpack} bonus entity, gives player a speed boost.  
+
+
+
+
+{\ttfamily \#include $<$Bonus.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Jetpack\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Jetpack__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Jetpack\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Jetpack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9}{collidedwith\+Player}} () override
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classmodel_1_1Jetpack_a6b308f2bddfcff0f35eb626d2424fd77}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Jetpack_a4e4aadb783b3e2bee1d361e14dc52982}{update\+Bonus\+Position}} () override
+\begin{DoxyCompactList}\small\item\em Update the position of the bonus based on its platform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c}{get\+Hitbox}} () const override
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the bonus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Bonus}{model\+::\+Bonus}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Bonus_aaad33a5556278ae43bf3a017560d6e0e}{attach\+To\+Platform}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ \&platform)
+\begin{DoxyCompactList}\small\item\em Attach this bonus to a platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the entity. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Bonus}{model\+::\+Bonus}}}
+\begin{DoxyCompactItemize}
+\item 
+Entity\+Type {\bfseries Type}
+\begin{DoxyCompactList}\small\item\em Type of the bonus. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ {\bfseries attached\+Platform}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Platform}{Platform} this bonus is attached to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1Jetpack}{Jetpack} bonus entity, gives player a speed boost. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9}\label{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9} 
+\index{model::Jetpack@{model::Jetpack}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::Jetpack@{model::Jetpack}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily float model\+::\+Jetpack\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle collision with the player. 
+
+\begin{DoxyReturn}{Returns}
+Effect value (e.\+g., bounce height or boost speed). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05}{model\+::\+Bonus}}.
+
+\Hypertarget{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c}\label{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c} 
+\index{model::Jetpack@{model::Jetpack}!getHitbox@{getHitbox}}
+\index{getHitbox@{getHitbox}!model::Jetpack@{model::Jetpack}}
+\doxysubsubsection{\texorpdfstring{getHitbox()}{getHitbox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} model\+::\+Jetpack\+::get\+Hitbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the hitbox of the bonus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1Hitbox}{Hitbox} struct. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Bonus_a1355778956879277529766cec3865044}{model\+::\+Bonus}}.
+
+\Hypertarget{classmodel_1_1Jetpack_a6b308f2bddfcff0f35eb626d2424fd77}\label{classmodel_1_1Jetpack_a6b308f2bddfcff0f35eb626d2424fd77} 
+\index{model::Jetpack@{model::Jetpack}!getType@{getType}}
+\index{getType@{getType}!model::Jetpack@{model::Jetpack}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Entity\+Type model\+::\+Jetpack\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the entity. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+Type enum value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Jetpack_a4e4aadb783b3e2bee1d361e14dc52982}\label{classmodel_1_1Jetpack_a4e4aadb783b3e2bee1d361e14dc52982} 
+\index{model::Jetpack@{model::Jetpack}!updateBonusPosition@{updateBonusPosition}}
+\index{updateBonusPosition@{updateBonusPosition}!model::Jetpack@{model::Jetpack}}
+\doxysubsubsection{\texorpdfstring{updateBonusPosition()}{updateBonusPosition()}}
+{\footnotesize\ttfamily void model\+::\+Jetpack\+::update\+Bonus\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the position of the bonus based on its platform. 
+
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Bonus_ae83a69154226509578a44877a15a75a7}{model\+::\+Bonus}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Bonus.\+h\item 
+src/\+Model/\+Entities/Bonus.\+cpp\end{DoxyCompactItemize}

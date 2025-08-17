@@ -1,0 +1,115 @@
+\doxysection{view\+::Bonus\+View Class Reference}
+\hypertarget{classview_1_1BonusView}{}\label{classview_1_1BonusView}\index{view::BonusView@{view::BonusView}}
+
+
+View class for bonus entities. Handles texture loading and sprite setup for bonuses.  
+
+
+
+
+{\ttfamily \#include $<$Bonus\+View.\+h$>$}
+
+
+
+Inheritance diagram for view\+::Bonus\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classview_1_1BonusView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::Bonus\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classview_1_1BonusView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classview_1_1BonusView_ab01dabfd1e727da05094f57915c8ed72}\label{classview_1_1BonusView_ab01dabfd1e727da05094f57915c8ed72} 
+{\bfseries Bonus\+View} ()
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classview_1_1BonusView}{Bonus\+View} and initialize its texture and sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classview_1_1BonusView_a5ff88a00c0246471a8b979d5e4ac0154}{set\+Texture}} (Entity\+Type \mbox{\hyperlink{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739}{type}})
+\begin{DoxyCompactList}\small\item\em Set the texture based on the bonus type. Throws std\+::runtime\+\_\+error if texture loading fails. \end{DoxyCompactList}\item 
+Entity\+View\+Type \mbox{\hyperlink{classview_1_1BonusView_a43afdc93c84487344d12ed015dc3bb4f}{get\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Get the type of this entity view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classview_1_1EntityView_ada405592c50e7333bbc44060908a263a}{update}} (float \mbox{\hyperlink{classview_1_1EntityView_ab119c26fcabfa15853e90f5ea411f386}{x}}, float \mbox{\hyperlink{classview_1_1EntityView_ac6deeff02bf299f8ba6ec853888e9b0c}{y}}) override
+\begin{DoxyCompactList}\small\item\em Update the sprite\textquotesingle{}s position based on the entity\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classview_1_1EntityView_a548d77a9b8baff75f1c5baceb099d0ab}{on\+Destroy}} () override
+\begin{DoxyCompactList}\small\item\em Mark the view as inactive when destroyed. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{classview_1_1EntityView_aa04ce7bcdc6d4c6127174d5d1e2c5681}{get\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em Get the sprite for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classview_1_1EntityView_aa11de9361d9cf41e02715debc885a06a}{set\+Type}} (Entity\+View\+Type \mbox{\hyperlink{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739}{type}})
+\begin{DoxyCompactList}\small\item\em Set the type of this entity view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Active} = true
+\begin{DoxyCompactList}\small\item\em Indicates if the view is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x}
+\begin{DoxyCompactList}\small\item\em X position. \end{DoxyCompactList}\item 
+float {\bfseries y}
+\begin{DoxyCompactList}\small\item\em Y position. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Texture $>$ {\bfseries texture}
+\begin{DoxyCompactList}\small\item\em Texture for the sprite. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Sprite $>$ {\bfseries sprite}
+\begin{DoxyCompactList}\small\item\em Sprite for rendering. \end{DoxyCompactList}\item 
+Entity\+View\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View class for bonus entities. Handles texture loading and sprite setup for bonuses. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1BonusView_a43afdc93c84487344d12ed015dc3bb4f}\label{classview_1_1BonusView_a43afdc93c84487344d12ed015dc3bb4f} 
+\index{view::BonusView@{view::BonusView}!getType@{getType}}
+\index{getType@{getType}!view::BonusView@{view::BonusView}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Entity\+View\+Type view\+::\+Bonus\+View\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of this entity view. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+View\+Type\+::\+Bonus 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classview_1_1EntityView_a72d614c8f7f54920fca9b18447360927}{view\+::\+Entity\+View}}.
+
+\Hypertarget{classview_1_1BonusView_a5ff88a00c0246471a8b979d5e4ac0154}\label{classview_1_1BonusView_a5ff88a00c0246471a8b979d5e4ac0154} 
+\index{view::BonusView@{view::BonusView}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!view::BonusView@{view::BonusView}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void view\+::\+Bonus\+View\+::set\+Texture (\begin{DoxyParamCaption}\item[{Entity\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Set the texture based on the bonus type. Throws std\+::runtime\+\_\+error if texture loading fails. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of bonus entity. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+View/Bonus\+View.\+h\item 
+src/\+View/Bonus\+View.\+cpp\end{DoxyCompactItemize}

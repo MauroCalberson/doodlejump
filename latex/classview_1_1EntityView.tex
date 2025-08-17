@@ -1,0 +1,164 @@
+\doxysection{view\+::Entity\+View Class Reference}
+\hypertarget{classview_1_1EntityView}{}\label{classview_1_1EntityView}\index{view::EntityView@{view::EntityView}}
+
+
+Base class for all entity views. Handles sprite management and observer updates.  
+
+
+
+
+{\ttfamily \#include $<$Entityt\+View.\+h$>$}
+
+
+
+Inheritance diagram for view\+::Entity\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1EntityView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::Entity\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classview_1_1EntityView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classview_1_1EntityView_ada405592c50e7333bbc44060908a263a}{update}} (float \mbox{\hyperlink{classview_1_1EntityView_ab119c26fcabfa15853e90f5ea411f386}{x}}, float \mbox{\hyperlink{classview_1_1EntityView_ac6deeff02bf299f8ba6ec853888e9b0c}{y}}) override
+\begin{DoxyCompactList}\small\item\em Update the sprite\textquotesingle{}s position based on the entity\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classview_1_1EntityView_a548d77a9b8baff75f1c5baceb099d0ab}{on\+Destroy}} () override
+\begin{DoxyCompactList}\small\item\em Mark the view as inactive when destroyed. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \mbox{\hyperlink{classview_1_1EntityView_aa04ce7bcdc6d4c6127174d5d1e2c5681}{get\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em Get the sprite for rendering. \end{DoxyCompactList}\item 
+virtual Entity\+View\+Type \mbox{\hyperlink{classview_1_1EntityView_a72d614c8f7f54920fca9b18447360927}{get\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the type of this entity view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classview_1_1EntityView_aa11de9361d9cf41e02715debc885a06a}{set\+Type}} (Entity\+View\+Type \mbox{\hyperlink{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739}{type}})
+\begin{DoxyCompactList}\small\item\em Set the type of this entity view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classview_1_1EntityView_a7566113260be7db29a311628632bdc37}\label{classview_1_1EntityView_a7566113260be7db29a311628632bdc37} 
+bool {\bfseries is\+Active} = true
+\begin{DoxyCompactList}\small\item\em Indicates if the view is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classview_1_1EntityView_ab119c26fcabfa15853e90f5ea411f386}\label{classview_1_1EntityView_ab119c26fcabfa15853e90f5ea411f386} 
+float {\bfseries x}
+\begin{DoxyCompactList}\small\item\em X position. \end{DoxyCompactList}\item 
+\Hypertarget{classview_1_1EntityView_ac6deeff02bf299f8ba6ec853888e9b0c}\label{classview_1_1EntityView_ac6deeff02bf299f8ba6ec853888e9b0c} 
+float {\bfseries y}
+\begin{DoxyCompactList}\small\item\em Y position. \end{DoxyCompactList}\item 
+\Hypertarget{classview_1_1EntityView_a55d1f4d3b22eadb287aadcc26f13b163}\label{classview_1_1EntityView_a55d1f4d3b22eadb287aadcc26f13b163} 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Texture $>$ {\bfseries texture}
+\begin{DoxyCompactList}\small\item\em Texture for the sprite. \end{DoxyCompactList}\item 
+\Hypertarget{classview_1_1EntityView_a2b44787fdf5abf4ed840b0eb56488380}\label{classview_1_1EntityView_a2b44787fdf5abf4ed840b0eb56488380} 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Sprite $>$ {\bfseries sprite}
+\begin{DoxyCompactList}\small\item\em Sprite for rendering. \end{DoxyCompactList}\item 
+\Hypertarget{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739}\label{classview_1_1EntityView_aa66afd79c70eabe119a822823ef7c739} 
+Entity\+View\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all entity views. Handles sprite management and observer updates. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1EntityView_aa04ce7bcdc6d4c6127174d5d1e2c5681}\label{classview_1_1EntityView_aa04ce7bcdc6d4c6127174d5d1e2c5681} 
+\index{view::EntityView@{view::EntityView}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!view::EntityView@{view::EntityView}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite view\+::\+Entity\+View\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the sprite for rendering. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the sprite. 
+\end{DoxyReturn}
+\Hypertarget{classview_1_1EntityView_a72d614c8f7f54920fca9b18447360927}\label{classview_1_1EntityView_a72d614c8f7f54920fca9b18447360927} 
+\index{view::EntityView@{view::EntityView}!getType@{getType}}
+\index{getType@{getType}!view::EntityView@{view::EntityView}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual Entity\+View\+Type view\+::\+Entity\+View\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the type of this entity view. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+View\+Type enum value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classview_1_1BGTileView_a297a227bb6fe0bc77b80153bce9e4e30}{view\+::\+BGTile\+View}}, \mbox{\hyperlink{classview_1_1BonusView_a43afdc93c84487344d12ed015dc3bb4f}{view\+::\+Bonus\+View}}, \mbox{\hyperlink{classview_1_1PlatformView_a4a988d249a3ff40b9eab4a2a0a2375f0}{view\+::\+Platform\+View}}, and \mbox{\hyperlink{classview_1_1PlayerView_ae7fbede94f7edfa2997195db82dfd8f4}{view\+::\+Player\+View}}.
+
+\Hypertarget{classview_1_1EntityView_a548d77a9b8baff75f1c5baceb099d0ab}\label{classview_1_1EntityView_a548d77a9b8baff75f1c5baceb099d0ab} 
+\index{view::EntityView@{view::EntityView}!onDestroy@{onDestroy}}
+\index{onDestroy@{onDestroy}!view::EntityView@{view::EntityView}}
+\doxysubsubsection{\texorpdfstring{onDestroy()}{onDestroy()}}
+{\footnotesize\ttfamily void view\+::\+Entity\+View\+::on\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Mark the view as inactive when destroyed. 
+
+
+
+Implements \mbox{\hyperlink{classObserver}{Observer}}.
+
+\Hypertarget{classview_1_1EntityView_aa11de9361d9cf41e02715debc885a06a}\label{classview_1_1EntityView_aa11de9361d9cf41e02715debc885a06a} 
+\index{view::EntityView@{view::EntityView}!setType@{setType}}
+\index{setType@{setType}!view::EntityView@{view::EntityView}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void view\+::\+Entity\+View\+::set\+Type (\begin{DoxyParamCaption}\item[{Entity\+View\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Set the type of this entity view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Entity\+View\+Type enum value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classview_1_1EntityView_ada405592c50e7333bbc44060908a263a}\label{classview_1_1EntityView_ada405592c50e7333bbc44060908a263a} 
+\index{view::EntityView@{view::EntityView}!update@{update}}
+\index{update@{update}!view::EntityView@{view::EntityView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::\+Entity\+View\+::update (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the sprite\textquotesingle{}s position based on the entity\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver}{Observer}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classview_1_1PlayerView_ac265dc3e9150029f8e46181da5794d0f}{view\+::\+Player\+View}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+View/Entityt\+View.\+h\item 
+src/\+View/Entityt\+View.\+cpp\end{DoxyCompactItemize}

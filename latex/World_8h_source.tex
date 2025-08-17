@@ -1,0 +1,64 @@
+\doxysection{World.\+h}
+\hypertarget{World_8h_source}{}\label{World_8h_source}\index{src/Model/World.h@{src/Model/World.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_WORLD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_WORLD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}AbstractFactory.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Entities/Player.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}CollisionSystem.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../Helper/Random.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }PlatformManager;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }BonusManager;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }BGTileManager;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1World}{World}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1World}{World}}(std::unique\_ptr<AbstractFactory>\ factory);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1World_ade12edbbc36a78be6840ea700f2c568c}{\string~World}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_af73053bfde275d8bfbd5ce5f8fa5aee4}{update}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_a6e05af061131414fc138daa2e73aa560}{setup}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1World_a991da6217abc8a4e0195ccede8d03c88}{getScore}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ score;\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1World_ad673fcfca644accadec1df83a8a57b7f}{stop}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ handleCollisions();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ updateDifficulty();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::pair<float,\ float>\ calcPlatformCoords();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ std::shared\_ptr<Platform>\ generatePlatform();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ createBackgroundTiles();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ notifyEntityObservers();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ updateScore();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ std::shared\_ptr<Camera>\ camera;\ }
+\DoxyCodeLine{00090\ \ \ \ \ std::shared\_ptr<Player>\ player;\ }
+\DoxyCodeLine{00091\ \ \ \ \ std::unique\_ptr<AbstractFactory>\ factory;\ }
+\DoxyCodeLine{00092\ \ \ \ \ std::unique\_ptr<PlatformManager>\ platformManager;\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::unique\_ptr<BonusManager>\ bonusManager;\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::unique\_ptr<BGTileManager>\ bgTileManager;\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{float}\ difficulty\ =\ 0.0f;\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ 0;\ }
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_WORLD\_H}}
+
+\end{DoxyCode}

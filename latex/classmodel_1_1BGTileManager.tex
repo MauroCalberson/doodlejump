@@ -1,0 +1,75 @@
+\doxysection{model\+::BGTile\+Manager Class Reference}
+\hypertarget{classmodel_1_1BGTileManager}{}\label{classmodel_1_1BGTileManager}\index{model::BGTileManager@{model::BGTileManager}}
+
+
+Manages background tiles for the game. Handles adding, updating, and repositioning tiles as needed.  
+
+
+
+
+{\ttfamily \#include $<$BGTile\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1BGTileManager_a94fc6f9f5fa6a684c59f789741b71150}{add\+Tile}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1BGTile}{BGTile}} $>$ \&tile)
+\begin{DoxyCompactList}\small\item\em Add a background tile to the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1BGTileManager_a464c2365324ecf51f92c3f337db4eaa5}{update\+Tiles}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Camera}{Camera}} $>$ \&camera)
+\begin{DoxyCompactList}\small\item\em Update the positions of background tiles based on camera. Repositions tiles that move out of view and notifies observers. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1BGTile}{BGTile}} $>$ $>$ \& \mbox{\hyperlink{classmodel_1_1BGTileManager_ae87f10c8f3888a3c461dbbd512464f7a}{get\+Background\+Tiles}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of background tiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages background tiles for the game. Handles adding, updating, and repositioning tiles as needed. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1BGTileManager_a94fc6f9f5fa6a684c59f789741b71150}\label{classmodel_1_1BGTileManager_a94fc6f9f5fa6a684c59f789741b71150} 
+\index{model::BGTileManager@{model::BGTileManager}!addTile@{addTile}}
+\index{addTile@{addTile}!model::BGTileManager@{model::BGTileManager}}
+\doxysubsubsection{\texorpdfstring{addTile()}{addTile()}}
+{\footnotesize\ttfamily void model\+::\+BGTile\+Manager\+::add\+Tile (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1BGTile}{BGTile}} $>$ \&}]{tile }\end{DoxyParamCaption})}
+
+
+
+Add a background tile to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Shared pointer to \doxylink{classmodel_1_1BGTile}{BGTile}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1BGTileManager_ae87f10c8f3888a3c461dbbd512464f7a}\label{classmodel_1_1BGTileManager_ae87f10c8f3888a3c461dbbd512464f7a} 
+\index{model::BGTileManager@{model::BGTileManager}!getBackgroundTiles@{getBackgroundTiles}}
+\index{getBackgroundTiles@{getBackgroundTiles}!model::BGTileManager@{model::BGTileManager}}
+\doxysubsubsection{\texorpdfstring{getBackgroundTiles()}{getBackgroundTiles()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1BGTile}{BGTile}} $>$ $>$ \& model\+::\+BGTile\+Manager\+::get\+Background\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of background tiles. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to vector of \doxylink{classmodel_1_1BGTile}{BGTile} shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1BGTileManager_a464c2365324ecf51f92c3f337db4eaa5}\label{classmodel_1_1BGTileManager_a464c2365324ecf51f92c3f337db4eaa5} 
+\index{model::BGTileManager@{model::BGTileManager}!updateTiles@{updateTiles}}
+\index{updateTiles@{updateTiles}!model::BGTileManager@{model::BGTileManager}}
+\doxysubsubsection{\texorpdfstring{updateTiles()}{updateTiles()}}
+{\footnotesize\ttfamily void model\+::\+BGTile\+Manager\+::update\+Tiles (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Camera}{Camera}} $>$ \&}]{camera }\end{DoxyParamCaption})}
+
+
+
+Update the positions of background tiles based on camera. Repositions tiles that move out of view and notifies observers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Shared pointer to \doxylink{classmodel_1_1Camera}{Camera}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/BGTile\+Manager.\+h\item 
+src/\+Model/BGTile\+Manager.\+cpp\end{DoxyCompactItemize}

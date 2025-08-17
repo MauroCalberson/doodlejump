@@ -1,0 +1,187 @@
+\doxysection{model\+::Platform Class Reference}
+\hypertarget{classmodel_1_1Platform}{}\label{classmodel_1_1Platform}\index{model::Platform@{model::Platform}}
+
+
+Represents a platform entity in the game. Supports static, horizontally moving (Blue), and vertically moving (Yellow) platforms.  
+
+
+
+
+{\ttfamily \#include $<$Platform.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Platform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Platform__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Platform_ae78af4cdaf363c684cdc8e6889ca5d4f}{set\+Type}} (Entity\+Type t)
+\begin{DoxyCompactList}\small\item\em Set the type of the platform. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classmodel_1_1Platform_aabedbc6cee48901adf0a551e255cdc8b}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of the platform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the platform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Platform_a4eba07c00387d17a7e077e670dde1ea0}{get\+Hitbox}} () const override
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the platform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Platform_ae526e17972f530a3616c48320ed2d99b}{set\+Movement\+Bounds}} (float min\+Bound, float max\+Bound)
+\begin{DoxyCompactList}\small\item\em Set movement bounds for vertical movement. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1Platform_a413ce2469ddb431806d80456dca65319}\label{classmodel_1_1Platform_a413ce2469ddb431806d80456dca65319} 
+void {\bfseries update\+Position} ()
+\begin{DoxyCompactList}\small\item\em Update the position of the platform based on its type. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmodel_1_1Platform_a890fac2327127acf42e5aec50ce1b0bd}{collidedwith\+Player}} () override
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a platform entity in the game. Supports static, horizontally moving (Blue), and vertically moving (Yellow) platforms. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Platform_a890fac2327127acf42e5aec50ce1b0bd}\label{classmodel_1_1Platform_a890fac2327127acf42e5aec50ce1b0bd} 
+\index{model::Platform@{model::Platform}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily float model\+::\+Platform\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle collision with the player. 
+
+\begin{DoxyReturn}{Returns}
+Bounce height (default\+: 25.\+0f). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Platform_a4eba07c00387d17a7e077e670dde1ea0}\label{classmodel_1_1Platform_a4eba07c00387d17a7e077e670dde1ea0} 
+\index{model::Platform@{model::Platform}!getHitbox@{getHitbox}}
+\index{getHitbox@{getHitbox}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{getHitbox()}{getHitbox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} model\+::\+Platform\+::get\+Hitbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the hitbox of the platform. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1Hitbox}{Hitbox} struct. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Platform_aabedbc6cee48901adf0a551e255cdc8b}\label{classmodel_1_1Platform_aabedbc6cee48901adf0a551e255cdc8b} 
+\index{model::Platform@{model::Platform}!getType@{getType}}
+\index{getType@{getType}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Entity\+Type model\+::\+Platform\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of the platform. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+Type value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71}\label{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71} 
+\index{model::Platform@{model::Platform}!setcoords@{setcoords}}
+\index{setcoords@{setcoords}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{setcoords()}{setcoords()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+::setcoords (\begin{DoxyParamCaption}\item[{float \&}]{x,  }\item[{float \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the coordinates of the platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position. \\
+\hline
+{\em y} & Y position. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Platform_ae526e17972f530a3616c48320ed2d99b}\label{classmodel_1_1Platform_ae526e17972f530a3616c48320ed2d99b} 
+\index{model::Platform@{model::Platform}!setMovementBounds@{setMovementBounds}}
+\index{setMovementBounds@{setMovementBounds}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{setMovementBounds()}{setMovementBounds()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+::set\+Movement\+Bounds (\begin{DoxyParamCaption}\item[{float}]{min\+Bound,  }\item[{float}]{max\+Bound }\end{DoxyParamCaption})}
+
+
+
+Set movement bounds for vertical movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Bound} & Minimum Y value. \\
+\hline
+{\em max\+Bound} & Maximum Y value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1Platform_ae78af4cdaf363c684cdc8e6889ca5d4f}\label{classmodel_1_1Platform_ae78af4cdaf363c684cdc8e6889ca5d4f} 
+\index{model::Platform@{model::Platform}!setType@{setType}}
+\index{setType@{setType}!model::Platform@{model::Platform}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+::set\+Type (\begin{DoxyParamCaption}\item[{Entity\+Type}]{t }\end{DoxyParamCaption})}
+
+
+
+Set the type of the platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Entity\+Type value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Platform.\+h\item 
+src/\+Model/\+Entities/Platform.\+cpp\end{DoxyCompactItemize}

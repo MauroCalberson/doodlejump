@@ -1,0 +1,33 @@
+\doxysection{BGTile\+Manager.\+h}
+\hypertarget{BGTileManager_8h_source}{}\label{BGTileManager_8h_source}\index{src/Model/BGTileManager.h@{src/Model/BGTileManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_BGTILEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_BGTILEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Entities/BGTile.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1BGTileManager}{BGTileManager}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::shared\_ptr<BGTile>>\ backgroundTiles;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ highestTileY\ =\ 0.0f;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ tileHeight\ =\ 1024.0f;\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1BGTileManager_a94fc6f9f5fa6a684c59f789741b71150}{addTile}}(\textcolor{keyword}{const}\ std::shared\_ptr<BGTile>\&\ tile);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1BGTileManager_a464c2365324ecf51f92c3f337db4eaa5}{updateTiles}}(\textcolor{keyword}{const}\ std::shared\_ptr<Camera>\&\ camera);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<BGTile>>\&\ \mbox{\hyperlink{classmodel_1_1BGTileManager_ae87f10c8f3888a3c461dbbd512464f7a}{getBackgroundTiles}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ backgroundTiles;\ \}}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_BGTILEMANAGER\_H}}
+
+\end{DoxyCode}

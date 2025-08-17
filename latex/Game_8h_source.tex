@@ -1,0 +1,68 @@
+\doxysection{Game.\+h}
+\hypertarget{Game_8h_source}{}\label{Game_8h_source}\index{src/Game.h@{src/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_GAME\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_GAME\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}View/EntitytView.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Model/Enums.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }World;}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGame}{Game}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ sf::RenderWindow\ window;\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::unique\_ptr<model::World>\ world;\ }
+\DoxyCodeLine{00021\ \ \ \ \ sf::Font\ font;\ }
+\DoxyCodeLine{00022\ \ \ \ \ sf::Text\ scoreText;\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<std::shared\_ptr<view::BGTileView>>\ bgTileViews;\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<std::shared\_ptr<view::PlatformView>>\ platformViews;\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<std::shared\_ptr<view::PlayerView>>\ playerViews;\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<std::shared\_ptr<view::BonusView>>\ bonusViews;\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ HorDirection\ horDirection\ =\ HorDirection::NONE;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGameOver\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ highScore\ =\ 0;\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classGame_a0b4f9d1a86b367fcdbde7eb8bf448acf}{Game}}()\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classGame}{Game}}*\ \mbox{\hyperlink{classGame_a19798a4f4c50037e1c5cd8c5d491fef9}{getInstance}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_ad5148e1485f3e15644c6b1f02ab29499}{updateScore}}(\textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a79f698dda206dd7a9bed28b3f88bdc38}{processEvents}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a79df6376b332d63c9eca0dcee30305c3}{update}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a15ddd769261d923827a3cdf41499c843}{render}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a337f8d36e86969b1b29bd65cb2dbd6c4}{displayEntities}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_ada325a53bd0ffdb70af7ea3c2a65aad8}{displayGameOver}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{const}\ HorDirection\&\ \mbox{\hyperlink{classGame_ada874f28ce9c25a7a9ef918828e76088}{getInput}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ horDirection;\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b}{stop}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_aeb468737e1495cfcfbf512cfdc751117}{restart}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_aff8982357ce9a8fe29691b31dae9335e}{addEntityView}}(\textcolor{keyword}{const}\ std::shared\_ptr<view::EntityView>\&\ view);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGame_a0782f85463afaa4e234a3ab009f1989e}{removeEntityView}}(\textcolor{keyword}{const}\ std::shared\_ptr<view::EntityView>\&\ view);}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_GAME\_H}}
+
+\end{DoxyCode}

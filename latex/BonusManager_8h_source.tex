@@ -1,0 +1,32 @@
+\doxysection{Bonus\+Manager.\+h}
+\hypertarget{BonusManager_8h_source}{}\label{BonusManager_8h_source}\index{src/Model/BonusManager.h@{src/Model/BonusManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_BONUSMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_BONUSMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Entities/Bonus.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1BonusManager}{BonusManager}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<std::shared\_ptr<Bonus>>\ bonuses;\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1BonusManager_aacbdc345b801240e512888c1d35e7733}{addBonus}}(\textcolor{keyword}{const}\ std::shared\_ptr<Bonus>\&\ bonus);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1BonusManager_a57f368b081d9d58b9bd696f4c3203ca9}{updateBonuses}}(\textcolor{keywordtype}{float}\ cameraY);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Bonus>>\&\ \mbox{\hyperlink{classmodel_1_1BonusManager_a5a42cb6cb86a77dfa3247d4e864e59ba}{getBonuses}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bonuses;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1BonusManager_add99293ee43b506f0e36bfad8c27c958}{removeBonus}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_BONUSMANAGER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+<map id="view::PlatformView" name="view::PlatformView">
+<area shape="rect" id="Node000001" title="View class for platform entities. Handles texture loading and sprite setup for platforms." alt="" coords="5,152,153,177"/>
+<area shape="rect" id="Node000002" href="$classview_1_1EntityView.html" title="Base class for all entity views. Handles sprite management and observer updates." alt="" coords="14,79,145,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,118,82,152,77,152,77,118"/>
+<area shape="rect" id="Node000003" href="$classObserver.html" title=" " alt="" coords="39,5,120,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,44,82,79,77,79,77,44"/>
+</map>

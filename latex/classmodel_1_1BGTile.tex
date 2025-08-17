@@ -1,0 +1,112 @@
+\doxysection{model\+::BGTile Class Reference}
+\hypertarget{classmodel_1_1BGTile}{}\label{classmodel_1_1BGTile}\index{model::BGTile@{model::BGTile}}
+
+
+Represents a background tile entity in the game. Inherits from \doxylink{classmodel_1_1Entitymodel}{Entitymodel}. \doxylink{classmodel_1_1BGTile}{BGTile} does not interact with the player.  
+
+
+
+
+{\ttfamily \#include $<$BGTile.\+h$>$}
+
+
+
+Inheritance diagram for model\+::BGTile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1BGTile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::BGTile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1BGTile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1BGTile_aadcf8803c3664516b58aebca84812221}\label{classmodel_1_1BGTile_aadcf8803c3664516b58aebca84812221} 
+{\bfseries BGTile} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classmodel_1_1BGTile}{BGTile}. \end{DoxyCompactList}\item 
+Entity\+Type \mbox{\hyperlink{classmodel_1_1BGTile_a66edcd6f523860d146829845bb8cef8a}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of this entity. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmodel_1_1BGTile_a1f5c289826985a7ea0a39286dae739fa}{collidedwith\+Player}} () override
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \doxylink{classmodel_1_1BGTile}{BGTile} has no effect on the player, so always returns 0.\+0f. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the entity. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}{get\+Hitbox}} () const
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entitymodel}{model\+::\+Entitymodel}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a background tile entity in the game. Inherits from \doxylink{classmodel_1_1Entitymodel}{Entitymodel}. \doxylink{classmodel_1_1BGTile}{BGTile} does not interact with the player. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1BGTile_a1f5c289826985a7ea0a39286dae739fa}\label{classmodel_1_1BGTile_a1f5c289826985a7ea0a39286dae739fa} 
+\index{model::BGTile@{model::BGTile}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::BGTile@{model::BGTile}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily float model\+::\+BGTile\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle collision with the player. \doxylink{classmodel_1_1BGTile}{BGTile} has no effect on the player, so always returns 0.\+0f. 
+
+\begin{DoxyReturn}{Returns}
+0.\+0f 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1BGTile_a66edcd6f523860d146829845bb8cef8a}\label{classmodel_1_1BGTile_a66edcd6f523860d146829845bb8cef8a} 
+\index{model::BGTile@{model::BGTile}!getType@{getType}}
+\index{getType@{getType}!model::BGTile@{model::BGTile}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Entity\+Type model\+::\+BGTile\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of this entity. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+Type\+::\+BGTILE 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{model\+::\+Entitymodel}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/BGTile.\+h\end{DoxyCompactItemize}

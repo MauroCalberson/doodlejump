@@ -1,0 +1,56 @@
+\doxysection{Bonus.\+h}
+\hypertarget{Bonus_8h_source}{}\label{Bonus_8h_source}\index{src/Model/Entities/Bonus.h@{src/Model/Entities/Bonus.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_BONUS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_BONUS\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Entitymodel.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Platform.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Entitymodel}{Entitymodel}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ EntityType\ \mbox{\hyperlink{classmodel_1_1Bonus_a636b59ed666c9cdea389992ea2ac1ca5}{Type}};\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::weak\_ptr<Platform>\ \mbox{\hyperlink{classmodel_1_1Bonus_a6baaf2b7a5c4a911b0e2547d714d38b7}{attachedPlatform}};\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Bonus_aaad33a5556278ae43bf3a017560d6e0e}{attachToPlatform}}(\textcolor{keyword}{const}\ std::shared\_ptr<Platform>\&\ platform);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Bonus_ae83a69154226509578a44877a15a75a7}{updateBonusPosition}}()\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05}{collidedwithPlayer}}()\ =\ 0;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\ \mbox{\hyperlink{classmodel_1_1Bonus_a1355778956879277529766cec3865044}{getHitbox}}()\ \textcolor{keyword}{const\ override}\ =\ 0;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Spring}{Spring}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ bounceHeight\ =\ 56.509f;\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Spring}{Spring}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmodel_1_1Spring_a1f06a17090236a29483116db74fa437a}{collidedwithPlayer}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ \ \ \ \ [[nodiscard]]\ EntityType\ \mbox{\hyperlink{classmodel_1_1Spring_a13f9b90757e1cd704fd0a9ded4cc1bd6}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Spring_a9df495a46bb484ce1ce72708904fa8d5}{updateBonusPosition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\ \mbox{\hyperlink{classmodel_1_1Spring_aa594349567f635e19a74948801d32023}{getHitbox}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Jetpack}{Jetpack}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}}\ \{}
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{float}\ boostSpeed\ =\ 100.0f;\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Jetpack}{Jetpack}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9}{collidedwithPlayer}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ \ \ \ \ [[nodiscard]]\ EntityType\ \mbox{\hyperlink{classmodel_1_1Jetpack_a6b308f2bddfcff0f35eb626d2424fd77}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Jetpack_a4e4aadb783b3e2bee1d361e14dc52982}{updateBonusPosition}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\ \mbox{\hyperlink{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c}{getHitbox}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_BONUS\_H}}
+
+\end{DoxyCode}

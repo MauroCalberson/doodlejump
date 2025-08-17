@@ -1,0 +1,29 @@
+\doxysection{Abstract\+Factory.\+h}
+\hypertarget{AbstractFactory_8h_source}{}\label{AbstractFactory_8h_source}\index{src/Model/AbstractFactory.h@{src/Model/AbstractFactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Enums.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Platform;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }Player;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Bonus;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }BGTile;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1AbstractFactory}{AbstractFactory}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<Platform>\ createPlatform(EntityType\ platform)\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<Player>\ createPlayer()\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<Bonus>\ createBonus(EntityType\ type)\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<BGTile>\ createBGTile()\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{AbstractFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{\string~AbstractFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_ABSTRACTFACTORY\_H}}
+
+\end{DoxyCode}

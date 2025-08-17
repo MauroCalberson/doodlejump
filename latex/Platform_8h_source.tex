@@ -1,0 +1,49 @@
+\doxysection{Platform.\+h}
+\hypertarget{Platform_8h_source}{}\label{Platform_8h_source}\index{src/Model/Entities/Platform.h@{src/Model/Entities/Platform.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_PLATFORM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_PLATFORM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Entitymodel.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../Enums.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Platform}{Platform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Entitymodel}{Entitymodel}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ EntityType\ type;\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ max\ =\ 0;\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ min\ =\ 800;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ moveSpeed\ =\ 3;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ movingRight\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ movingUp\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ updateHorizontalMovement();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ updateVerticalMovement();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Platform}{\string~Platform}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Platform_ae78af4cdaf363c684cdc8e6889ca5d4f}{setType}}(EntityType\ t);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ [[nodiscard]]\ EntityType\ \mbox{\hyperlink{classmodel_1_1Platform_aabedbc6cee48901adf0a551e255cdc8b}{getType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71}{setcoords}}(\textcolor{keywordtype}{float}\&\ \mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}},\ \textcolor{keywordtype}{float}\&\ \mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\ \mbox{\hyperlink{classmodel_1_1Platform_a4eba07c00387d17a7e077e670dde1ea0}{getHitbox}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Platform_ae526e17972f530a3616c48320ed2d99b}{setMovementBounds}}(\textcolor{keywordtype}{float}\ minBound,\ \textcolor{keywordtype}{float}\ maxBound);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Platform_a413ce2469ddb431806d80456dca65319}{updatePosition}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmodel_1_1Platform_a890fac2327127acf42e5aec50ce1b0bd}{collidedwithPlayer}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_PLATFORM\_H}}
+
+\end{DoxyCode}

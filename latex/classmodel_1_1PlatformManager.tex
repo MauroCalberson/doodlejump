@@ -1,0 +1,144 @@
+\doxysection{model\+::Platform\+Manager Class Reference}
+\hypertarget{classmodel_1_1PlatformManager}{}\label{classmodel_1_1PlatformManager}\index{model::PlatformManager@{model::PlatformManager}}
+
+
+Manages platform entities in the game. Handles adding, updating, and removing platforms.  
+
+
+
+
+{\ttfamily \#include $<$Platform\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1PlatformManager_a76e0988a72482bdb82b22c81218dc74c}{Platform\+Manager}} (float start\+Height=800.\+0f)
+\begin{DoxyCompactList}\small\item\em Construct a \doxylink{classmodel_1_1PlatformManager}{Platform\+Manager} with an initial max platform height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1PlatformManager_a22d6629a8986770ca8fdf87bf1f2e6b1}{add\+Platform}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ \&platform)
+\begin{DoxyCompactList}\small\item\em Add a platform to the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1PlatformManager_a0aae33925f5304488a06d29dde39696d}{update\+Platforms}} (float cameraY)
+\begin{DoxyCompactList}\small\item\em Update the positions of platforms and remove out-\/of-\/view platforms. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ $>$ \& \mbox{\hyperlink{classmodel_1_1PlatformManager_a974af10acd5829407b1e52f287ef13bb}{get\+Platforms}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of platforms. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmodel_1_1PlatformManager_a26ad25509d385b10ae1f7c4de62c4ab4}{get\+Max\+Platform\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum platform height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1PlatformManager_a99e05c4cc6a98455cf03a8cf2ce2744e}{set\+Max\+Platform\+Height}} (float height)
+\begin{DoxyCompactList}\small\item\em Set the maximum platform height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1PlatformManager_ac336bd16bd28602281e74de1ff9128c6}{remove\+Platform}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Remove a platform by index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages platform entities in the game. Handles adding, updating, and removing platforms. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1PlatformManager_a76e0988a72482bdb82b22c81218dc74c}\label{classmodel_1_1PlatformManager_a76e0988a72482bdb82b22c81218dc74c} 
+\index{model::PlatformManager@{model::PlatformManager}!PlatformManager@{PlatformManager}}
+\index{PlatformManager@{PlatformManager}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{PlatformManager()}{PlatformManager()}}
+{\footnotesize\ttfamily model\+::\+Platform\+Manager\+::\+Platform\+Manager (\begin{DoxyParamCaption}\item[{float}]{start\+Height = {\ttfamily 800.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a \doxylink{classmodel_1_1PlatformManager}{Platform\+Manager} with an initial max platform height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Height} & Initial maximum platform height. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1PlatformManager_a22d6629a8986770ca8fdf87bf1f2e6b1}\label{classmodel_1_1PlatformManager_a22d6629a8986770ca8fdf87bf1f2e6b1} 
+\index{model::PlatformManager@{model::PlatformManager}!addPlatform@{addPlatform}}
+\index{addPlatform@{addPlatform}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{addPlatform()}{addPlatform()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+Manager\+::add\+Platform (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ \&}]{platform }\end{DoxyParamCaption})}
+
+
+
+Add a platform to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em platform} & Shared pointer to \doxylink{classmodel_1_1Platform}{Platform}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1PlatformManager_a26ad25509d385b10ae1f7c4de62c4ab4}\label{classmodel_1_1PlatformManager_a26ad25509d385b10ae1f7c4de62c4ab4} 
+\index{model::PlatformManager@{model::PlatformManager}!getMaxPlatformHeight@{getMaxPlatformHeight}}
+\index{getMaxPlatformHeight@{getMaxPlatformHeight}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{getMaxPlatformHeight()}{getMaxPlatformHeight()}}
+{\footnotesize\ttfamily float model\+::\+Platform\+Manager\+::get\+Max\+Platform\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the maximum platform height. 
+
+\begin{DoxyReturn}{Returns}
+Maximum platform height. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1PlatformManager_a974af10acd5829407b1e52f287ef13bb}\label{classmodel_1_1PlatformManager_a974af10acd5829407b1e52f287ef13bb} 
+\index{model::PlatformManager@{model::PlatformManager}!getPlatforms@{getPlatforms}}
+\index{getPlatforms@{getPlatforms}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{getPlatforms()}{getPlatforms()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Platform}{Platform}} $>$ $>$ \& model\+::\+Platform\+Manager\+::get\+Platforms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of platforms. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to vector of \doxylink{classmodel_1_1Platform}{Platform} shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1PlatformManager_ac336bd16bd28602281e74de1ff9128c6}\label{classmodel_1_1PlatformManager_ac336bd16bd28602281e74de1ff9128c6} 
+\index{model::PlatformManager@{model::PlatformManager}!removePlatform@{removePlatform}}
+\index{removePlatform@{removePlatform}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{removePlatform()}{removePlatform()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+Manager\+::remove\+Platform (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Remove a platform by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the platform to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1PlatformManager_a99e05c4cc6a98455cf03a8cf2ce2744e}\label{classmodel_1_1PlatformManager_a99e05c4cc6a98455cf03a8cf2ce2744e} 
+\index{model::PlatformManager@{model::PlatformManager}!setMaxPlatformHeight@{setMaxPlatformHeight}}
+\index{setMaxPlatformHeight@{setMaxPlatformHeight}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{setMaxPlatformHeight()}{setMaxPlatformHeight()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+Manager\+::set\+Max\+Platform\+Height (\begin{DoxyParamCaption}\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Set the maximum platform height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & New maximum platform height. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1PlatformManager_a0aae33925f5304488a06d29dde39696d}\label{classmodel_1_1PlatformManager_a0aae33925f5304488a06d29dde39696d} 
+\index{model::PlatformManager@{model::PlatformManager}!updatePlatforms@{updatePlatforms}}
+\index{updatePlatforms@{updatePlatforms}!model::PlatformManager@{model::PlatformManager}}
+\doxysubsubsection{\texorpdfstring{updatePlatforms()}{updatePlatforms()}}
+{\footnotesize\ttfamily void model\+::\+Platform\+Manager\+::update\+Platforms (\begin{DoxyParamCaption}\item[{float}]{cameraY }\end{DoxyParamCaption})}
+
+
+
+Update the positions of platforms and remove out-\/of-\/view platforms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cameraY} & Y position of the camera. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/Platform\+Manager.\+h\item 
+src/\+Model/Platform\+Manager.\+cpp\end{DoxyCompactItemize}

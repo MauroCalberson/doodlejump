@@ -1,0 +1,35 @@
+\doxysection{Stop\+Watch.\+h}
+\hypertarget{StopWatch_8h_source}{}\label{StopWatch_8h_source}\index{src/Helper/StopWatch.h@{src/Helper/StopWatch.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_STOPWATCH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_STOPWATCH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStopWatch}{StopWatch}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::chrono::steady\_clock::time\_point\ startTime;\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRunning;\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classStopWatch}{StopWatch}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Delete\ copy\ constructor\ and\ assignment\ operator}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classStopWatch}{StopWatch}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStopWatch}{StopWatch}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classStopWatch}{StopWatch}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStopWatch}{StopWatch}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classStopWatch}{StopWatch}}\&\ \mbox{\hyperlink{classStopWatch_af8ded20dbd1a7916443edde3be3f67e3}{getInstance}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStopWatch_a09a3c8f9ab03d7b28e4f8b90a833974e}{start}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStopWatch_a6e80b598d9304e37d8768b716e713e0e}{stop}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classStopWatch_ac8be1626396d1a5ca414f74349d59eb2}{getElapsedTime}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStopWatch_a1c0dcc57c615559f24bc9f8759271a9d}{reset}}();}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_STOPWATCH\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,121 @@
+\doxysection{model\+::Camera Class Reference}
+\hypertarget{classmodel_1_1Camera}{}\label{classmodel_1_1Camera}\index{model::Camera@{model::Camera}}
+
+
+Manages the camera\textquotesingle{}s position and view in the game world. Handles coordinate normalization and view checks.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Camera_aba7e477f46375345cb0966c0a8d0bd3d}{setcoords}} (float newX, float newY)
+\begin{DoxyCompactList}\small\item\em Set the camera\textquotesingle{}s coordinates. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Camera_abde9b4e2f4ef86ed28914be3d43d9249}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the camera\textquotesingle{}s current position. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Camera_a1655286350fe7c722245977835a18a1a}{normalize\+Coordinates}} (float worldX, float worldY) const
+\begin{DoxyCompactList}\small\item\em Normalize world coordinates to camera-\/relative coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmodel_1_1Camera_a40927620889207d99052acb454f582d1}{is\+In\+View}} (float \&worldX, float \&worldY) const
+\begin{DoxyCompactList}\small\item\em Check if a world position is within the camera\textquotesingle{}s view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Camera_a125fd270b2206a306021009e377c64da}{update\+Position}} (float \&playerY)
+\begin{DoxyCompactList}\small\item\em Update the camera\textquotesingle{}s position based on the player\textquotesingle{}s Y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the camera\textquotesingle{}s position and view in the game world. Handles coordinate normalization and view checks. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Camera_abde9b4e2f4ef86ed28914be3d43d9249}\label{classmodel_1_1Camera_abde9b4e2f4ef86ed28914be3d43d9249} 
+\index{model::Camera@{model::Camera}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!model::Camera@{model::Camera}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ model\+::\+Camera\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the camera\textquotesingle{}s current position. 
+
+\begin{DoxyReturn}{Returns}
+Pair of X and Y coordinates. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1Camera_a40927620889207d99052acb454f582d1}\label{classmodel_1_1Camera_a40927620889207d99052acb454f582d1} 
+\index{model::Camera@{model::Camera}!isInView@{isInView}}
+\index{isInView@{isInView}!model::Camera@{model::Camera}}
+\doxysubsubsection{\texorpdfstring{isInView()}{isInView()}}
+{\footnotesize\ttfamily bool model\+::\+Camera\+::is\+In\+View (\begin{DoxyParamCaption}\item[{float \&}]{worldX,  }\item[{float \&}]{worldY }\end{DoxyParamCaption}) const}
+
+
+
+Check if a world position is within the camera\textquotesingle{}s view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worldX} & \doxylink{classmodel_1_1World}{World} X position (by reference). \\
+\hline
+{\em worldY} & \doxylink{classmodel_1_1World}{World} Y position (by reference). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if in view, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1Camera_a1655286350fe7c722245977835a18a1a}\label{classmodel_1_1Camera_a1655286350fe7c722245977835a18a1a} 
+\index{model::Camera@{model::Camera}!normalizeCoordinates@{normalizeCoordinates}}
+\index{normalizeCoordinates@{normalizeCoordinates}!model::Camera@{model::Camera}}
+\doxysubsubsection{\texorpdfstring{normalizeCoordinates()}{normalizeCoordinates()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ model\+::\+Camera\+::normalize\+Coordinates (\begin{DoxyParamCaption}\item[{float}]{worldX,  }\item[{float}]{worldY }\end{DoxyParamCaption}) const}
+
+
+
+Normalize world coordinates to camera-\/relative coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worldX} & \doxylink{classmodel_1_1World}{World} X position. \\
+\hline
+{\em worldY} & \doxylink{classmodel_1_1World}{World} Y position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of normalized X and Y coordinates. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1Camera_aba7e477f46375345cb0966c0a8d0bd3d}\label{classmodel_1_1Camera_aba7e477f46375345cb0966c0a8d0bd3d} 
+\index{model::Camera@{model::Camera}!setcoords@{setcoords}}
+\index{setcoords@{setcoords}!model::Camera@{model::Camera}}
+\doxysubsubsection{\texorpdfstring{setcoords()}{setcoords()}}
+{\footnotesize\ttfamily void model\+::\+Camera\+::setcoords (\begin{DoxyParamCaption}\item[{float}]{newX,  }\item[{float}]{newY }\end{DoxyParamCaption})}
+
+
+
+Set the camera\textquotesingle{}s coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newX} & New X position. \\
+\hline
+{\em newY} & New Y position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1Camera_a125fd270b2206a306021009e377c64da}\label{classmodel_1_1Camera_a125fd270b2206a306021009e377c64da} 
+\index{model::Camera@{model::Camera}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!model::Camera@{model::Camera}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily void model\+::\+Camera\+::update\+Position (\begin{DoxyParamCaption}\item[{float \&}]{playerY }\end{DoxyParamCaption})}
+
+
+
+Update the camera\textquotesingle{}s position based on the player\textquotesingle{}s Y position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playerY} & \doxylink{classmodel_1_1Player}{Player}\textquotesingle{}s Y position (by reference). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/Camera.\+h\item 
+src/\+Model/Camera.\+cpp\end{DoxyCompactItemize}

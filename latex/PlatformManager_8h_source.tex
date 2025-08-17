@@ -1,0 +1,39 @@
+\doxysection{Platform\+Manager.\+h}
+\hypertarget{PlatformManager_8h_source}{}\label{PlatformManager_8h_source}\index{src/Model/PlatformManager.h@{src/Model/PlatformManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_PLATFORMMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_PLATFORMMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Entities/Platform.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1PlatformManager}{PlatformManager}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<std::shared\_ptr<Platform>>\ platforms;\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ maxPlatformHeight;\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1PlatformManager}{PlatformManager}}(\textcolor{keywordtype}{float}\ startHeight\ =\ 800.0f);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1PlatformManager_a22d6629a8986770ca8fdf87bf1f2e6b1}{addPlatform}}(\textcolor{keyword}{const}\ std::shared\_ptr<Platform>\&\ platform);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1PlatformManager_a0aae33925f5304488a06d29dde39696d}{updatePlatforms}}(\textcolor{keywordtype}{float}\ cameraY);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Platform>>\&\ \mbox{\hyperlink{classmodel_1_1PlatformManager_a974af10acd5829407b1e52f287ef13bb}{getPlatforms}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ platforms;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmodel_1_1PlatformManager_a26ad25509d385b10ae1f7c4de62c4ab4}{getMaxPlatformHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ maxPlatformHeight;\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1PlatformManager_a99e05c4cc6a98455cf03a8cf2ce2744e}{setMaxPlatformHeight}}(\textcolor{keywordtype}{float}\ height);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1PlatformManager_ac336bd16bd28602281e74de1ff9128c6}{removePlatform}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_PLATFORMMANAGER\_H}}
+
+\end{DoxyCode}

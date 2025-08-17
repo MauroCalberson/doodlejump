@@ -1,0 +1,88 @@
+\doxysection{Random Class Reference}
+\hypertarget{classRandom}{}\label{classRandom}\index{Random@{Random}}
+
+
+Singleton class for generating random numbers.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classRandom_a7c208cfc4a9859dbf23bd45e73e26ffa}{get\+Float}} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Generate a random float in the range \mbox{[}min, max\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRandom_a7aac570ca0e486704a9c7f27ea884fe6}{get\+Int}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Generate a random integer in the range \mbox{[}min, max\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classRandom}{Random}} \& \mbox{\hyperlink{classRandom_a2aa30d2f678fc76f75efc60356c6ea4d}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of \doxylink{classRandom}{Random}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class for generating random numbers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRandom_a7c208cfc4a9859dbf23bd45e73e26ffa}\label{classRandom_a7c208cfc4a9859dbf23bd45e73e26ffa} 
+\index{Random@{Random}!getFloat@{getFloat}}
+\index{getFloat@{getFloat}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{getFloat()}{getFloat()}}
+{\footnotesize\ttfamily float Random\+::get\+Float (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+
+
+Generate a random float in the range \mbox{[}min, max\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimum value. \\
+\hline
+{\em max} & Maximum value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRandom}{Random} float between min and max. 
+\end{DoxyReturn}
+\Hypertarget{classRandom_a2aa30d2f678fc76f75efc60356c6ea4d}\label{classRandom_a2aa30d2f678fc76f75efc60356c6ea4d} 
+\index{Random@{Random}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRandom}{Random}} \& Random\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of \doxylink{classRandom}{Random}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the \doxylink{classRandom}{Random} instance. 
+\end{DoxyReturn}
+\Hypertarget{classRandom_a7aac570ca0e486704a9c7f27ea884fe6}\label{classRandom_a7aac570ca0e486704a9c7f27ea884fe6} 
+\index{Random@{Random}!getInt@{getInt}}
+\index{getInt@{getInt}!Random@{Random}}
+\doxysubsubsection{\texorpdfstring{getInt()}{getInt()}}
+{\footnotesize\ttfamily int Random\+::get\+Int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Generate a random integer in the range \mbox{[}min, max\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimum value. \\
+\hline
+{\em max} & Maximum value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRandom}{Random} integer between min and max. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Helper/Random.\+h\item 
+src/\+Helper/Random.\+cpp\end{DoxyCompactItemize}

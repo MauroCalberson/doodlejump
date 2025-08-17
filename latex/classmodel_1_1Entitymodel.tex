@@ -1,0 +1,167 @@
+\doxysection{model\+::Entitymodel Class Reference}
+\hypertarget{classmodel_1_1Entitymodel}{}\label{classmodel_1_1Entitymodel}\index{model::Entitymodel@{model::Entitymodel}}
+
+
+Abstract base class for all game entities. Inherits from \doxylink{classmodel_1_1Subject}{Subject} for observer pattern support.  
+
+
+
+
+{\ttfamily \#include $<$Entitymodel.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Entitymodel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entitymodel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Entitymodel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classmodel_1_1Entitymodel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{setcoords}} (float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}{x}}, float \&\mbox{\hyperlink{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}{y}}) override
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the entity. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{getcoords}} () const override
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} \mbox{\hyperlink{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}{get\+Hitbox}} () const
+\begin{DoxyCompactList}\small\item\em Get the hitbox of the entity. \end{DoxyCompactList}\item 
+virtual Entity\+Type \mbox{\hyperlink{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the type of the entity. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}{collidedwith\+Player}} ()=0
+\begin{DoxyCompactList}\small\item\em Handle collision with the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460}\label{classmodel_1_1Entitymodel_a35edac1635fc970e694b5c8da8668460} 
+float {\bfseries x} = 0
+\begin{DoxyCompactList}\small\item\em X coordinate of the entity. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15}\label{classmodel_1_1Entitymodel_a6972974ee5dbe8881a48c64b1fdb6f15} 
+float {\bfseries y} = 0
+\begin{DoxyCompactList}\small\item\em Y coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all game entities. Inherits from \doxylink{classmodel_1_1Subject}{Subject} for observer pattern support. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607}\label{classmodel_1_1Entitymodel_ad77c74ee0a4b444d46d604297f923607} 
+\index{model::Entitymodel@{model::Entitymodel}!collidedwithPlayer@{collidedwithPlayer}}
+\index{collidedwithPlayer@{collidedwithPlayer}!model::Entitymodel@{model::Entitymodel}}
+\doxysubsubsection{\texorpdfstring{collidedwithPlayer()}{collidedwithPlayer()}}
+{\footnotesize\ttfamily virtual float model\+::\+Entitymodel\+::collidedwith\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handle collision with the player. 
+
+\begin{DoxyReturn}{Returns}
+Resulting velocity after collision. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1BGTile_a1f5c289826985a7ea0a39286dae739fa}{model\+::\+BGTile}}, \mbox{\hyperlink{classmodel_1_1Spring_a1f06a17090236a29483116db74fa437a}{model\+::\+Spring}}, \mbox{\hyperlink{classmodel_1_1Jetpack_a08190cce4b61c75860f29bc5b36e38d9}{model\+::\+Jetpack}}, \mbox{\hyperlink{classmodel_1_1Platform_a890fac2327127acf42e5aec50ce1b0bd}{model\+::\+Platform}}, \mbox{\hyperlink{classmodel_1_1Player_ab2d2b71d06d09ad14bc78b58c95fca8e}{model\+::\+Player}}, and \mbox{\hyperlink{classmodel_1_1Bonus_a833fc00380eaaf62791390902c8f2f05}{model\+::\+Bonus}}.
+
+\Hypertarget{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}\label{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37} 
+\index{model::Entitymodel@{model::Entitymodel}!getcoords@{getcoords}}
+\index{getcoords@{getcoords}!model::Entitymodel@{model::Entitymodel}}
+\doxysubsubsection{\texorpdfstring{getcoords()}{getcoords()}}
+{\footnotesize\ttfamily std\+::pair$<$ float, float $>$ model\+::\+Entitymodel\+::getcoords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the coordinates of the entity. 
+
+\begin{DoxyReturn}{Returns}
+Pair of floats (x, y). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Subject_a6a2059017d287963c14f062f721b9139}{model\+::\+Subject}}.
+
+\Hypertarget{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821}\label{classmodel_1_1Entitymodel_aa83afb5f689262d0c8e28b8e573a6821} 
+\index{model::Entitymodel@{model::Entitymodel}!getHitbox@{getHitbox}}
+\index{getHitbox@{getHitbox}!model::Entitymodel@{model::Entitymodel}}
+\doxysubsubsection{\texorpdfstring{getHitbox()}{getHitbox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}} model\+::\+Entitymodel\+::get\+Hitbox (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the hitbox of the entity. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structmodel_1_1Hitbox}{Hitbox} struct. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Spring_aa594349567f635e19a74948801d32023}{model\+::\+Spring}}, \mbox{\hyperlink{classmodel_1_1Jetpack_afa5b4ee1f54272cb8a9c7743b7802d5c}{model\+::\+Jetpack}}, \mbox{\hyperlink{classmodel_1_1Platform_a4eba07c00387d17a7e077e670dde1ea0}{model\+::\+Platform}}, \mbox{\hyperlink{classmodel_1_1Player_a5a20547da362d8a0052832ec0dcba417}{model\+::\+Player}}, and \mbox{\hyperlink{classmodel_1_1Bonus_a1355778956879277529766cec3865044}{model\+::\+Bonus}}.
+
+\Hypertarget{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839}\label{classmodel_1_1Entitymodel_a4c86cf70495ce625efb8f17ed2072839} 
+\index{model::Entitymodel@{model::Entitymodel}!getType@{getType}}
+\index{getType@{getType}!model::Entitymodel@{model::Entitymodel}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual Entity\+Type model\+::\+Entitymodel\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the type of the entity. 
+
+\begin{DoxyReturn}{Returns}
+Entity\+Type enum value. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1BGTile_a66edcd6f523860d146829845bb8cef8a}{model\+::\+BGTile}}, \mbox{\hyperlink{classmodel_1_1Spring_a13f9b90757e1cd704fd0a9ded4cc1bd6}{model\+::\+Spring}}, \mbox{\hyperlink{classmodel_1_1Jetpack_a6b308f2bddfcff0f35eb626d2424fd77}{model\+::\+Jetpack}}, \mbox{\hyperlink{classmodel_1_1Platform_aabedbc6cee48901adf0a551e255cdc8b}{model\+::\+Platform}}, and \mbox{\hyperlink{classmodel_1_1Player_a0972b4cdbbfc7128c735fcf82c4f0ac8}{model\+::\+Player}}.
+
+\Hypertarget{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}\label{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a} 
+\index{model::Entitymodel@{model::Entitymodel}!setcoords@{setcoords}}
+\index{setcoords@{setcoords}!model::Entitymodel@{model::Entitymodel}}
+\doxysubsubsection{\texorpdfstring{setcoords()}{setcoords()}}
+{\footnotesize\ttfamily void model\+::\+Entitymodel\+::setcoords (\begin{DoxyParamCaption}\item[{float \&}]{x,  }\item[{float \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the coordinates of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position. \\
+\hline
+{\em y} & Y position. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmodel_1_1Subject_a81af26d8390e6820bb48d5546db3ccd1}{model\+::\+Subject}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71}{model\+::\+Platform}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Entitymodel.\+h\item 
+src/\+Model/\+Entities/Entitymodel.\+cpp\end{DoxyCompactItemize}

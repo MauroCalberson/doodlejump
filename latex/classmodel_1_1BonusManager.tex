@@ -1,0 +1,92 @@
+\doxysection{model\+::Bonus\+Manager Class Reference}
+\hypertarget{classmodel_1_1BonusManager}{}\label{classmodel_1_1BonusManager}\index{model::BonusManager@{model::BonusManager}}
+
+
+Manages bonus entities in the game. Handles adding, updating, and removing bonuses.  
+
+
+
+
+{\ttfamily \#include $<$Bonus\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1BonusManager_aacbdc345b801240e512888c1d35e7733}{add\+Bonus}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ \&bonus)
+\begin{DoxyCompactList}\small\item\em Add a bonus to the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1BonusManager_a57f368b081d9d58b9bd696f4c3203ca9}{update\+Bonuses}} (float cameraY)
+\begin{DoxyCompactList}\small\item\em Update the positions of bonuses and remove out-\/of-\/view bonuses. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ $>$ \& \mbox{\hyperlink{classmodel_1_1BonusManager_a5a42cb6cb86a77dfa3247d4e864e59ba}{get\+Bonuses}} () const
+\begin{DoxyCompactList}\small\item\em Get the list of bonuses. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1BonusManager_add99293ee43b506f0e36bfad8c27c958}{remove\+Bonus}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Remove a bonus by index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages bonus entities in the game. Handles adding, updating, and removing bonuses. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1BonusManager_aacbdc345b801240e512888c1d35e7733}\label{classmodel_1_1BonusManager_aacbdc345b801240e512888c1d35e7733} 
+\index{model::BonusManager@{model::BonusManager}!addBonus@{addBonus}}
+\index{addBonus@{addBonus}!model::BonusManager@{model::BonusManager}}
+\doxysubsubsection{\texorpdfstring{addBonus()}{addBonus()}}
+{\footnotesize\ttfamily void model\+::\+Bonus\+Manager\+::add\+Bonus (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ \&}]{bonus }\end{DoxyParamCaption})}
+
+
+
+Add a bonus to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bonus} & Shared pointer to \doxylink{classmodel_1_1Bonus}{Bonus}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1BonusManager_a5a42cb6cb86a77dfa3247d4e864e59ba}\label{classmodel_1_1BonusManager_a5a42cb6cb86a77dfa3247d4e864e59ba} 
+\index{model::BonusManager@{model::BonusManager}!getBonuses@{getBonuses}}
+\index{getBonuses@{getBonuses}!model::BonusManager@{model::BonusManager}}
+\doxysubsubsection{\texorpdfstring{getBonuses()}{getBonuses()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Bonus}{Bonus}} $>$ $>$ \& model\+::\+Bonus\+Manager\+::get\+Bonuses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the list of bonuses. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to vector of \doxylink{classmodel_1_1Bonus}{Bonus} shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{classmodel_1_1BonusManager_add99293ee43b506f0e36bfad8c27c958}\label{classmodel_1_1BonusManager_add99293ee43b506f0e36bfad8c27c958} 
+\index{model::BonusManager@{model::BonusManager}!removeBonus@{removeBonus}}
+\index{removeBonus@{removeBonus}!model::BonusManager@{model::BonusManager}}
+\doxysubsubsection{\texorpdfstring{removeBonus()}{removeBonus()}}
+{\footnotesize\ttfamily void model\+::\+Bonus\+Manager\+::remove\+Bonus (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Remove a bonus by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the bonus to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1BonusManager_a57f368b081d9d58b9bd696f4c3203ca9}\label{classmodel_1_1BonusManager_a57f368b081d9d58b9bd696f4c3203ca9} 
+\index{model::BonusManager@{model::BonusManager}!updateBonuses@{updateBonuses}}
+\index{updateBonuses@{updateBonuses}!model::BonusManager@{model::BonusManager}}
+\doxysubsubsection{\texorpdfstring{updateBonuses()}{updateBonuses()}}
+{\footnotesize\ttfamily void model\+::\+Bonus\+Manager\+::update\+Bonuses (\begin{DoxyParamCaption}\item[{float}]{cameraY }\end{DoxyParamCaption})}
+
+
+
+Update the positions of bonuses and remove out-\/of-\/view bonuses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cameraY} & Y position of the camera. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/Bonus\+Manager.\+h\item 
+src/\+Model/Bonus\+Manager.\+cpp\end{DoxyCompactItemize}

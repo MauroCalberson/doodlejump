@@ -1,0 +1,107 @@
+\doxysection{model\+::Subject Class Reference}
+\hypertarget{classmodel_1_1Subject}{}\label{classmodel_1_1Subject}\index{model::Subject@{model::Subject}}
+
+
+Base class for observable entities. Supports multiple observers and notifies them of changes.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Subject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&o)
+\begin{DoxyCompactList}\small\item\em Add an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}{notify\+Observers}} (const float \&x, const float \&y)
+\begin{DoxyCompactList}\small\item\em Notify all observers of a coordinate change. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1Subject_a0202efa548091427bd56f9766e4c5433}\label{classmodel_1_1Subject_a0202efa548091427bd56f9766e4c5433} 
+void {\bfseries notify\+Deletion} ()
+\begin{DoxyCompactList}\small\item\em Notify all observers that the subject is being destroyed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Subject_a81af26d8390e6820bb48d5546db3ccd1}{setcoords}} (float \&x, float \&y)=0
+\begin{DoxyCompactList}\small\item\em Set the coordinates of the subject. Pure virtual, must be implemented by derived classes. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classmodel_1_1Subject_a6a2059017d287963c14f062f721b9139}{getcoords}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the coordinates of the subject. Pure virtual, must be implemented by derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for observable entities. Supports multiple observers and notifies them of changes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae}\label{classmodel_1_1Subject_ac94c2d2e9003430fc3bd9a8f5bfbefae} 
+\index{model::Subject@{model::Subject}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily void model\+::\+Subject\+::add\+Observer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classObserver}{Observer}} $>$ \&}]{o }\end{DoxyParamCaption})}
+
+
+
+Add an observer to the subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Shared pointer to observer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1Subject_a6a2059017d287963c14f062f721b9139}\label{classmodel_1_1Subject_a6a2059017d287963c14f062f721b9139} 
+\index{model::Subject@{model::Subject}!getcoords@{getcoords}}
+\index{getcoords@{getcoords}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{getcoords()}{getcoords()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$ float, float $>$ model\+::\+Subject\+::getcoords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the coordinates of the subject. Pure virtual, must be implemented by derived classes. 
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Entitymodel_a16fe61576f3dd8e16349e129798d6b37}{model\+::\+Entitymodel}}.
+
+\Hypertarget{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd}\label{classmodel_1_1Subject_afacd1fa1cff11f6e2b5b8c1d106645bd} 
+\index{model::Subject@{model::Subject}!notifyObservers@{notifyObservers}}
+\index{notifyObservers@{notifyObservers}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{notifyObservers()}{notifyObservers()}}
+{\footnotesize\ttfamily void model\+::\+Subject\+::notify\+Observers (\begin{DoxyParamCaption}\item[{const float \&}]{x,  }\item[{const float \&}]{y }\end{DoxyParamCaption})}
+
+
+
+Notify all observers of a coordinate change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate. \\
+\hline
+{\em y} & Y coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmodel_1_1Subject_a81af26d8390e6820bb48d5546db3ccd1}\label{classmodel_1_1Subject_a81af26d8390e6820bb48d5546db3ccd1} 
+\index{model::Subject@{model::Subject}!setcoords@{setcoords}}
+\index{setcoords@{setcoords}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{setcoords()}{setcoords()}}
+{\footnotesize\ttfamily virtual void model\+::\+Subject\+::setcoords (\begin{DoxyParamCaption}\item[{float \&}]{x,  }\item[{float \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the coordinates of the subject. Pure virtual, must be implemented by derived classes. 
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Entitymodel_a9cd58d53fac59334c29e367fb04faa4a}{model\+::\+Entitymodel}}, and \mbox{\hyperlink{classmodel_1_1Platform_aae88f56f5a477f052b77e8ef536b2c71}{model\+::\+Platform}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/\+Entities/Subject.\+h\item 
+src/\+Model/\+Entities/Subject.\+cpp\end{DoxyCompactItemize}

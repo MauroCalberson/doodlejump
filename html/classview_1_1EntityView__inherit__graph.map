@@ -1,0 +1,13 @@
+<map id="view::EntityView" name="view::EntityView">
+<area shape="rect" id="Node000001" title="Base class for all entity views. Handles sprite management and observer updates." alt="" coords="246,79,377,104"/>
+<area shape="rect" id="Node000003" href="$classview_1_1BGTileView.html" title="View class for background tiles. Handles texture loading and sprite setup for background tiles." alt="" coords="5,152,140,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,110,112,154,111,149,259,105"/>
+<area shape="rect" id="Node000004" href="$classview_1_1BonusView.html" title="View class for bonus entities. Handles texture loading and sprite setup for bonuses." alt="" coords="164,152,296,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,115,245,154,242,150,286,111"/>
+<area shape="rect" id="Node000005" href="$classview_1_1PlatformView.html" title="View class for platform entities. Handles texture loading and sprite setup for platforms." alt="" coords="320,152,468,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="337,111,382,150,379,154,333,115"/>
+<area shape="rect" id="Node000006" href="$classview_1_1PlayerView.html" title="View class for the player entity. Handles texture loading, sprite setup, and position updates for the..." alt="" coords="493,152,626,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="365,105,520,149,518,154,364,110"/>
+<area shape="rect" id="Node000002" href="$classObserver.html" title=" " alt="" coords="271,5,352,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,44,314,79,309,79,309,44"/>
+</map>

@@ -1,0 +1,140 @@
+\doxysection{Game Class Reference}
+\hypertarget{classGame}{}\label{classGame}\index{Game@{Game}}
+
+
+Main game class. Handles window, game loop, entity views, and input.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGame_a0b4f9d1a86b367fcdbde7eb8bf448acf}\label{classGame_a0b4f9d1a86b367fcdbde7eb8bf448acf} 
+{\bfseries Game} () noexcept
+\begin{DoxyCompactList}\small\item\em Construct the game and initialize window and UI. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Game} ()
+\begin{DoxyCompactList}\small\item\em Destroy the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ad5148e1485f3e15644c6b1f02ab29499}{update\+Score}} (int score)
+\begin{DoxyCompactList}\small\item\em Update the score display. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}\label{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa} 
+void {\bfseries run} ()
+\begin{DoxyCompactList}\small\item\em Main game loop. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a79f698dda206dd7a9bed28b3f88bdc38}\label{classGame_a79f698dda206dd7a9bed28b3f88bdc38} 
+void {\bfseries process\+Events} ()
+\begin{DoxyCompactList}\small\item\em Process window and keyboard events. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a79df6376b332d63c9eca0dcee30305c3}\label{classGame_a79df6376b332d63c9eca0dcee30305c3} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Update game logic. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a15ddd769261d923827a3cdf41499c843}\label{classGame_a15ddd769261d923827a3cdf41499c843} 
+void {\bfseries render} ()
+\begin{DoxyCompactList}\small\item\em Render all entities and UI. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a337f8d36e86969b1b29bd65cb2dbd6c4}\label{classGame_a337f8d36e86969b1b29bd65cb2dbd6c4} 
+void {\bfseries display\+Entities} ()
+\begin{DoxyCompactList}\small\item\em Draw all entity views. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_ada325a53bd0ffdb70af7ea3c2a65aad8}\label{classGame_ada325a53bd0ffdb70af7ea3c2a65aad8} 
+void {\bfseries display\+Game\+Over} ()
+\begin{DoxyCompactList}\small\item\em Display the game over screen. \end{DoxyCompactList}\item 
+const Hor\+Direction \& \mbox{\hyperlink{classGame_ada874f28ce9c25a7a9ef918828e76088}{get\+Input}} () const
+\begin{DoxyCompactList}\small\item\em Get the current horizontal input direction. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b}\label{classGame_a17fbb36fd4a2085f9ff4f1fa93d7d08b} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Set the game to game over state. \end{DoxyCompactList}\item 
+\Hypertarget{classGame_aeb468737e1495cfcfbf512cfdc751117}\label{classGame_aeb468737e1495cfcfbf512cfdc751117} 
+void {\bfseries restart} ()
+\begin{DoxyCompactList}\small\item\em Restart the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_aff8982357ce9a8fe29691b31dae9335e}{add\+Entity\+View}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}} $>$ \&view)
+\begin{DoxyCompactList}\small\item\em Add an entity view to the appropriate container. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a0782f85463afaa4e234a3ab009f1989e}{remove\+Entity\+View}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}} $>$ \&view)
+\begin{DoxyCompactList}\small\item\em Remove an entity view from the appropriate container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classGame}{Game}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGame_a19798a4f4c50037e1c5cd8c5d491fef9}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main game class. Handles window, game loop, entity views, and input. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGame_aff8982357ce9a8fe29691b31dae9335e}\label{classGame_aff8982357ce9a8fe29691b31dae9335e} 
+\index{Game@{Game}!addEntityView@{addEntityView}}
+\index{addEntityView@{addEntityView}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{addEntityView()}{addEntityView()}}
+{\footnotesize\ttfamily void Game\+::add\+Entity\+View (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}} $>$ \&}]{view }\end{DoxyParamCaption})}
+
+
+
+Add an entity view to the appropriate container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & Shared pointer to the entity view. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGame_ada874f28ce9c25a7a9ef918828e76088}\label{classGame_ada874f28ce9c25a7a9ef918828e76088} 
+\index{Game@{Game}!getInput@{getInput}}
+\index{getInput@{getInput}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily const Hor\+Direction \& Game\+::get\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current horizontal input direction. 
+
+\begin{DoxyReturn}{Returns}
+Reference to Hor\+Direction. 
+\end{DoxyReturn}
+\Hypertarget{classGame_a19798a4f4c50037e1c5cd8c5d491fef9}\label{classGame_a19798a4f4c50037e1c5cd8c5d491fef9} 
+\index{Game@{Game}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGame}{Game}} \texorpdfstring{$\ast$}{*} Game\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of the game. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the game instance. 
+\end{DoxyReturn}
+\Hypertarget{classGame_a0782f85463afaa4e234a3ab009f1989e}\label{classGame_a0782f85463afaa4e234a3ab009f1989e} 
+\index{Game@{Game}!removeEntityView@{removeEntityView}}
+\index{removeEntityView@{removeEntityView}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{removeEntityView()}{removeEntityView()}}
+{\footnotesize\ttfamily void Game\+::remove\+Entity\+View (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1EntityView}{view\+::\+Entity\+View}} $>$ \&}]{view }\end{DoxyParamCaption})}
+
+
+
+Remove an entity view from the appropriate container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & Shared pointer to the entity view. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classGame_ad5148e1485f3e15644c6b1f02ab29499}\label{classGame_ad5148e1485f3e15644c6b1f02ab29499} 
+\index{Game@{Game}!updateScore@{updateScore}}
+\index{updateScore@{updateScore}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{updateScore()}{updateScore()}}
+{\footnotesize\ttfamily void Game\+::update\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Update the score display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Current score. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Game.\+h\item 
+src/Game.\+cpp\end{DoxyCompactItemize}

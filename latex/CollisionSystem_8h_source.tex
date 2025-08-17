@@ -1,0 +1,36 @@
+\doxysection{Collision\+System.\+h}
+\hypertarget{CollisionSystem_8h_source}{}\label{CollisionSystem_8h_source}\index{src/Model/CollisionSystem.h@{src/Model/CollisionSystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_COLLISIONSYSTEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_COLLISIONSYSTEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Enums.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Entities/Player.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Entities/Platform.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Entities/Bonus.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }model\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmodel_1_1CollisionInfo}{CollisionInfo}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structmodel_1_1CollisionInfo_a86e32b37bac1475a1015d5d478296382}{hasCollision}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::shared\_ptr<Entitymodel>\ \mbox{\hyperlink{structmodel_1_1CollisionInfo_ae5db2e35524bc0092b8e88ff0ead9b00}{collidedEntity}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structmodel_1_1CollisionInfo_a5892de9a7f1a2445a971f4868f455f5d}{index}};\ }
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1CollisionSystem}{CollisionSystem}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1CollisionSystem_a25219baab30865c162cf63439908e4d0}{doHitboxesIntersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structmodel_1_1Hitbox}{Hitbox}}\&\ b);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structmodel_1_1CollisionInfo}{CollisionInfo}}\ \mbox{\hyperlink{classmodel_1_1CollisionSystem_aebab8d697913f51eb285f438ae55a963}{detectCollision}}(\textcolor{keyword}{const}\ std::shared\_ptr<Player>\&\ player,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Platform>>\&\ platforms,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Bonus>>\&\ bonuses);}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_COLLISIONSYSTEM\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['game_0',['game',['../classGame.html#a0b4f9d1a86b367fcdbde7eb8bf448acf',1,'Game::Game()'],['../classGame.html',1,'Game']]],
+  ['getbackgroundtiles_1',['getBackgroundTiles',['../classmodel_1_1BGTileManager.html#ae87f10c8f3888a3c461dbbd512464f7a',1,'model::BGTileManager']]],
+  ['getbonuses_2',['getBonuses',['../classmodel_1_1BonusManager.html#a5a42cb6cb86a77dfa3247d4e864e59ba',1,'model::BonusManager']]],
+  ['getcoords_3',['getcoords',['../classmodel_1_1Entitymodel.html#a16fe61576f3dd8e16349e129798d6b37',1,'model::Entitymodel::getcoords()'],['../classmodel_1_1Subject.html#a6a2059017d287963c14f062f721b9139',1,'model::Subject::getcoords()']]],
+  ['getelapsedtime_4',['getElapsedTime',['../classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2',1,'StopWatch']]],
+  ['getfloat_5',['getFloat',['../classRandom.html#a7c208cfc4a9859dbf23bd45e73e26ffa',1,'Random']]],
+  ['gethitbox_6',['gethitbox',['../classmodel_1_1Jetpack.html#afa5b4ee1f54272cb8a9c7743b7802d5c',1,'model::Jetpack::getHitbox()'],['../classmodel_1_1Player.html#a5a20547da362d8a0052832ec0dcba417',1,'model::Player::getHitbox()'],['../classmodel_1_1Platform.html#a4eba07c00387d17a7e077e670dde1ea0',1,'model::Platform::getHitbox()'],['../classmodel_1_1Entitymodel.html#aa83afb5f689262d0c8e28b8e573a6821',1,'model::Entitymodel::getHitbox()'],['../classmodel_1_1Spring.html#aa594349567f635e19a74948801d32023',1,'model::Spring::getHitbox()'],['../classmodel_1_1Bonus.html#a1355778956879277529766cec3865044',1,'model::Bonus::getHitbox()']]],
+  ['getinput_7',['getInput',['../classGame.html#ada874f28ce9c25a7a9ef918828e76088',1,'Game']]],
+  ['getinstance_8',['getinstance',['../classGame.html#a19798a4f4c50037e1c5cd8c5d491fef9',1,'Game::getInstance()'],['../classRandom.html#a2aa30d2f678fc76f75efc60356c6ea4d',1,'Random::getInstance()'],['../classStopWatch.html#af8ded20dbd1a7916443edde3be3f67e3',1,'StopWatch::getInstance()']]],
+  ['getint_9',['getInt',['../classRandom.html#a7aac570ca0e486704a9c7f27ea884fe6',1,'Random']]],
+  ['getmaxplatformheight_10',['getMaxPlatformHeight',['../classmodel_1_1PlatformManager.html#a26ad25509d385b10ae1f7c4de62c4ab4',1,'model::PlatformManager']]],
+  ['getplatforms_11',['getPlatforms',['../classmodel_1_1PlatformManager.html#a974af10acd5829407b1e52f287ef13bb',1,'model::PlatformManager']]],
+  ['getposition_12',['getPosition',['../classmodel_1_1Camera.html#abde9b4e2f4ef86ed28914be3d43d9249',1,'model::Camera']]],
+  ['getscore_13',['getScore',['../classmodel_1_1World.html#a991da6217abc8a4e0195ccede8d03c88',1,'model::World']]],
+  ['getsprite_14',['getSprite',['../classview_1_1EntityView.html#aa04ce7bcdc6d4c6127174d5d1e2c5681',1,'view::EntityView']]],
+  ['gettype_15',['gettype',['../classmodel_1_1Entitymodel.html#a4c86cf70495ce625efb8f17ed2072839',1,'model::Entitymodel::getType()'],['../classview_1_1PlayerView.html#ae7fbede94f7edfa2997195db82dfd8f4',1,'view::PlayerView::getType()'],['../classview_1_1PlatformView.html#a4a988d249a3ff40b9eab4a2a0a2375f0',1,'view::PlatformView::getType()'],['../classview_1_1EntityView.html#a72d614c8f7f54920fca9b18447360927',1,'view::EntityView::getType()'],['../classview_1_1BonusView.html#a43afdc93c84487344d12ed015dc3bb4f',1,'view::BonusView::getType()'],['../classview_1_1BGTileView.html#a297a227bb6fe0bc77b80153bce9e4e30',1,'view::BGTileView::getType()'],['../classmodel_1_1Player.html#a0972b4cdbbfc7128c735fcf82c4f0ac8',1,'model::Player::getType()'],['../classmodel_1_1Platform.html#aabedbc6cee48901adf0a551e255cdc8b',1,'model::Platform::getType()'],['../classmodel_1_1Jetpack.html#a6b308f2bddfcff0f35eb626d2424fd77',1,'model::Jetpack::getType()'],['../classmodel_1_1Spring.html#a13f9b90757e1cd704fd0a9ded4cc1bd6',1,'model::Spring::getType()'],['../classmodel_1_1BGTile.html#a66edcd6f523860d146829845bb8cef8a',1,'model::BGTile::getType()']]],
+  ['getverticalspeed_16',['getVerticalSpeed',['../classmodel_1_1Player.html#af4ed376def40b366c5aaf626f6c917aa',1,'model::Player']]]
+];

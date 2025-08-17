@@ -1,0 +1,76 @@
+\doxysection{model\+::World Class Reference}
+\hypertarget{classmodel_1_1World}{}\label{classmodel_1_1World}\index{model::World@{model::World}}
+
+
+Main game world class. Handles entity management, game logic, and score.  
+
+
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1World_a9558fe64c17182bb87428ab1010100bd}{World}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{Abstract\+Factory}} $>$ factory)
+\begin{DoxyCompactList}\small\item\em Construct the world and initialize entities. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1World_ade12edbbc36a78be6840ea700f2c568c}\label{classmodel_1_1World_ade12edbbc36a78be6840ea700f2c568c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+World} ()
+\begin{DoxyCompactList}\small\item\em Destroy the world and clean up resources. \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1World_af73053bfde275d8bfbd5ce5f8fa5aee4}\label{classmodel_1_1World_af73053bfde275d8bfbd5ce5f8fa5aee4} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Update the world state (entities, collisions, camera, score). \end{DoxyCompactList}\item 
+\Hypertarget{classmodel_1_1World_a6e05af061131414fc138daa2e73aa560}\label{classmodel_1_1World_a6e05af061131414fc138daa2e73aa560} 
+void {\bfseries setup} ()
+\begin{DoxyCompactList}\small\item\em Set up initial entities and game state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmodel_1_1World_a991da6217abc8a4e0195ccede8d03c88}{get\+Score}} () const
+\begin{DoxyCompactList}\small\item\em Get the current score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1World_ad673fcfca644accadec1df83a8a57b7f}\label{classmodel_1_1World_ad673fcfca644accadec1df83a8a57b7f} 
+bool {\bfseries stop} = false
+\begin{DoxyCompactList}\small\item\em Indicates if the game should stop (e.\+g., player fell off screen) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main game world class. Handles entity management, game logic, and score. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1World_a9558fe64c17182bb87428ab1010100bd}\label{classmodel_1_1World_a9558fe64c17182bb87428ab1010100bd} 
+\index{model::World@{model::World}!World@{World}}
+\index{World@{World}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily model\+::\+World\+::\+World (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{Abstract\+Factory}} $>$}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct the world and initialize entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factory} & Abstract factory for creating entities. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1World_a991da6217abc8a4e0195ccede8d03c88}\label{classmodel_1_1World_a991da6217abc8a4e0195ccede8d03c88} 
+\index{model::World@{model::World}!getScore@{getScore}}
+\index{getScore@{getScore}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int model\+::\+World\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current score. 
+
+\begin{DoxyReturn}{Returns}
+Current score. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Model/World.\+h\item 
+src/\+Model/World.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,23 @@
+\doxysection{Concrete\+Factory.\+h}
+\hypertarget{ConcreteFactory_8h_source}{}\label{ConcreteFactory_8h_source}\index{src/View/ConcreteFactory.h@{src/View/ConcreteFactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DOODLEJUMP\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DOODLEJUMP\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Model/AbstractFactory.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Game.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGame}{Game}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }view\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1ConcreteFactory}{ConcreteFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model::AbstractFactory}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ std::shared\_ptr<model::Platform>\ createPlatform(EntityType\ platform)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00012\ \ \ \ \ std::shared\_ptr<model::Player>\ createPlayer()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ std::shared\_ptr<model::Bonus>\ createBonus(EntityType\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ std::shared\_ptr<model::BGTile>\ createBGTile()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DOODLEJUMP\_CONCRETEFACTORY\_H}}
+
+\end{DoxyCode}
