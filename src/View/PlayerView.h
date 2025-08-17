@@ -5,6 +5,7 @@
 #include "EntitytView.h"
 #include <memory>
 #include <stdexcept>
+#include <iostream>
 
 namespace view {
 
